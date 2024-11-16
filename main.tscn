@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://c2bf7gptf2nbg" path="res://Order-Window.tscn" id="1_abmnf"]
 [ext_resource type="PackedScene" path="res://assembly_station.tscn" id="2_v30kg"]
-[ext_resource type="PackedScene" uid="uid://yaseaoyatlxf" path="res://grilling_station.tscn" id="3_jkhi2"]
 [ext_resource type="PackedScene" uid="uid://chg8jnexjnrdm" path="res://grilling_station.tscn" id="3_jkhi2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_loxf3"]
