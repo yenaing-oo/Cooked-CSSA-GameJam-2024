@@ -1,16 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://cj2l0c4oecaah"]
 
-[ext_resource type="Script" path="res://trump.gd" id="1_ljlju"]
-[ext_resource type="PackedScene" uid="uid://bmk3318ej3bjh" path="res://assets/trump/source/trump_lp_anim_iddle01.fbx" id="2_7e0ad"]
+[ext_resource type="Script" path="res://player.gd" id="1_ljlju"]
+[ext_resource type="PackedScene" uid="uid://d4iecpqh0rb8t" path="res://assets/Chef.fbx" id="2_afnys"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ts3ca"]
-size = Vector3(1, 1.81815, 1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_u2buu"]
+size = Vector3(0.077919, 0.154369, 0.0795555)
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_ljlju")
 
-[node name="trump_lp_anim_iddle01" parent="." instance=ExtResource("2_7e0ad")]
+[node name="Chef" parent="." instance=ExtResource("2_afnys")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.949031, 0)
-shape = SubResource("BoxShape3D_ts3ca")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0102576, 0.0566959, 0.000471041)
+shape = SubResource("BoxShape3D_u2buu")
