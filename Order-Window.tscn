@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://n0nn3om43skj"]
+[gd_scene load_steps=11 format=3 uid="uid://1pnrbv88w7fd"]
 
 [ext_resource type="Script" path="res://order_window.gd" id="1_sj23p"]
 [ext_resource type="ArrayMesh" uid="uid://da53wswqtm50o" path="res://assest/window.obj" id="1_uu8a2"]
