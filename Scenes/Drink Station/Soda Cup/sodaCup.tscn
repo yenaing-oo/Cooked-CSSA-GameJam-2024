@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b36oytyur37gs"]
+
+[ext_resource type="PackedScene" uid="uid://c3wq8t63kmisg" path="res://Scenes/Drink Station/Soda Cup/Lowpoly_Cup.fbx" id="1_3r87a"]
+
+[node name="Lowpoly_Cup" instance=ExtResource("1_3r87a")]
+transform = Transform3D(0.013, 0, 0, 0, 0.013, 0, 0, 0, 0.013, 0, 0, 0)
