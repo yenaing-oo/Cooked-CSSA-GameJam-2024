@@ -9,7 +9,7 @@ orientation = 2
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_17nix"]
 
 [node name="board" type="MeshInstance3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.430961, 3.86115, -1.06153)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.430961, 3.86115, -0.528762)
 mesh = SubResource("PlaneMesh_58fka")
 surface_material_override/0 = SubResource("StandardMaterial3D_ivjad")
 
@@ -23,3 +23,6 @@ font_size = 71
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1834, -2.69433, 0.257424)
 shape = SubResource("WorldBoundaryShape3D_17nix")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.06258)
