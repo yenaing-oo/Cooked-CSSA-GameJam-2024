@@ -1,8 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://b7q1e1oqd6m0q"]
 
-[ext_resource type="PackedScene" uid="uid://1qvg57klsyay" path="res://Order-Window.tscn" id="1_abmnf"]
+[ext_resource type="PackedScene" uid="uid://c2bf7gptf2nbg" path="res://Order-Window.tscn" id="1_abmnf"]
 [ext_resource type="PackedScene" path="res://assembly_station.tscn" id="2_v30kg"]
 [ext_resource type="PackedScene" uid="uid://yaseaoyatlxf" path="res://grilling_station.tscn" id="3_jkhi2"]
+[ext_resource type="PackedScene" uid="uid://chg8jnexjnrdm" path="res://grilling_station.tscn" id="3_jkhi2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_loxf3"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
