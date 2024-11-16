@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://6ds8ggegs0ff"]
+
+[ext_resource type="Script" path="res://Scenes/Drink Station/drinkStation.gd" id="1_emjyk"]
+[ext_resource type="PackedScene" uid="uid://bk7b6k7cf2d5f" path="res://Scenes/Drink Station/Soda Fountain/sodaFountain.tscn" id="1_jnp6d"]
+[ext_resource type="PackedScene" uid="uid://b36oytyur37gs" path="res://Scenes/Drink Station/Soda Cup/sodaCup.tscn" id="3_e6nhw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p5yk2"]
+size = Vector3(2.8, 0.76, 3)
+
+[node name="drinkStation" type="Node3D"]
+script = ExtResource("1_emjyk")
+
+[node name="sodaFountain" parent="." instance=ExtResource("1_jnp6d")]
+
+[node name="sodaCup1" parent="." instance=ExtResource("3_e6nhw")]
+transform = Transform3D(0.013, 0, 0, 0, 0.013, 0, 0, 0, 0.013, -0.27107, -0.279006, -0.138612)
+visible = false
+
+[node name="fillTimer" type="Timer" parent="sodaCup1"]
+wait_time = 5.0
+one_shot = true
+
+[node name="overflowTimer" type="Timer" parent="sodaCup1"]
+wait_time = 5.0
+one_shot = true
+
+[node name="sodaCup2" parent="." instance=ExtResource("3_e6nhw")]
+transform = Transform3D(0.013, 0, 0, 0, 0.013, 0, 0, 0, 0.013, -0.27107, -0.279006, 0.163954)
+visible = false
+
+[node name="fillTimer" type="Timer" parent="sodaCup2"]
+wait_time = 5.0
+one_shot = true
+
+[node name="overflowTimer" type="Timer" parent="sodaCup2"]
+wait_time = 5.0
+one_shot = true
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03335, -0.000183105, -0.00430298)
+shape = SubResource("BoxShape3D_p5yk2")
+
+[connection signal="timeout" from="sodaCup1/fillTimer" to="." method="_soda_timeout" binds= ["soda_one"]]
+[connection signal="timeout" from="sodaCup1/overflowTimer" to="." method="_soda_overflow_timeout" binds= ["soda_one"]]
+[connection signal="timeout" from="sodaCup2/fillTimer" to="." method="_soda_timeout" binds= ["soda_two"]]
+[connection signal="timeout" from="sodaCup2/overflowTimer" to="." method="_soda_overflow_timeout" binds= ["soda_two"]]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
