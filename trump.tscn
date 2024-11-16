@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://ojpjw23vhqe0"]
+
+[ext_resource type="Script" path="res://trump.gd" id="1_iodr4"]
+[ext_resource type="PackedScene" uid="uid://bmk3318ej3bjh" path="res://assets/trump/source/trump_lp_anim_iddle01.fbx" id="2_gk4df"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kciaw"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_dw4l4"]
+sky_material = SubResource("ProceduralSkyMaterial_kciaw")
+
+[sub_resource type="Environment" id="Environment_vvotn"]
+background_mode = 2
+sky = SubResource("Sky_dw4l4")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ts3ca"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_530ya"]
+size = Vector2(10, 10)
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0018909, -0.00334108, 0.000980854)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vvotn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("1_iodr4")
+
+[node name="trump_lp_anim_iddle01" parent="CharacterBody3D" instance=ExtResource("2_gk4df")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("BoxShape3D_ts3ca")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.570054, 2.40576, 6.21033)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_530ya")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj2l0c4oecaah"]
+
+[ext_resource type="Script" path="res://trump.gd" id="1_ljlju"]
+[ext_resource type="PackedScene" uid="uid://bmk3318ej3bjh" path="res://assets/trump/source/trump_lp_anim_iddle01.fbx" id="2_7e0ad"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ts3ca"]
+size = Vector3(1, 1.81815, 1)
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_ljlju")
+
+[node name="trump_lp_anim_iddle01" parent="." instance=ExtResource("2_7e0ad")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.949031, 0)
+shape = SubResource("BoxShape3D_ts3ca")
