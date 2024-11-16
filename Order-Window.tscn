@@ -50,6 +50,7 @@ environment = SubResource("Environment_r668h")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+visible = false
 shadow_enabled = true
 
 [node name="Window" type="StaticBody3D" parent="."]
@@ -57,7 +58,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28229, 0.229291, 0)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Window"]
-mesh = ExtResource("1_uu8a2")
+mesh = ExtResource("1_7tafq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Window"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00128174, 1.00715, 0.00177002)
@@ -88,6 +89,7 @@ shape = SubResource("CylinderShape3D_apg3s")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.474346, 1.35889, 0)
+visible = false
 fov = 59.1
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]

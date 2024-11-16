@@ -1,3 +1,42 @@
-[gd_scene format=3 uid="uid://coq4nlhcx3c0l"]
+[gd_scene load_steps=7 format=3 uid="uid://b7q1e1oqd6m0q"]
+
+[ext_resource type="PackedScene" uid="uid://1qvg57klsyay" path="res://Order-Window.tscn" id="1_abmnf"]
+[ext_resource type="PackedScene" path="res://assembly_station.tscn" id="2_v30kg"]
+[ext_resource type="PackedScene" path="res://grilling_station.tscn" id="3_jkhi2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_loxf3"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_lftme"]
+sky_material = SubResource("ProceduralSkyMaterial_loxf3")
+
+[sub_resource type="Environment" id="Environment_0u4sc"]
+background_mode = 2
+sky = SubResource("Sky_lftme")
+tonemap_mode = 2
+glow_enabled = true
 
 [node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0u4sc")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.533196, 1.3303, 0)
+
+[node name="Window" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.998483, 0, 0, 0, 0.998483, 0, 0, 0, 0.998483, 0, 0, 0)
+
+[node name="OrderingWindow" parent="." instance=ExtResource("1_abmnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72593, 0, 2.72105)
+
+[node name="AssemblyStation" parent="." instance=ExtResource("2_v30kg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.02491, 0.5, 4.44271)
+
+[node name="GrillingStation" parent="." instance=ExtResource("3_jkhi2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.05619, 0, 0)
