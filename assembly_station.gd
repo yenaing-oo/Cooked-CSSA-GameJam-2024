@@ -20,8 +20,8 @@ var arrow_textures = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-	start_minigame()
+	
+	start_minigame() #THIS FUNCTION SHOULD BE CALLED BY THE PLAYER NOT HERE, just for testing
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -61,7 +61,7 @@ func generate_directions(sequence_length: int) -> Array:
 	var output = []
 	for i in sequence_length:
 		output.append(DIRECTIONS[randi() % DIRECTIONS.size()])
-		print(output[i])
+		#print(output[i])
 	
 	return output
 
@@ -81,7 +81,7 @@ func _input(event: InputEvent) -> void:
 func check_input(input: String):
 	#Correct, continue minigame
 	if sequence[sequence_number] == input:
-		print("Correct Input!")
+		#print("Correct Input!")
 		sequence_number += 1
 		
 		var new_sequence = []
@@ -94,10 +94,11 @@ func check_input(input: String):
 			print("Minigame Complete!")
 			inMinigame = false
 			clear_arrows()
+			#Add some functionality for the player to interacte with
 			
 	#Incorrect, restart
 	else:
-		print("Incorrect Input!")
+		#print("Incorrect Input!")
 		sequence_number = 0
 		sequence = generate_directions(6)
 		draw_arrows(sequence)
