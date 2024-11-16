@@ -1,6 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://fhdiwjakeka1"]
+[gd_scene load_steps=15 format=3 uid="uid://b7q1e1oqd6m0q"]
 
-[ext_resource type="Texture2D" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
+[ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
 [ext_resource type="ArrayMesh" uid="uid://8piu0esrgi53" path="res://wall.obj" id="2_cb21w"]
 [ext_resource type="ArrayMesh" uid="uid://c3ind6wwx42xs" path="res://wall_half.obj" id="3_2rqgw"]
 
@@ -97,7 +97,6 @@ mesh = ExtResource("3_2rqgw")
 [node name="StaticBody3D" type="StaticBody3D" parent="WallHalf"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WallHalf/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_jmpaw")
 
 [node name="Wall3" type="MeshInstance3D" parent="."]
