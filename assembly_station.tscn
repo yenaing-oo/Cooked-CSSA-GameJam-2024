@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://chgwnwwg656es"]
+[gd_scene load_steps=4 format=3 uid="uid://chgwnwwg656es"]
 
 [ext_resource type="Script" path="res://assembly_station.gd" id="1_1ik1v"]
-[ext_resource type="Texture2D" uid="uid://cng5wcj2psthx" path="res://assets/textures/up_arrow.png" id="2_s7kdh"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_58fmd"]
 
@@ -19,10 +18,5 @@ mesh = SubResource("BoxMesh_58fmd")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_b0vpq")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0, 0.758782, 0)
-visible = false
-texture = ExtResource("2_s7kdh")
-
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="TempCam" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.638159, 2.60832)
