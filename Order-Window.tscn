@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://1qvg57klsyay"]
 
-[ext_resource type="ArrayMesh" uid="uid://da53wswqtm50o" path="res://assest/window.obj" id="1_uu8a2"]
+[ext_resource type="ArrayMesh" uid="uid://da53wswqtm50o" path="res://assets/models/window.obj" id="1_7tafq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ktx0l"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -41,7 +41,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28229, 0.229291, 0)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Window"]
-mesh = ExtResource("1_uu8a2")
+mesh = ExtResource("1_7tafq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Window"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00128174, 1.00715, 0.00177002)
