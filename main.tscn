@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b7q1e1oqd6m0q"]
+[gd_scene load_steps=7 format=3 uid="uid://c04xpg6q5tfim"]
 
 [ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
 [ext_resource type="ArrayMesh" uid="uid://8piu0esrgi53" path="res://wall.obj" id="2_cb21w"]
