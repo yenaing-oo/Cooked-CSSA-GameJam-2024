@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://chgwnwwg656es"]
+
+[ext_resource type="Script" path="res://assembly_station.gd" id="1_1ik1v"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_58fmd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b0vpq"]
+
+[node name="AssemblyStation" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+script = ExtResource("1_1ik1v")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_58fmd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_b0vpq")
+
+[node name="TempCam" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.638159, 2.60832)
+visible = false

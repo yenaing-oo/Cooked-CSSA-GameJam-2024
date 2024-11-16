@@ -1,0 +1,90 @@
+[gd_scene load_steps=10 format=3 uid="uid://1qvg57klsyay"]
+
+[ext_resource type="ArrayMesh" uid="uid://da53wswqtm50o" path="res://assest/window.obj" id="1_uu8a2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ktx0l"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_60xa6"]
+sky_material = SubResource("ProceduralSkyMaterial_ktx0l")
+
+[sub_resource type="Environment" id="Environment_r668h"]
+background_mode = 2
+sky = SubResource("Sky_60xa6")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ktab2"]
+size = Vector3(0.439087, 1.98834, 2.00159)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1t81c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2go3k"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_118w3"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_apg3s"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_r668h")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+visible = false
+shadow_enabled = true
+
+[node name="Window" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28229, 0.229291, 0)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Window"]
+mesh = ExtResource("1_uu8a2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Window"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00128174, 1.00715, 0.00177002)
+shape = SubResource("BoxShape3D_ktab2")
+
+[node name="floor" type="StaticBody3D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("BoxMesh_1t81c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
+shape = SubResource("BoxShape3D_2go3k")
+
+[node name="button" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.26266, 0.858887, 0)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="button"]
+transform = Transform3D(0.2, 0, 0, 0, 0.06, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("CylinderMesh_118w3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button"]
+transform = Transform3D(0.2, 0, 0, 0, 0.06, 0, 0, 0, 0.2, 0, 0, 0)
+shape = SubResource("CylinderShape3D_apg3s")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.474346, 1.35889, 0)
+visible = false
+fov = 59.1
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
+transform = Transform3D(1, -3.46767e-08, -1.70992e-08, 3.46767e-08, 0.608817, 0.793311, -1.70992e-08, -0.793311, 0.608817, 6.42784e-08, 2, 1.47052)
+
+[node name="timer" type="Label3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.26829, 1.17863, 0)
+double_sided = false
+text = "timer"
+
+[node name="instruction" type="Label3D" parent="timer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20921e-08, 0.406995, -0.276635)
+no_depth_test = true
+text = "press \"E\" to take 
+the order"
