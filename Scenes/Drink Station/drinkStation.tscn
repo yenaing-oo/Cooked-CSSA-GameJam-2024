@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://6ds8ggegs0ff"]
+[gd_scene load_steps=13 format=3 uid="uid://6ds8ggegs0ff"]
 
 [ext_resource type="Script" path="res://Scenes/Drink Station/drinkStation.gd" id="1_emjyk"]
 [ext_resource type="PackedScene" uid="uid://bk7b6k7cf2d5f" path="res://Scenes/Drink Station/Soda Fountain/sodaFountain.tscn" id="1_jnp6d"]
 [ext_resource type="PackedScene" uid="uid://b36oytyur37gs" path="res://Scenes/Drink Station/Soda Cup/sodaCup.tscn" id="3_e6nhw"]
+[ext_resource type="AudioStream" uid="uid://b8nafokpuxrlj" path="res://Scenes/Drink Station/sodaFizz.ogg" id="4_c46mu"]
 
 [sub_resource type="Gradient" id="Gradient_0c4qo"]
 colors = PackedColorArray(0.411765, 0.411765, 0.411765, 1, 0.411765, 0.411765, 0.411765, 1)
@@ -73,6 +74,10 @@ sorting_offset = 1.0
 modulate = Color(1, 0, 0, 1)
 texture = SubResource("GradientTexture2D_sk4pd")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="sodaCup1"]
+stream = ExtResource("4_c46mu")
+volume_db = -10.0
+
 [node name="sodaCup2" parent="." instance=ExtResource("3_e6nhw")]
 transform = Transform3D(0.013, 0, 0, 0, 0.013, 0, 0, 0, 0.013, -0.27107, -0.279006, 0.163954)
 visible = false
@@ -102,6 +107,10 @@ visible = false
 sorting_offset = 1.0
 modulate = Color(1, 0, 0, 1)
 texture = SubResource("GradientTexture2D_v0epy")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="sodaCup2"]
+stream = ExtResource("4_c46mu")
+volume_db = -10.0
 
 [node name="Area3D" type="Area3D" parent="."]
 
