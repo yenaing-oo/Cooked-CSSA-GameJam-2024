@@ -13,6 +13,7 @@ var time = TAKE_ORDER_TIMER
 func _ready() -> void:
 	$Timer.start()
 	print("Rating: " + str(currRating))
+	set_process_input(true)
 
 
 
@@ -22,4 +23,9 @@ func _on_timer_timeout() -> void:
 	if(time == 0):
 		currRating = currRating-1
 		print("Rating: " + str(currRating))
+		time = TAKE_ORDER_TIMER
+
+#checking key press to take order
+func _input(event: InputEvent) -> void:
+	if(Input.is_key_pressed(KEY_E)):
 		time = TAKE_ORDER_TIMER
