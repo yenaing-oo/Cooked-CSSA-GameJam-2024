@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://6ds8ggegs0ff"]
+
+[ext_resource type="Script" path="res://Scenes/Drink Station/drinkStation.gd" id="1_emjyk"]
+[ext_resource type="PackedScene" uid="uid://bk7b6k7cf2d5f" path="res://Scenes/Drink Station/Soda Fountain/sodaFountain.tscn" id="1_jnp6d"]
+[ext_resource type="PackedScene" uid="uid://c3wq8t63kmisg" path="res://Scenes/Drink Station/Soda Cup/Lowpoly_Cup.fbx" id="2_o0mxi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p5yk2"]
+size = Vector3(1.4, 0.76, 1.5)
+
+[node name="drinkStation" type="Node3D"]
+script = ExtResource("1_emjyk")
+
+[node name="sodaFountain" parent="." instance=ExtResource("1_jnp6d")]
+
+[node name="Lowpoly_Cup" parent="." instance=ExtResource("2_o0mxi")]
+transform = Transform3D(0.013, 0, 0, 0, 0.013, 0, 0, 0, 0.013, -0.27107, -0.279006, 0.163954)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.346881, -0.000183105, -0.00430298)
+shape = SubResource("BoxShape3D_p5yk2")
