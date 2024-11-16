@@ -6,19 +6,19 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dk6i4"]
 
-[sub_resource type="Gradient" id="Gradient_fvmmx"]
+[sub_resource type="Gradient" id="Gradient_0c4qo"]
 colors = PackedColorArray(0.411765, 0.411765, 0.411765, 1, 0.411765, 0.411765, 0.411765, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_thl2v"]
-gradient = SubResource("Gradient_fvmmx")
+gradient = SubResource("Gradient_0c4qo")
 width = 100
 height = 20
 
-[sub_resource type="Gradient" id="Gradient_r4of7"]
+[sub_resource type="Gradient" id="Gradient_gxtw6"]
 colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_670po"]
-gradient = SubResource("Gradient_r4of7")
+gradient = SubResource("Gradient_gxtw6")
 width = 100
 height = 20
 

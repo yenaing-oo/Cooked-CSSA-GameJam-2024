@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b8nafokpuxrlj"
+path="res://.godot/imported/sodaFizz.ogg-8e48b781b4c2a1969d00dc050b109d82.oggvorbisstr"
+
+[deps]
+
+source_file="res://Scenes/Drink Station/sodaFizz.ogg"
+dest_files=["res://.godot/imported/sodaFizz.ogg-8e48b781b4c2a1969d00dc050b109d82.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
