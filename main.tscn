@@ -1,3 +1,35 @@
-[gd_scene format=3 uid="uid://b8ffi6hqm5t35"]
+[gd_scene load_steps=5 format=3 uid="uid://b8ffi6hqm5t35"]
+
+[ext_resource type="PackedScene" uid="uid://blt4etfwamx5b" path="res://assest/PizzaCafe/PizzaCafe.fbx" id="1_3b146"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_loxf3"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_lftme"]
+sky_material = SubResource("ProceduralSkyMaterial_loxf3")
+
+[sub_resource type="Environment" id="Environment_0u4sc"]
+background_mode = 2
+sky = SubResource("Sky_lftme")
+tonemap_mode = 2
+glow_enabled = true
 
 [node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0u4sc")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+visible = false
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+visible = false
+
+[node name="Window" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.998483, 0, 0, 0, 0.998483, 0, 0, 0, 0.998483, 0, 0, 0)
+
+[node name="PizzaCafe" parent="." instance=ExtResource("1_3b146")]
+transform = Transform3D(1.1918, 0, 0, 0, 1.1918, 0, 0, 0, 1.1918, -0.572678, 0, 0.824581)
