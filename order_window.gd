@@ -3,7 +3,7 @@ extends Node3D
 
 const ORDER_WINDOW_TIME = 11
 
-@onready var timer: Label3D = $Timer/timer
+@onready var timer: Label3D = $timer
 
 var rating = 5
 
@@ -26,7 +26,7 @@ func _on_timer_timeout() -> void:
 	time = time -1
 	if(time == 0):	
 		rating = rating -1
-		print("Rating: " + rating)	
+		print(rating)	
 		time = ORDER_WINDOW_TIME
 	
 	timer.text = str(time)
