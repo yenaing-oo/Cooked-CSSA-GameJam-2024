@@ -1,8 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://6ds8ggegs0ff"]
+[gd_scene load_steps=13 format=3 uid="uid://6ds8ggegs0ff"]
 
 [ext_resource type="Script" path="res://Scenes/Drink Station/drinkStation.gd" id="1_emjyk"]
 [ext_resource type="PackedScene" uid="uid://bk7b6k7cf2d5f" path="res://Scenes/Drink Station/Soda Fountain/sodaFountain.tscn" id="1_jnp6d"]
 [ext_resource type="PackedScene" uid="uid://b36oytyur37gs" path="res://Scenes/Drink Station/Soda Cup/sodaCup.tscn" id="3_e6nhw"]
+[ext_resource type="AudioStream" uid="uid://b8nafokpuxrlj" path="res://Scenes/Drink Station/sodaFizz.ogg" id="4_c46mu"]
+
+[sub_resource type="Gradient" id="Gradient_0c4qo"]
+colors = PackedColorArray(0.411765, 0.411765, 0.411765, 1, 0.411765, 0.411765, 0.411765, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_thl2v"]
+gradient = SubResource("Gradient_0c4qo")
+width = 100
+height = 20
+
+[sub_resource type="Gradient" id="Gradient_r4of7"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1x4xq"]
+gradient = SubResource("Gradient_r4of7")
+width = 100
+height = 20
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sk4pd"]
+gradient = SubResource("Gradient_r4of7")
+width = 100
+height = 20
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ctpt6"]
+gradient = SubResource("Gradient_r4of7")
+width = 100
+height = 20
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_v0epy"]
+gradient = SubResource("Gradient_r4of7")
+width = 100
+height = 20
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p5yk2"]
 size = Vector3(2.8, 0.76, 3)
@@ -24,6 +56,28 @@ one_shot = true
 wait_time = 5.0
 one_shot = true
 
+[node name="loadingBar" type="Sprite3D" parent="sodaCup1"]
+transform = Transform3D(1.46976e-13, 3.36241e-06, 76.9231, 76.9231, -3.36241e-06, 0, 3.36241e-06, 76.9231, -3.36241e-06, 20.8515, 99.3081, -0.688772)
+visible = false
+texture = SubResource("GradientTexture2D_thl2v")
+
+[node name="loadingBarFilling" type="Sprite3D" parent="sodaCup1/loadingBar"]
+transform = Transform3D(0.001, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+visible = false
+sorting_offset = 1.0
+texture = SubResource("GradientTexture2D_1x4xq")
+
+[node name="loadingBarOverflow" type="Sprite3D" parent="sodaCup1/loadingBar"]
+transform = Transform3D(1e-06, 3.55271e-15, 0, -3.38813e-21, 1, 3.55271e-15, 0, -3.55271e-15, 1, -0.5005, 0, 0)
+visible = false
+sorting_offset = 1.0
+modulate = Color(1, 0, 0, 1)
+texture = SubResource("GradientTexture2D_sk4pd")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="sodaCup1"]
+stream = ExtResource("4_c46mu")
+volume_db = -10.0
+
 [node name="sodaCup2" parent="." instance=ExtResource("3_e6nhw")]
 transform = Transform3D(0.013, 0, 0, 0, 0.013, 0, 0, 0, 0.013, -0.27107, -0.279006, 0.163954)
 visible = false
@@ -35,6 +89,28 @@ one_shot = true
 [node name="overflowTimer" type="Timer" parent="sodaCup2"]
 wait_time = 5.0
 one_shot = true
+
+[node name="loadingBar" type="Sprite3D" parent="sodaCup2"]
+transform = Transform3D(1.46976e-13, 3.36241e-06, 76.9231, 76.9231, -3.36241e-06, 0, 3.36241e-06, 76.9231, -3.36241e-06, 20.8515, 99.3081, -0.688772)
+visible = false
+texture = SubResource("GradientTexture2D_thl2v")
+
+[node name="loadingBarFilling" type="Sprite3D" parent="sodaCup2/loadingBar"]
+transform = Transform3D(0.001, 3.55271e-15, 0, 0, 1, 3.55271e-15, 0, -3.55271e-15, 1, -0.5, 0, -4.44089e-16)
+visible = false
+sorting_offset = 1.0
+texture = SubResource("GradientTexture2D_ctpt6")
+
+[node name="loadingBarOverflow" type="Sprite3D" parent="sodaCup2/loadingBar"]
+transform = Transform3D(0.001, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+visible = false
+sorting_offset = 1.0
+modulate = Color(1, 0, 0, 1)
+texture = SubResource("GradientTexture2D_v0epy")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="sodaCup2"]
+stream = ExtResource("4_c46mu")
+volume_db = -10.0
 
 [node name="Area3D" type="Area3D" parent="."]
 
