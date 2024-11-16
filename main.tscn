@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b7q1e1oqd6m0q"]
+[gd_scene load_steps=7 format=3 uid="uid://c04xpg6q5tfim"]
 
-[ext_resource type="PackedScene" uid="uid://1qvg57klsyay" path="res://Order-Window.tscn" id="1_abmnf"]
-[ext_resource type="PackedScene" uid="uid://88sdvjr4vjyk" path="res://assembly_station.tscn" id="2_v30kg"]
-[ext_resource type="PackedScene" path="res://grilling_station.tscn" id="3_jkhi2"]
+[ext_resource type="PackedScene" path="res://Order-Window.tscn" id="1_abmnf"]
+[ext_resource type="PackedScene" path="res://assembly_station.tscn" id="2_v30kg"]
+[ext_resource type="PackedScene" uid="uid://dlf1ycdciq1tb" path="res://grilling_station.tscn" id="3_jkhi2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_loxf3"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -39,4 +39,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72593, 0, 2.72105)
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.02491, 0.744746, 4.44271)
 
 [node name="GrillingStation" parent="." instance=ExtResource("3_jkhi2")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.05619, 0, 0)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.05619, 0.3, 0)
