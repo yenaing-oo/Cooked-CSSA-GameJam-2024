@@ -58,7 +58,7 @@ func _soda_timeout(extra_arg_0: String) -> void:
 
 func pick_up_soda() -> void:
     var cup_picked_up = oldest_cup()
-    cup_picked_up.visible = false
+    oldest_cup().visible = false
 
 func oldest_cup() -> Node3D:
     var oldest_soda_cup = null
