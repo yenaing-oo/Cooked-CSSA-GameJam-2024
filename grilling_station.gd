@@ -4,6 +4,7 @@ const COOKING_TIME = 5
 const TIMER_ANCHOR = Vector3(0, 0.8, 0)
 
 var cooking = false
+var burning = false
 var cooking_start_time
 var loading_bar
 var loading_bar_front
@@ -36,6 +37,8 @@ func update_timer():
 	if time_elapsed >= COOKING_TIME:
 		cooking = false
 		print("Cooking Finished!")
+		burning = true
+		
 	else:
 		loading_bar_front.scale = Vector3(time_fraction, 1, 1)
 		loading_bar_front.position = Vector3((1-time_fraction) * loading_bar_front_offset, 0, 0)
