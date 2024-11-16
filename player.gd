@@ -12,9 +12,9 @@ func _physics_process(delta: float) -> void:
 	
 	# Get the camera's forward and right directions, ignoring vertical orientation.
 	var camera_transform := get_viewport().get_camera_3d().global_transform.basis
-	var forward := camera_transform.z.normalized()
+	var forward := camera_transform.z.normalized()  # Invert forward to match desired behavior
 	var right := camera_transform.x.normalized()
-	
+
 	# Calculate the direction relative to the camera.
 	var direction := (input_dir.x * right + input_dir.y * forward).normalized()
 
@@ -22,7 +22,11 @@ func _physics_process(delta: float) -> void:
 		# Set velocity based on the calculated direction.
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-		look_at(global_transform.origin - direction, Vector3.UP)
+		
+		var rotated_direction := Vector3(-direction.z, 0, direction.x)
+
+		# Rotate the player to face the movement direction
+		look_at(global_transform.origin + rotated_direction, Vector3.UP)  # Make player face the direction of movement
 	else:
 		# Gradually stop movement when no input is given.
 		velocity.x = move_toward(velocity.x, 0, SPEED)
