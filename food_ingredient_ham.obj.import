@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpw7h2cp5w027"
+path="res://.godot/imported/food_ingredient_ham.obj-1604ff7228f7593bd7903dbfe3888347.mesh"
+
+[deps]
+
+files=["res://.godot/imported/food_ingredient_ham.obj-1604ff7228f7593bd7903dbfe3888347.mesh"]
+
+source_file="res://food_ingredient_ham.obj"
+dest_files=["res://.godot/imported/food_ingredient_ham.obj-1604ff7228f7593bd7903dbfe3888347.mesh", "res://.godot/imported/food_ingredient_ham.obj-1604ff7228f7593bd7903dbfe3888347.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

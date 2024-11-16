@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b2tcqree3gfsb"
+path="res://.godot/imported/food_ingredient_steak_pieces.obj-ef9ccb8d01e10a94403c3d88733100ef.mesh"
+
+[deps]
+
+files=["res://.godot/imported/food_ingredient_steak_pieces.obj-ef9ccb8d01e10a94403c3d88733100ef.mesh"]
+
+source_file="res://food_ingredient_steak_pieces.obj"
+dest_files=["res://.godot/imported/food_ingredient_steak_pieces.obj-ef9ccb8d01e10a94403c3d88733100ef.mesh", "res://.godot/imported/food_ingredient_steak_pieces.obj-ef9ccb8d01e10a94403c3d88733100ef.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

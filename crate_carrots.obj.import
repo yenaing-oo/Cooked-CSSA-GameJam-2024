@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://db4qx3pkh5rcx"
+path="res://.godot/imported/crate_carrots.obj-39c252d64f4fc184d31487db7896ae41.mesh"
+
+[deps]
+
+files=["res://.godot/imported/crate_carrots.obj-39c252d64f4fc184d31487db7896ae41.mesh"]
+
+source_file="res://crate_carrots.obj"
+dest_files=["res://.godot/imported/crate_carrots.obj-39c252d64f4fc184d31487db7896ae41.mesh", "res://.godot/imported/crate_carrots.obj-39c252d64f4fc184d31487db7896ae41.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

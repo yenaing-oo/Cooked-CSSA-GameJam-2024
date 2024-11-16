@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0mnd0dx3gygf"
+path="res://.godot/imported/kitchentable_sink_large.obj-6ee4aa1b7fcc03c6cedc9fa137cbfcc7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/kitchentable_sink_large.obj-6ee4aa1b7fcc03c6cedc9fa137cbfcc7.mesh"]
+
+source_file="res://kitchentable_sink_large.obj"
+dest_files=["res://.godot/imported/kitchentable_sink_large.obj-6ee4aa1b7fcc03c6cedc9fa137cbfcc7.mesh", "res://.godot/imported/kitchentable_sink_large.obj-6ee4aa1b7fcc03c6cedc9fa137cbfcc7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

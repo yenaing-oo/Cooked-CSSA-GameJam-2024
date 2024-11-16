@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dhph8futxckin"
+path="res://.godot/imported/fridge_A_door_bottom.obj-2acbaf97b00968675c05f8bc2dd46958.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fridge_A_door_bottom.obj-2acbaf97b00968675c05f8bc2dd46958.mesh"]
+
+source_file="res://fridge_A_door_bottom.obj"
+dest_files=["res://.godot/imported/fridge_A_door_bottom.obj-2acbaf97b00968675c05f8bc2dd46958.mesh", "res://.godot/imported/fridge_A_door_bottom.obj-2acbaf97b00968675c05f8bc2dd46958.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
