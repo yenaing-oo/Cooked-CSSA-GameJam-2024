@@ -61,7 +61,7 @@ func check_interaction() -> void:
 	if Input.is_action_just_pressed("interact"):
 		if assembly_station and global_transform.origin.distance_to(assembly_station.global_transform.origin) <= INTERACTION_DISTANCE and carrying_drink and carrying_burger:
 			print("Use assembly station")
-			assembly_station.start_minigame()
+			assembly_station.use_station()
 		elif drink_station and global_transform.origin.distance_to(drink_station.global_transform.origin) <= INTERACTION_DISTANCE:
 			print("Drinks being created...")
 			drink_station.create_soda()
