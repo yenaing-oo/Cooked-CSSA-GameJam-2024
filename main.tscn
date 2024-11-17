@@ -326,6 +326,31 @@ physics_material_override = SubResource("PhysicsMaterial_jvfqf")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="kitchen/Wall23/StaticBody3D"]
 shape = SubResource("BoxShape3D_0ogw3")
 
+[node name="TipsLabel" type="Label3D" parent="kitchen"]
+transform = Transform3D(-1, 8.74228e-08, -1.04251e-15, 0, 1.19249e-08, 1, 8.74228e-08, 1, -1.19249e-08, 0, 3.43984, -2.59089)
+pixel_size = 0.0128
+text = "Tips
+To process an order
+1) Make a drink.
+2) Make a burger
+3) Pack the order at
+ the assembly table"
+
+[node name="DrinksStationLabel" type="Label3D" parent="kitchen/TipsLabel"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 8.75803, 9.42113, -3.07923)
+pixel_size = 0.0165
+text = "Drinks Station"
+
+[node name="GrillLabel" type="Label3D" parent="kitchen/TipsLabel"]
+transform = Transform3D(-4.37114e-08, 1, 1.05879e-22, -1, -4.37114e-08, 0, -8.88178e-16, -1.05879e-22, 1, 8.82171, -4.5687, -3.08027)
+pixel_size = 0.014
+text = "Grill"
+
+[node name="AssemblyTableLabel" type="Label3D" parent="kitchen/TipsLabel"]
+transform = Transform3D(1, 0, 5.29396e-22, 0, 1, 0, 0, 0, 1, -5.40826, 10.9072, -2.85371)
+pixel_size = 0.017
+text = "Assembly Table"
+
 [node name="enviroment" type="Node3D" parent="."]
 
 [node name="floor" type="MeshInstance3D" parent="enviroment"]
