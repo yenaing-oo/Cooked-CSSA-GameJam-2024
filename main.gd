@@ -9,6 +9,8 @@ var flashing = false # Indicates if the stars are currently flashing
 @onready var pauseScene = $newPause
 @onready var continueButton = $newPause/VBoxContainer/continueButton
 @onready var howToButton = $newPause/VBoxContainer/howToPlayButton
+@onready var howToPlayScene = $howToPlay
+@onready var howToPlaySceneReturn = $howToPlay/Button
 @onready var paused = false
 
 # Called when the node enters the scene tree for the first time.
@@ -22,6 +24,19 @@ func _ready() -> void:
 		restart_button.connect("pressed", self.restart_game)
 	if continueButton:
 		continueButton.connect("pressed", continueGame)
+	if howToButton:
+		howToButton.connect("pressed", showHowToPlay)
+	if howToPlaySceneReturn:
+		howToPlaySceneReturn.connect("pressed", showPause)
+		pass
+
+func showHowToPlay():
+	pauseScene.visible = false
+	howToPlayScene.visible = true
+
+func showPause():
+	howToPlayScene.visible = false
+	pauseScene.visible = true
 
 func continueGame():
 	paused = false
