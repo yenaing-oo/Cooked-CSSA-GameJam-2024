@@ -1,8 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://chg8jnexjnrdm"]
+[gd_scene load_steps=13 format=3 uid="uid://1yc1amupu3fg"]
 
 [ext_resource type="Script" path="res://grilling_station.gd" id="1_msga3"]
 [ext_resource type="PackedScene" uid="uid://3pbnq7adse1r" path="res://assets/models/StovetopOven.glb" id="2_yvyjs"]
 [ext_resource type="AudioStream" uid="uid://cwj8wkn3mxeaa" path="res://fried.mp3" id="3_vdde7"]
+[ext_resource type="PackedScene" uid="uid://djdny0gcdhe7w" path="res://assets/models/BurgerPattyCooked.glb" id="4_tk10t"]
+[ext_resource type="PackedScene" uid="uid://21i1t5sdc7eq" path="res://assets/models/BurgerPattyRaw.glb" id="5_21ck3"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_begt6"]
 
@@ -71,3 +73,11 @@ transform = Transform3D(0.0758921, 0, 0, 0, 0.0605597, 0, 0, 0, 0.0758921, 0, 0.
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_vdde7")
 autoplay = true
+
+[node name="BurgerPattyCooked" parent="." instance=ExtResource("4_tk10t")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.03395, 0)
+visible = false
+
+[node name="BurgerPattyRaw" parent="." instance=ExtResource("5_21ck3")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.034, 0)
+visible = false

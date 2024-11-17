@@ -13,6 +13,8 @@ var loading_bar_cooking
 var loading_bar_cooking_offset
 var loading_bar_burnt
 var loading_bar_burnt_offset
+var burger_raw
+var burger_cooked
 
 @onready var player = get_parent().get_node("player")
 
@@ -23,6 +25,8 @@ func _ready() -> void:
 	loading_bar_cooking_offset = loading_bar_cooking.position.x
 	loading_bar_burnt = $LoadingBar/LoadingBarBurnt
 	loading_bar_burnt_offset = loading_bar_burnt.position.x
+	burger_raw = $BurgerPattyRaw
+	burger_cooked = $BurgerPattyCooked
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -36,6 +40,7 @@ func start_cooking():
 		cooking_start_time = Time.get_unix_time_from_system()
 		cooking = true
 		loading_bar.visible = true
+		burger_raw.visible = true
 	
 #Moves the loading bar forward to show the cooking progress
 func update_cooking_timer():
@@ -48,6 +53,8 @@ func update_cooking_timer():
 		burning_start_time = Time.get_unix_time_from_system()
 		print("Cooking Finished!")
 		burning = true
+		burger_raw.visible = false
+		burger_cooked.visible = true
 		
 	else:
 		loading_bar_burnt.visible = false
@@ -64,6 +71,7 @@ func update_burning_timer():
 		print("Food Burnt!")
 		burning = false
 		cooked = false
+		burger_cooked.visible = false
 		reset_loading_bar()
 	else:
 		loading_bar_cooking.visible = false
@@ -77,8 +85,10 @@ func grab_cooked_food() -> bool:
 	
 	if cooked and not player.carrying_burger:
 		cooked = false
+		burger_cooked.visible = false
 		reset_loading_bar()
 		output = true
+		
 	return output
 
 func reset_loading_bar():
