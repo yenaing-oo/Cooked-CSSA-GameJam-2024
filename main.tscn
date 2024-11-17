@@ -19,9 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://bebt4gwnj7rdn" path="res://assets/models/HighCabinet2.glb" id="8_412p7"]
 [ext_resource type="Texture2D" uid="uid://b7h54iekwq11r" path="res://assets/textures/Star.png" id="17_lkctv"]
 [ext_resource type="AudioStream" uid="uid://crt86wtwyuw5x" path="res://cookedmusic.mp3" id="18_d84a0"]
-[ext_resource type="PackedScene" path="res://Scenes/how_to_play.tscn" id="20_57yxg"]
-[ext_resource type="PackedScene" uid="uid://cl6tgr2lq4oj8" path="res://game_over.tscn" id="20_kawj3"]
-[ext_resource type="PackedScene" path="res://newPause.tscn" id="22_olink"]
+[ext_resource type="PackedScene" uid="uid://cbmm52jtdh1v5" path="res://Scenes/how_to_play.tscn" id="20_57yxg"]
+[ext_resource type="PackedScene" path="res://game_over.tscn" id="20_kawj3"]
+[ext_resource type="PackedScene" uid="uid://db476piim5spd" path="res://newPause.tscn" id="22_olink"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3hyoq"]
 size = Vector3(5, 3, 0.1)
@@ -375,20 +375,12 @@ shape = SubResource("BoxShape3D_0ogw3")
 transform = Transform3D(-1, 8.74228e-08, -1.04251e-15, 0, 1.19249e-08, 1, 8.74228e-08, 1, -1.19249e-08, 0, 3.43984, -3.21929)
 pixel_size = 0.011
 text = "Controls
+
 Enter - Interact with a station
 Shift - Pickup prepared item
 Escape - Pause
 Arrow Keys - Assembly Table minigame
-
-Guide
-Accept an order by interacting with the
-Ordering Window when an order is available.
-
-Fulfill an order by interacting with Assembly
-Table while holding a burger and drink.
-
-If you don't pick up an order in time, your
-rating goes down"
+Esc - Pause/Guide"
 font_size = 30
 
 [node name="DrinksStationLabel" type="Label3D" parent="kitchen/TipsLabel"]
@@ -625,7 +617,7 @@ stream = ExtResource("18_d84a0")
 volume_db = -8.0
 autoplay = true
 
-[node name="How to play" parent="." instance=ExtResource("20_57yxg")]
+[node name="howToPlay" parent="." instance=ExtResource("20_57yxg")]
 visible = false
 
 [node name="GameOver" parent="." instance=ExtResource("20_kawj3")]
@@ -634,4 +626,4 @@ visible = false
 
 [node name="newPause" parent="." instance=ExtResource("22_olink")]
 visible = false
-scale = Vector2(4, 4)
+scale = Vector2(10, 10)
