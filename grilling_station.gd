@@ -6,8 +6,6 @@ const BURNING_TIME = 5
 var cooking = false
 var cooked = false
 var burning = false
-#var cooking_start_time
-#var burning_start_time
 var loading_bar
 var loading_bar_cooking
 var loading_bar_cooking_offset
@@ -41,7 +39,6 @@ func _process(delta: float) -> void:
 
 func start_cooking():
 	if not (cooking or burning):
-		#cooking_start_time = Time.get_unix_time_from_system()
 		cooking = true
 		loading_bar.visible = true
 		burger_raw.visible = true
@@ -51,7 +48,6 @@ func start_cooking():
 	
 #Moves the loading bar forward to show the cooking progress
 func update_cooking_timer():
-	#var time_elapsed = Time.get_unix_time_from_system() - cooking_start_time
 	var time_elapsed = COOKING_TIME - cook_timer.time_left
 	var time_fraction = time_elapsed / COOKING_TIME
 	
@@ -62,7 +58,6 @@ func update_cooking_timer():
 
 #Just have the food burn after the timer goes off
 func update_burning_timer():
-	#var time_elapsed = Time.get_unix_time_from_system() - burning_start_time
 	var time_elapsed = BURNING_TIME - burn_timer.time_left
 	var time_fraction = time_elapsed / BURNING_TIME
 
