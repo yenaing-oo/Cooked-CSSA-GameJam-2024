@@ -8,6 +8,7 @@ const ORDER_WINDOW_TIME = 11
 var rating = 5
 var main_scene
 
+
 var time = ORDER_WINDOW_TIME
 
 # Called when the node enters the scene tree for the first time.
@@ -29,4 +30,4 @@ func _on_timer_timeout() -> void:
 	
 func take_order():
 		time = ORDER_WINDOW_TIME
-#		TODO: take order 
+		main_scene.increaseOrder() #increases the order count in the order variable in main
