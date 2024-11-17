@@ -129,25 +129,27 @@ func _soda_timeout(extra_arg_0: String) -> void:
 		soda_two.overflow = true
 		soda_two.overflow_timer_node.start()
 
-func pick_up_soda() -> void:
+func pick_up_soda() -> bool:
 	var cup_picked_up = oldest_cup()
 
 	if cup_picked_up == null:
-		return
+		return false
 
 	# Check if the selected cup is still filling
 	if cup_picked_up == soda_one and soda_one.filling:
 		print("Cannot pick up soda_one; it's still filling.")
-		return
+		return false
 	elif cup_picked_up == soda_two and soda_two.filling:
 		print("Cannot pick up soda_two; it's still filling.")
-		return
+		return false
 	
 	# Proceed to pick up the cup
 	cup_picked_up.node.visible = false
 	cup_picked_up.fill_timer_node.stop()
 	cup_picked_up.overflow_timer_node.stop()
 	print("Picked up:", cup_picked_up.node.name)
+	
+	return true
 
 func oldest_cup() -> Soda:
 	var oldest_soda_cup = null

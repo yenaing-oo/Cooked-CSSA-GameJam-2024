@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cow1ybcm04vem"]
+[gd_scene load_steps=6 format=3 uid="uid://bq05pqu66wwbu"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_ljlju"]
 [ext_resource type="PackedScene" uid="uid://d4iecpqh0rb8t" path="res://assets/Chef.fbx" id="2_afnys"]
+[ext_resource type="PackedScene" uid="uid://dle4n1cc32vvo" path="res://assets/models/Burger.glb" id="3_5tmmb"]
+[ext_resource type="PackedScene" uid="uid://b36oytyur37gs" path="res://Scenes/Drink Station/Soda Cup/sodaCup.tscn" id="4_eswte"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u2buu"]
 size = Vector3(0.077919, 0.154369, 0.0795555)
@@ -14,3 +16,11 @@ script = ExtResource("1_ljlju")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0102576, 0.0566959, 0.000471041)
 shape = SubResource("BoxShape3D_u2buu")
+
+[node name="Burger" parent="." instance=ExtResource("3_5tmmb")]
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0, 0.130361, -0.0167255)
+visible = false
+
+[node name="Drink" parent="." instance=ExtResource("4_eswte")]
+transform = Transform3D(0.003, 0, 0, 0, 0.003, 0, 0, 0, 0.003, 0, 0.132429, 0.0185801)
+visible = false

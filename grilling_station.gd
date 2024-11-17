@@ -63,6 +63,7 @@ func grab_cooked_food() -> bool:
 	
 	if cooked:
 		reset_loading_bar()
+		output = true
 	return output	
 
 func reset_loading_bar():

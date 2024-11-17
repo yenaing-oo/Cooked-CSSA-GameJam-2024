@@ -61,9 +61,11 @@ func check_interaction() -> void:
 	elif Input.is_action_just_pressed("pick_up"):
 		if drink_station and global_transform.origin.distance_to(drink_station.global_transform.origin) <= INTERACTION_DISTANCE:
 			print("Drink picked up")
-			drink_station.pick_up_soda()
+			if drink_station.pick_up_soda():
+				$Drink.visible = true
 		elif grilling_station and global_transform.origin.distance_to(grilling_station.global_transform.origin) <= INTERACTION_DISTANCE:
 			print("Food picked up")
-			grilling_station.grab_cooked_food()
+			if grilling_station.grab_cooked_food():
+				$Burger.visible = true
 
 		
