@@ -5,7 +5,7 @@ const DIRECTIONS = ["up", "down", "left", "right"]
 const ARROW_SCALE = Vector3(0.1, 0.1, 0.1)
 const ARROW_ANCHOR = Vector3(0, 1.3, 0)
 
-var inMinigame = true
+var inMinigame = false
 var sequence = [] 		#The current sequence of directions for the minigame
 var sequence_number = 0	#The index of the direction the player has to press next
 var drawn_arrows = [] 	#The Sprite3D arrows that are currently drawn, keep track to erase later
@@ -20,8 +20,8 @@ var arrow_textures = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
-	start_minigame() #THIS FUNCTION SHOULD BE CALLED BY THE PLAYER NOT HERE, just for testing
+	pass
+	#start_minigame() #THIS FUNCTION SHOULD BE CALLED BY THE PLAYER NOT HERE, just for testing
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -45,7 +45,7 @@ func draw_arrows(sequence: Array):
 		arrow.texture = arrow_textures.get(sequence[i])
 		
 		var xPos = ARROW_ANCHOR.x - sequence.size()/2.0 + i + 0.5
-		arrow.position = ARROW_ANCHOR + Vector3(xPos * 1, 0, 0)
+		arrow.position = ARROW_ANCHOR + Vector3(xPos * 1.1, 0, 0)
 		arrow.scale = ARROW_SCALE
 		add_child(arrow)
 		drawn_arrows.append(arrow)
