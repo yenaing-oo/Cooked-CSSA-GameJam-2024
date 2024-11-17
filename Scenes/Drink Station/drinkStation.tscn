@@ -1,30 +1,33 @@
-[gd_scene load_steps=13 format=3 uid="uid://6ds8ggegs0ff"]
+[gd_scene load_steps=14 format=3 uid="uid://6ds8ggegs0ff"]
 
 [ext_resource type="Script" path="res://Scenes/Drink Station/drinkStation.gd" id="1_emjyk"]
 [ext_resource type="PackedScene" uid="uid://bk7b6k7cf2d5f" path="res://Scenes/Drink Station/Soda Fountain/sodaFountain.tscn" id="1_jnp6d"]
 [ext_resource type="PackedScene" uid="uid://b36oytyur37gs" path="res://Scenes/Drink Station/Soda Cup/sodaCup.tscn" id="3_e6nhw"]
 [ext_resource type="AudioStream" uid="uid://b8nafokpuxrlj" path="res://Scenes/Drink Station/sodaFizz.ogg" id="4_c46mu"]
 
-[sub_resource type="Gradient" id="Gradient_0c4qo"]
+[sub_resource type="Gradient" id="Gradient_wi2es"]
 colors = PackedColorArray(0.411765, 0.411765, 0.411765, 1, 0.411765, 0.411765, 0.411765, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_thl2v"]
-gradient = SubResource("Gradient_0c4qo")
+gradient = SubResource("Gradient_wi2es")
+width = 100
+height = 20
+
+[sub_resource type="Gradient" id="Gradient_sxk87"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1x4xq"]
+gradient = SubResource("Gradient_sxk87")
+width = 100
+height = 20
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sk4pd"]
+gradient = SubResource("Gradient_sxk87")
 width = 100
 height = 20
 
 [sub_resource type="Gradient" id="Gradient_r4of7"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_1x4xq"]
-gradient = SubResource("Gradient_r4of7")
-width = 100
-height = 20
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_sk4pd"]
-gradient = SubResource("Gradient_r4of7")
-width = 100
-height = 20
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_ctpt6"]
 gradient = SubResource("Gradient_r4of7")
