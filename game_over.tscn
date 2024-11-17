@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl6tgr2lq4oj8"]
+
+[ext_resource type="Texture2D" uid="uid://c53oytlsqlis4" path="res://assets/YouGotCooked.jpg" id="1_48rwg"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2.6654, 2.66031)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -757.485
+offset_top = -425.89
+offset_right = -717.485
+offset_bottom = -385.89
+scale = Vector2(38.4071, 22.5663)
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -580.0
+offset_top = -325.0
+offset_right = 1340.0
+offset_bottom = 755.0
+scale = Vector2(0.601052, 0.598873)
+texture = ExtResource("1_48rwg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(0.0967163, 0.421563)
+
+[node name="RestartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 284.01
+offset_top = 168.025
+offset_right = 349.01
+offset_bottom = 199.025
+scale = Vector2(2.21005, 2.25518)
+text = "Restart"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 77.6619
+offset_top = 165.018
+offset_right = 142.662
+offset_bottom = 196.018
+scale = Vector2(2.21005, 2.25518)
+text = "Quit
+"
