@@ -10,6 +10,8 @@ var rating = 5
 
 var stars = []
 var flashing = false # Indicates if the stars are currently flashing
+@onready var quit_button = $GameOver/QuitButton
+@onready var restart_button = $GameOver/"RestartButton"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,6 +23,10 @@ func _ready() -> void:
 
 func test():
 	paused = false
+	if quit_button:
+		quit_button.connect("pressed", self.quit_game)
+	if restart_button:
+		restart_button.connect("pressed", self.restart_game)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -50,7 +56,7 @@ func setWindowPositionCenter() -> void:
 func lose_rating():
 	rating -= 1
 	if rating <= 0:
-		return
+		$GameOver.visible = true
 	stars[rating].visible = false
 	
 	# Start flashing if only 2 or fewer stars remain
@@ -91,4 +97,14 @@ func pause_menu():
 		Engine.time_scale = 0
 		
 	paused = !paused
+
+func quit_game():
+	get_tree().quit()
+
+func restart_game():
+	# Reload the current scene
+	var current_scene = get_tree().current_scene
+	if current_scene:
+		$GameOver.visible = false
+		get_tree().reload_current_scene()
 		
