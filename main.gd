@@ -11,6 +11,12 @@ func _ready() -> void:
 	for star in $Stars.get_children():
 		stars.append(star)
 
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		setWindowSize()
+		setWindowPositionCenter()
 
 func setWindowSize() -> void:
 	var windowWidth := 1152
@@ -18,13 +24,6 @@ func setWindowSize() -> void:
 
 	get_window().size.x = windowWidth
 	get_window().size.y = windowHeight
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_cancel"):
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-		setWindowSize()
-		setWindowPositionCenter()
 
 func setWindowPositionCenter() -> void:
 	var center_screen := DisplayServer.screen_get_position() + DisplayServer.screen_get_size() /2 
