@@ -16,12 +16,6 @@ func _ready() -> void:
 	print(rating)
 
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-	#pass
-
-
 func _on_timer_timeout() -> void:
 	time = time -1
 	if(time == 0):	
@@ -31,7 +25,6 @@ func _on_timer_timeout() -> void:
 	
 	timer.text = str(time)
 	
-func _input(ev):
-	if(Input.is_key_pressed(KEY_E)):
+func take_order():
 		time = ORDER_WINDOW_TIME
 #		TODO: take order 
