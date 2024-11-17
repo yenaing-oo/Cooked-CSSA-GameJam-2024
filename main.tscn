@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://c04xpg6q5tfim"]
+[gd_scene load_steps=49 format=3 uid="uid://c04xpg6q5tfim"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i66vg"]
 [ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://c2bf7gptf2nbg" path="res://Order-Window.tscn" id="8_7h5am"]
 [ext_resource type="PackedScene" uid="uid://bebt4gwnj7rdn" path="res://assets/models/HighCabinet2.glb" id="8_412p7"]
 [ext_resource type="Texture2D" uid="uid://b7h54iekwq11r" path="res://assets/textures/Star.png" id="17_lkctv"]
+[ext_resource type="AudioStream" uid="uid://crt86wtwyuw5x" path="res://cookedmusic.mp3" id="18_d84a0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cajwv"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -515,3 +516,8 @@ texture = ExtResource("17_lkctv")
 [node name="5" type="Sprite3D" parent="Stars"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 0)
 texture = ExtResource("17_lkctv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_d84a0")
+volume_db = -18.0
+autoplay = true
