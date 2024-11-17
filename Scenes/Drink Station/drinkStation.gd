@@ -6,6 +6,7 @@ extends Node3D
 @export var fill_time = 5.0
 @export var overflow_time = 5.0
 
+@onready var player = get_parent().get_node("player")
 
 # Scotts variables
 var loading_bar_filling_front
@@ -130,6 +131,9 @@ func _soda_timeout(extra_arg_0: String) -> void:
 		soda_two.overflow_timer_node.start()
 
 func pick_up_soda() -> bool:
+	if player.carrying_drink:
+		return false
+	
 	var cup_picked_up = oldest_cup()
 
 	if cup_picked_up == null:

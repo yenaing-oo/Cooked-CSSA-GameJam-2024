@@ -73,4 +73,9 @@ func check_interaction() -> void:
 				$Burger.visible = true
 				carrying_burger = true
 
+func reset_inventory():
+	carrying_burger = false
+	carrying_drink = false
+	$Burger.visible = false
+	$Drink.visible = false
 		
