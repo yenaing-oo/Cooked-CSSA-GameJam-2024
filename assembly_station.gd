@@ -6,6 +6,7 @@ const SEQUENCE_LENGTH = 6
 const DIRECTIONS = ["up", "down", "left", "right"]
 const ARROW_SCALE = Vector3(0.1, 0.1, 0.1)
 const ARROW_ANCHOR = Vector3(0, 1.3, 0)
+@onready var player = get_parent().get_node("player")
 
 var inMinigame = false
 var sequence = [] 		#The current sequence of directions for the minigame
@@ -100,6 +101,7 @@ func check_input(input: String):
 			game_manager.add_point()  # adds point for the game
 			
 			#Add some functionality for the player to interacte with
+			player.reset_inventory()
 			
 	#Incorrect, restart
 	else:

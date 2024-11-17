@@ -4,6 +4,9 @@ extends CharacterBody3D
 const GRAVITY = -9.8  # Gravity force (default Earth gravity)
 const INTERACTION_DISTANCE = 8.0  # Distance threshold for interaction
 
+var carrying_burger = false
+var carrying_drink = false
+
 @onready var assembly_station = get_parent().get_node("AssemblyStation")  # Reference to AssemblyStation node in the main scene
 @onready var grilling_station = get_parent().get_node("GrillingStation")
 @onready var drink_station = get_parent().get_node("DrinkStation")
@@ -46,7 +49,7 @@ func _physics_process(delta: float) -> void:
 
 func check_interaction() -> void:
 	if Input.is_action_just_pressed("interact"):
-		if assembly_station and global_transform.origin.distance_to(assembly_station.global_transform.origin) <= INTERACTION_DISTANCE:
+		if assembly_station and global_transform.origin.distance_to(assembly_station.global_transform.origin) <= INTERACTION_DISTANCE and carrying_drink and carrying_burger:
 			print("Use assembly station")
 			assembly_station.start_minigame()
 		elif drink_station and global_transform.origin.distance_to(drink_station.global_transform.origin) <= INTERACTION_DISTANCE:
@@ -61,9 +64,18 @@ func check_interaction() -> void:
 	elif Input.is_action_just_pressed("pick_up"):
 		if drink_station and global_transform.origin.distance_to(drink_station.global_transform.origin) <= INTERACTION_DISTANCE:
 			print("Drink picked up")
-			drink_station.pick_up_soda()
+			if drink_station.pick_up_soda():
+				$Drink.visible = true
+				carrying_drink = true
 		elif grilling_station and global_transform.origin.distance_to(grilling_station.global_transform.origin) <= INTERACTION_DISTANCE:
 			print("Food picked up")
-			grilling_station.grab_cooked_food()
+			if grilling_station.grab_cooked_food():
+				$Burger.visible = true
+				carrying_burger = true
 
+func reset_inventory():
+	carrying_burger = false
+	carrying_drink = false
+	$Burger.visible = false
+	$Drink.visible = false
 		

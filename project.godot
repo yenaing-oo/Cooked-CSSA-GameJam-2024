@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://cookedlogo.png"
 <<<<<<<HEADrun/main_scene="res://main.tscn"
 
+[display]
+
+window/size/mode=3
+
 [input]
 
 interact={
