@@ -27,4 +27,4 @@ func increaseOrder(): #used this in the ordeerwindow to take orders
 	
 	orderlabel.text = str(order)
 	
-	print(order)
+	print(order)	

@@ -2,12 +2,12 @@ extends Node3D
 
 @onready var game_manager: Node = %GameManager
 
-const SEQUENCE_LENGTH = 6
 const DIRECTIONS = ["up", "down", "left", "right"]
 const ARROW_SCALE = Vector3(0.1, 0.1, 0.1)
 const ARROW_ANCHOR = Vector3(0, 1.3, 0)
 @onready var player = get_parent().get_node("player")
 
+var sequence_length = 6
 var inMinigame = false
 var sequence = [] 		#The current sequence of directions for the minigame
 var sequence_number = 0	#The index of the direction the player has to press next
@@ -34,7 +34,7 @@ func _process(delta: float) -> void:
 func start_minigame():
 	inMinigame = true
 	sequence_number = 0
-	sequence = generate_directions(SEQUENCE_LENGTH)
+	sequence = generate_directions(sequence_length)
 	draw_arrows(sequence)
 	
 #Creates Sprite3Ds with the correct texture above the Station
@@ -50,6 +50,7 @@ func draw_arrows(sequence: Array):
 		var xPos = ARROW_ANCHOR.x - sequence.size()/2.0 + i + 0.5
 		arrow.position = ARROW_ANCHOR + Vector3(xPos * 1.1, 0, 0)
 		arrow.scale = ARROW_SCALE
+		arrow.render_priority = 2
 		add_child(arrow)
 		drawn_arrows.append(arrow)
 		
@@ -59,10 +60,10 @@ func clear_arrows():
 	drawn_arrows = []
 
 #Generates the sequence of directions for the assembly minigame
-func generate_directions(sequence_length: int) -> Array:
+func generate_directions(length: int) -> Array:
 	
 	var output = []
-	for i in sequence_length:
+	for i in length:
 		output.append(DIRECTIONS[randi() % DIRECTIONS.size()])
 		#print(output[i])
 	
@@ -108,7 +109,7 @@ func check_input(input: String):
 	else:
 		#print("Incorrect Input!")
 		sequence_number = 0
-		sequence = generate_directions(6)
+		sequence = generate_directions(sequence_length)
 		draw_arrows(sequence)
 	
 func use_station() -> void:
@@ -116,3 +117,6 @@ func use_station() -> void:
 	# For example, start a minigame:
 	print("Player is using the assembly station")
 	start_minigame()  # Start the minigame or other logic
+
+func increase_difficulty():
+	sequence_length += 1
