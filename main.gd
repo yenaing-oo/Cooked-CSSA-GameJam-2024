@@ -9,6 +9,7 @@ var flashing = false # Indicates if the stars are currently flashing
 @onready var pauseScene = $newPause
 @onready var continueButton = $newPause/VBoxContainer/continueButton
 @onready var howToButton = $newPause/VBoxContainer/howToPlayButton
+@onready var paused = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,15 +20,32 @@ func _ready() -> void:
 		quit_button.connect("pressed", self.quit_game)
 	if restart_button:
 		restart_button.connect("pressed", self.restart_game)
+	if continueButton:
+		continueButton.connect("pressed", continueGame)
+
+func continueGame():
+	paused = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-		setWindowSize()
-		setWindowPositionCenter()
+		pauseScene.visible = true
+		paused = true
+
+	if paused:
+		Engine.time_scale = 0
+	elif !paused:
+		pauseScene.visible = false
+		Engine.time_scale = 1
 		
 
+func test():
+	paused = false
+	if quit_button:
+		quit_button.connect("pressed", self.quit_game)
+	if restart_button:
+		restart_button.connect("pressed", self.restart_game)
+	
 func setWindowSize() -> void:
 	var windowWidth := 1152
 	var windowHeight := 648
