@@ -128,7 +128,7 @@ unique_name_in_owner = true
 script = ExtResource("2_7rypi")
 
 [node name="scorelabel" type="Label3D" parent="GameManager"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -32.0267, 14.9738, 10.1503)
+transform = Transform3D(-1, 0, -8.74228e-08, -3.18886e-08, 0.9311, 0.364763, 8.13994e-08, 0.364763, -0.9311, -32.0267, 14.9738, 10.1503)
 pixel_size = 0.15
 font_size = 40
 outline_size = 10
