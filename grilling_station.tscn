@@ -82,3 +82,10 @@ visible = false
 [node name="BurgerPattyRaw" parent="." instance=ExtResource("5_21ck3")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.034, 0)
 visible = false
+
+[node name="CookTimer" type="Timer" parent="."]
+
+[node name="BurnTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="CookTimer" to="." method="_on_cook_timer_timeout"]
+[connection signal="timeout" from="BurnTimer" to="." method="_on_burn_timer_timeout"]
