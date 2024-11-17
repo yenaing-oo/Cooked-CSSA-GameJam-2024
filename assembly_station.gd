@@ -115,10 +115,9 @@ func check_input(input: String):
 		draw_arrows(sequence)
 	
 func use_station() -> void:
-	# This is where you handle the logic when the player interacts with the assembly station.
-	# For example, start a minigame:
-	print("Player is using the assembly station")
-	start_minigame()  # Start the minigame or other logic
+	if game_manager.order > 0:
+		print("Player is using the assembly station")
+		start_minigame()  # Start the minigame or other logic
 
 func increase_difficulty():
 	sequence_length += 1
