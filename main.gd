@@ -1,11 +1,11 @@
+class_name Main
 extends Node3D
 
 var rating = 5
 
 @onready var pausemenu: Control = %Pause
-var paused = false
-
-
+@onready var continueButton = $Pause/VBoxContainer/Continue
+@onready var paused = false
 
 
 var stars = []
@@ -16,15 +16,23 @@ func _ready() -> void:
 	#pass # Replace with function body.
 	for star in $Stars.get_children():
 		stars.append(star)
+	if continueButton:
+		continueButton.connect("pressed", test)
+
+func test():
+	paused = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-		setWindowSize()
-		setWindowPositionCenter()
-		
-	
+		pausemenu.visible = true
+		paused = true
+
+	if paused:
+		Engine.time_scale = 0
+	elif !paused:
+		pausemenu.visible = false
+		Engine.time_scale = 1
 
 func setWindowSize() -> void:
 	var windowWidth := 1152
@@ -84,8 +92,3 @@ func pause_menu():
 		
 	paused = !paused
 		
-	
-	
-	
-	
-	

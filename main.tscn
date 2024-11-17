@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bebt4gwnj7rdn" path="res://assets/models/HighCabinet2.glb" id="8_412p7"]
 [ext_resource type="Texture2D" uid="uid://b7h54iekwq11r" path="res://assets/textures/Star.png" id="17_lkctv"]
 [ext_resource type="AudioStream" uid="uid://crt86wtwyuw5x" path="res://cookedmusic.mp3" id="18_d84a0"]
-[ext_resource type="PackedScene" uid="uid://ccj5dkdayoc2n" path="res://pause.tscn" id="20_l84gt"]
+[ext_resource type="PackedScene" uid="uid://yt83niy758t2" path="res://pause.tscn" id="20_l84gt"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3hyoq"]
 size = Vector3(5, 3, 0.1)
@@ -626,5 +626,7 @@ autoplay = true
 
 [node name="Pause" parent="." instance=ExtResource("20_l84gt")]
 unique_name_in_owner = true
-visible = false
 material = SubResource("ShaderMaterial_83apc")
+offset_right = -576.0
+offset_bottom = -324.0
+scale = Vector2(1, 1)
