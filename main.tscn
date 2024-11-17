@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bebt4gwnj7rdn" path="res://assets/models/HighCabinet2.glb" id="8_412p7"]
 [ext_resource type="Texture2D" uid="uid://b7h54iekwq11r" path="res://assets/textures/Star.png" id="17_lkctv"]
 [ext_resource type="AudioStream" uid="uid://crt86wtwyuw5x" path="res://cookedmusic.mp3" id="18_d84a0"]
-[ext_resource type="PackedScene" path="res://game_over.tscn" id="20_kawj3"]
+[ext_resource type="PackedScene" uid="uid://bcuf4ojacfwcr" path="res://game_over2.tscn" id="20_xyxoo"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3hyoq"]
 size = Vector3(5, 3, 0.1)
@@ -623,6 +623,6 @@ stream = ExtResource("18_d84a0")
 volume_db = -8.0
 autoplay = true
 
-[node name="GameOver" parent="." instance=ExtResource("20_kawj3")]
+[node name="GameOver" parent="." instance=ExtResource("20_xyxoo")]
 unique_name_in_owner = true
 visible = false
