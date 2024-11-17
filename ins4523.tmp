@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cweqrqdwyi2qw"]
+
+[ext_resource type="Script" path="res://instruction.gd" id="1_gt4vq"]
+[ext_resource type="Texture2D" uid="uid://dcu4dflbwt601" path="res://typing pad.png" id="2_ah3th"]
+[ext_resource type="AudioStream" path="res://keyboard-typing-5997.mp3" id="2_jtsli"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dmhx3"]
+texture = ExtResource("2_ah3th")
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_gt4vq")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 486.0
+offset_top = 53.0
+offset_right = 798.0
+offset_bottom = 314.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_dmhx3")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 537.0
+offset_top = 104.0
+offset_right = 639.0
+offset_bottom = 189.0
+
+[node name="TypingSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_jtsli")
