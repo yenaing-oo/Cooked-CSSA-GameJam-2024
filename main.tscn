@@ -87,17 +87,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 [node name="cabinetBlank" parent="kitchen" instance=ExtResource("5_aaxje")]
 transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 4.09, 0, 1.38)
 
-[node name="cabinetBlank2" parent="kitchen" instance=ExtResource("5_aaxje")]
-transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 3.965, 0, 11.105)
-
 [node name="cabinetHorizontalDrawers" parent="kitchen" instance=ExtResource("2_itvpa")]
 transform = Transform3D(-2.99971, -0.0393803, 0.0147254, -0.0393811, 2.99974, -7.51817e-05, -0.0147231, -0.000268475, -2.99996, 1.91, 0, -5.31)
 
 [node name="Fridge" parent="kitchen" instance=ExtResource("4_t7cqa")]
-transform = Transform3D(-3, 0, 4.52987e-07, 0, 3, 0, -4.52987e-07, 0, -3, 7.97, 0, -2.56)
+transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, 10.95, 0, -11.71)
 
 [node name="cupboards" parent="kitchen" instance=ExtResource("5_tfiwq")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.495, 0, 0)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -11.92, 0, 2.255)
 
 [node name="sink" parent="kitchen" instance=ExtResource("6_wrqhi")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
@@ -112,6 +109,17 @@ transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -8.145
 
 [node name="cabinetBlank3" parent="kitchen/rightTop" instance=ExtResource("5_aaxje")]
 transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -11.17, 0, 11.2)
+
+[node name="leftTop" type="Node3D" parent="kitchen"]
+
+[node name="cabinetVerticalDrawers" parent="kitchen/leftTop" instance=ExtResource("3_vffqg")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 5.115, 0, 11.2)
+
+[node name="cabinetHorizontalDrawers2" parent="kitchen/leftTop" instance=ExtResource("2_itvpa")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 8.145, 0, 11.2)
+
+[node name="cabinetBlank3" parent="kitchen/leftTop" instance=ExtResource("5_aaxje")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 11.17, 0, 11.2)
 
 [node name="enviroment" type="Node3D" parent="."]
 
@@ -279,14 +287,8 @@ shadow_enabled = true
 transform = Transform3D(-0.468617, -3.13831e-08, 2.63336e-08, 0, 0.301221, 0.358981, -4.09677e-08, 0.358981, -0.301221, 0, 25.935, -21.325)
 fov = 40.0
 
-[node name="drinks" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.19, 0, 6.2)
-
-[node name="drinkStation" parent="drinks" instance=ExtResource("4_xr7el")]
-transform = Transform3D(0.000185892, 0.000313927, -3, -3.438e-05, 3, 0.000313927, 3, 3.438e-05, 0.000185892, 4.141, 3.137, 5.266)
-
-[node name="cabinetBlank" parent="drinks" instance=ExtResource("5_aaxje")]
-transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 4.09, 0, 4.905)
+[node name="drinkStation" parent="." instance=ExtResource("4_xr7el")]
+transform = Transform3D(0.000185892, 0.000313926, -3, -3.438e-05, 3, 0.000313926, 3, 3.438e-05, 0.000185892, 8.176, 3.137, 11.466)
 
 [node name="AssemblyStation" parent="." instance=ExtResource("5_ryx4q")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -11.385, 1, 7.528)
