@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://c04xpg6q5tfim"]
+[gd_scene load_steps=55 format=3 uid="uid://c04xpg6q5tfim"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i66vg"]
 [ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
@@ -20,7 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://b7h54iekwq11r" path="res://assets/textures/Star.png" id="17_lkctv"]
 [ext_resource type="AudioStream" uid="uid://crt86wtwyuw5x" path="res://cookedmusic.mp3" id="18_d84a0"]
 [ext_resource type="PackedScene" path="res://game_over.tscn" id="20_kawj3"]
-[ext_resource type="PackedScene" uid="uid://yt83niy758t2" path="res://pause.tscn" id="21_hohpo"]
 [ext_resource type="PackedScene" uid="uid://db476piim5spd" path="res://newPause.tscn" id="22_olink"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3hyoq"]
@@ -628,13 +627,6 @@ autoplay = true
 [node name="GameOver" parent="." instance=ExtResource("20_kawj3")]
 unique_name_in_owner = true
 visible = false
-
-[node name="Pause" parent="." instance=ExtResource("21_hohpo")]
-visible = false
-offset_left = -576.0
-offset_top = -324.0
-offset_right = -576.0
-offset_bottom = -324.0
 
 [node name="newPause" parent="." instance=ExtResource("22_olink")]
 visible = false
