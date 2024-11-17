@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://c04xpg6q5tfim"]
+[gd_scene load_steps=56 format=3 uid="uid://c04xpg6q5tfim"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i66vg"]
 [ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
@@ -21,6 +21,7 @@
 [ext_resource type="AudioStream" uid="uid://crt86wtwyuw5x" path="res://cookedmusic.mp3" id="18_d84a0"]
 [ext_resource type="PackedScene" uid="uid://b2561xajuh770" path="res://Scenes/how_to_play.tscn" id="20_57yxg"]
 [ext_resource type="PackedScene" path="res://game_over.tscn" id="20_kawj3"]
+[ext_resource type="PackedScene" path="res://newPause.tscn" id="22_olink"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3hyoq"]
 size = Vector3(5, 3, 0.1)
@@ -629,3 +630,7 @@ autoplay = true
 [node name="GameOver" parent="." instance=ExtResource("20_kawj3")]
 unique_name_in_owner = true
 visible = false
+
+[node name="newPause" parent="." instance=ExtResource("22_olink")]
+visible = false
+scale = Vector2(4, 4)
