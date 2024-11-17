@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bebt4gwnj7rdn" path="res://assets/models/HighCabinet2.glb" id="8_412p7"]
 [ext_resource type="Texture2D" uid="uid://b7h54iekwq11r" path="res://assets/textures/Star.png" id="17_lkctv"]
 [ext_resource type="AudioStream" uid="uid://crt86wtwyuw5x" path="res://cookedmusic.mp3" id="18_d84a0"]
-[ext_resource type="PackedScene" path="res://Scenes/how_to_play.tscn" id="20_57yxg"]
+[ext_resource type="PackedScene" uid="uid://cbmm52jtdh1v5" path="res://Scenes/how_to_play.tscn" id="20_57yxg"]
 [ext_resource type="PackedScene" path="res://game_over.tscn" id="20_kawj3"]
 [ext_resource type="PackedScene" uid="uid://db476piim5spd" path="res://newPause.tscn" id="22_olink"]
 
@@ -634,4 +634,4 @@ visible = false
 
 [node name="newPause" parent="." instance=ExtResource("22_olink")]
 visible = false
-scale = Vector2(4, 4)
+scale = Vector2(10, 10)
