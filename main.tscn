@@ -481,7 +481,7 @@ transform = Transform3D(-0.468617, -3.13831e-08, 2.63336e-08, 0, 0.301221, 0.358
 fov = 40.0
 
 [node name="DrinkStation" parent="." instance=ExtResource("4_xr7el")]
-transform = Transform3D(-3, 0, -2.62268e-07, 0, 3, 0, 2.62268e-07, 0, -3, -11, 3.139, 7.35873)
+transform = Transform3D(-3, 0, -4.52987e-07, 0, 3, 0, 4.52987e-07, 0, -3, -11, 3.139, 7.35873)
 
 [node name="AssemblyStation" parent="." instance=ExtResource("5_ryx4q")]
 transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 5.96677, 1, 11.528)
