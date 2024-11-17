@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://c04xpg6q5tfim"]
+[gd_scene load_steps=53 format=3 uid="uid://c04xpg6q5tfim"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i66vg"]
 [ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
@@ -19,6 +19,15 @@
 [ext_resource type="PackedScene" uid="uid://bebt4gwnj7rdn" path="res://assets/models/HighCabinet2.glb" id="8_412p7"]
 [ext_resource type="Texture2D" uid="uid://b7h54iekwq11r" path="res://assets/textures/Star.png" id="17_lkctv"]
 [ext_resource type="AudioStream" uid="uid://crt86wtwyuw5x" path="res://cookedmusic.mp3" id="18_d84a0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3hyoq"]
+size = Vector3(5, 3, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xos7g"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bdn83"]
+size = Vector3(5, 3, 0.001)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cajwv"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -129,9 +138,24 @@ script = ExtResource("2_7rypi")
 
 [node name="scorelabel" type="Label3D" parent="GameManager"]
 transform = Transform3D(-1, 0, -8.74228e-08, -3.18886e-08, 0.9311, 0.364763, 8.13994e-08, 0.364763, -0.9311, -32.0267, 14.9738, 10.1503)
+visible = false
 pixel_size = 0.15
 font_size = 40
 outline_size = 10
+
+[node name="orderlabel" type="Label3D" parent="GameManager"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 9.44392, 10.2043, 26.4432)
+pixel_size = 0.15
+font_size = 11
+
+[node name="blackboard" type="MeshInstance3D" parent="GameManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.70321, 10.0782, 26.8793)
+mesh = SubResource("BoxMesh_3hyoq")
+surface_material_override/0 = SubResource("StandardMaterial3D_xos7g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameManager/blackboard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0363874, 0.00395489, 0.00885582)
+shape = SubResource("BoxShape3D_bdn83")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_5wdju")

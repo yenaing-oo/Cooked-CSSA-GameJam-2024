@@ -35,4 +35,5 @@ func _on_timer_timeout() -> void:
 	
 func take_order():
 		time = ORDER_WINDOW_TIME
-		main_scene.increaseOrder() #increases the order count in the order variable in main
+		game_manager.increaseOrder() #increases the order count in the order variable in game manager
+		
