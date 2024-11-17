@@ -54,11 +54,13 @@ texture = SubResource("GradientTexture2D_670po")
 transform = Transform3D(0.0758921, 0, 0, 0, 0.0605597, 0, 0, 0, 0.0758921, 0, 0.552112, 0)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.951051, 0)
 stream = ExtResource("3_vdde7")
 autoplay = true
+bus = &"burgerbgm"
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.948777, 0.315947, 0, -0.315947, 0.948777, 0.0121503, 2.28876, 2.91884)
+transform = Transform3D(1, 0, 0, 0, 0.948777, 0.315947, 0, -0.315947, 0.948777, 0.0121503, 2.28876, 9.74473)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.836269, 5.19888)
