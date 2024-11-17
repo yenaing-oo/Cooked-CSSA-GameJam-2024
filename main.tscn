@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://c04xpg6q5tfim"]
+[gd_scene load_steps=48 format=3 uid="uid://c04xpg6q5tfim"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i66vg"]
 [ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
@@ -37,9 +37,45 @@ albedo_color = Color(1, 1, 1, 0)
 
 [sub_resource type="BoxMesh" id="BoxMesh_36a0s"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ruswk"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jvfqf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0ogw3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06tkv"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kymxn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tnea6"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_q24t5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4v58f"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_otxpr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwiug"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_g6kwv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4fhhn"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fvuk5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_380wo"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_itc5i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ppgqi"]
 albedo_color = Color(1, 0.831373, 0.596078, 1)
@@ -78,6 +114,8 @@ data = PackedVector3Array(-1.9, 4, -0.25, 1.9, 4, -0.25, -1.9, 4, 0.25, -1.9, 4,
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pmp4e"]
 data = PackedVector3Array(-1.9, 4, -0.25, 1.9, 4, -0.25, -1.9, 4, 0.25, -1.9, 4, 0.25, 1.9, 4, -0.25, 1.9, 4, 0.25, 1.9, 4, -0.25, 2, 3.9, -0.1367, 1.9, 4, 0.25, 1.9, 4, 0.25, 2, 3.9, -0.1367, 2, 3.9, 0.1367, 1.9, 0, -0.25, -1.9, 0, -0.25, 1.9, 0, 0.25, 1.9, 0, 0.25, -1.9, 0, -0.25, -1.9, 0, 0.25, -1.9, 0, -0.25, -2, 0.1, -0.1367, -1.9, 0, 0.25, -1.9, 0, 0.25, -2, 0.1, -0.1367, -2, 0.1, 0.1367, -2, 0.1, -0.1367, -2, 1.9, -0.1362, -2, 0.1, 0.1367, -2, 0.1, 0.1367, -2, 1.9, -0.1362, -2, 1.9, 0.1362, -1.9, 2.1, 0.25, -1.9, 2, 0.15, -2, 2.1, 0.1362, -2, 2.1, 0.1362, -1.9, 2, 0.15, -2, 2, 0.0351, 1.9, 2.1, 0.25, 1.9, 4, 0.25, 2, 2.1, 0.1362, 2, 2.1, 0.1362, 1.9, 4, 0.25, 2, 3.9, 0.1367, 1.9, 2.1, -0.25, 1.9, 2, -0.15, 2, 2.1, -0.1362, 2, 2.1, -0.1362, 1.9, 2, -0.15, 2, 2, -0.0351, -1.9, 2.1, -0.25, -1.9, 4, -0.25, -2, 2.1, -0.1362, -2, 2.1, -0.1362, -1.9, 4, -0.25, -2, 3.9, -0.1367, -1.9, 2, -0.15, -1.9, 2.1, -0.25, -2, 2, -0.0351, -2, 2, -0.0351, -1.9, 2.1, -0.25, -2, 2.1, -0.1362, 1.9, 1.9, 0.25, 1.9, 2, 0.15, 2, 1.9, 0.1362, 2, 1.9, 0.1362, 1.9, 2, 0.15, 2, 2, 0.0351, -1.9, 1.9, -0.25, -1.9, 2, -0.15, -2, 1.9, -0.1362, -2, 1.9, -0.1362, -1.9, 2, -0.15, -2, 2, -0.0351, 1.9, 4, -0.25, 1.9, 2.1, -0.25, 2, 3.9, -0.1367, 2, 3.9, -0.1367, 1.9, 2.1, -0.25, 2, 2.1, -0.1362, 1.9, 1.9, -0.25, 1.9, 0, -0.25, 2, 1.9, -0.1362, 2, 1.9, -0.1362, 1.9, 0, -0.25, 2, 0.1, -0.1367, 1.9, 2, -0.15, 1.9, 1.9, -0.25, 2, 2, -0.0351, 2, 2, -0.0351, 1.9, 1.9, -0.25, 2, 1.9, -0.1362, 1.9, 2, 0.15, 1.9, 2.1, 0.25, 2, 2, 0.0351, 2, 2, 0.0351, 1.9, 2.1, 0.25, 2, 2.1, 0.1362, -1.9, 4, 0.25, -1.9, 2.1, 0.25, -2, 3.9, 0.1367, -2, 3.9, 0.1367, -1.9, 2.1, 0.25, -2, 2.1, 0.1362, -1.9, 2, 0.15, -1.9, 1.9, 0.25, -2, 2, 0.0351, -2, 2, 0.0351, -1.9, 1.9, 0.25, -2, 1.9, 0.1362, -1.9, 0, -0.25, -1.9, 1.9, -0.25, -2, 0.1, -0.1367, -2, 0.1, -0.1367, -1.9, 1.9, -0.25, -2, 1.9, -0.1362, -1.9, 1.9, 0.25, -1.9, 0, 0.25, -2, 1.9, 0.1362, -2, 1.9, 0.1362, -1.9, 0, 0.25, -2, 0.1, 0.1367, 1.9, 0, 0.25, 1.9, 1.9, 0.25, 2, 0.1, 0.1367, 2, 0.1, 0.1367, 1.9, 1.9, 0.25, 2, 1.9, 0.1362, 2, 2, -0.0351, 2, 1.9, -0.1362, 2, 2, 0.0351, 2, 2, 0.0351, 2, 1.9, -0.1362, 2, 1.9, 0.1362, 2, 3.9, -0.1367, 2, 2.1, -0.1362, 2, 3.9, 0.1367, 2, 3.9, 0.1367, 2, 2.1, -0.1362, 2, 2.1, 0.1362, -1.9, 1.9, 0.25, -1.9, 2, 0.15, 1.9, 1.9, 0.25, 1.9, 1.9, 0.25, -1.9, 2, 0.15, 1.9, 2, 0.15, -2, 2, -0.0351, -2, 2.1, -0.1362, -2, 2, 0.0351, -2, 2, 0.0351, -2, 2.1, -0.1362, -2, 2.1, 0.1362, 2, 2.1, -0.1362, 2, 2, -0.0351, 2, 2.1, 0.1362, 2, 2.1, 0.1362, 2, 2, -0.0351, 2, 2, 0.0351, 2, 1.9, -0.1362, 2, 0.1, -0.1367, 2, 1.9, 0.1362, 2, 1.9, 0.1362, 2, 0.1, -0.1367, 2, 0.1, 0.1367, 1.9, 2, -0.15, 1.9, 2.1, -0.25, -1.9, 2, -0.15, -1.9, 2, -0.15, 1.9, 2.1, -0.25, -1.9, 2.1, -0.25, -1.9, 2, 0.15, -1.9, 2.1, 0.25, 1.9, 2, 0.15, 1.9, 2, 0.15, -1.9, 2.1, 0.25, 1.9, 2.1, 0.25, -2, 3.9, -0.1367, -1.9, 4, -0.25, -2, 3.9, 0.1367, -2, 3.9, 0.1367, -1.9, 4, -0.25, -1.9, 4, 0.25, 1.9, 0, -0.25, 1.9, 1.9, -0.25, -1.9, 0, -0.25, -1.9, 0, -0.25, 1.9, 1.9, -0.25, -1.9, 1.9, -0.25, 1.9, 1.9, -0.25, 1.9, 2, -0.15, -1.9, 1.9, -0.25, -1.9, 1.9, -0.25, 1.9, 2, -0.15, -1.9, 2, -0.15, -2, 1.9, -0.1362, -2, 2, -0.0351, -2, 1.9, 0.1362, -2, 1.9, 0.1362, -2, 2, -0.0351, -2, 2, 0.0351, 2, 0.1, -0.1367, 1.9, 0, -0.25, 2, 0.1, 0.1367, 2, 0.1, 0.1367, 1.9, 0, -0.25, 1.9, 0, 0.25, -1.9, 0, 0.25, -1.9, 1.9, 0.25, 1.9, 0, 0.25, 1.9, 0, 0.25, -1.9, 1.9, 0.25, 1.9, 1.9, 0.25, -1.9, 2.1, 0.25, -1.9, 4, 0.25, 1.9, 2.1, 0.25, 1.9, 2.1, 0.25, -1.9, 4, 0.25, 1.9, 4, 0.25, 1.9, 2.1, -0.25, 1.9, 4, -0.25, -1.9, 2.1, -0.25, -1.9, 2.1, -0.25, 1.9, 4, -0.25, -1.9, 4, -0.25, -2, 2.1, -0.1362, -2, 3.9, -0.1367, -2, 2.1, 0.1362, -2, 2.1, 0.1362, -2, 3.9, -0.1367, -2, 3.9, 0.1367)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ruswk"]
 
 [node name="mainScene" type="Node3D"]
 transform = Transform3D(2.13394, 0, 0, 0, 2.13394, 0, 0, 0, 2.13394, 0, 0, 0)
@@ -181,16 +219,99 @@ transform = Transform3D(-1.31134e-07, 0, 4, 0, 5, 0, -3, 0, -1.74846e-07, -9.639
 transform = Transform3D(-1.31134e-07, 0, 3, 0, 5, 0, -3, 0, -1.31134e-07, -5.29, 5, 11.2)
 
 [node name="Wall16" type="MeshInstance3D" parent="kitchen"]
-transform = Transform3D(9.1, 0, 0, 0, 1.795, 0, 0, 0, 0.5, -0.008, 0.894, -1.486)
+transform = Transform3D(9.24, 1.56924e-07, 0, -8.07786e-07, 1.795, 0, 0, 0, -8, 0, 0.894, -2.09)
 material_override = SubResource("StandardMaterial3D_5q4m0")
 mesh = SubResource("BoxMesh_36a0s")
 skeleton = NodePath("../../enviroment")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="kitchen/Wall16"]
-physics_material_override = SubResource("PhysicsMaterial_ruswk")
+physics_material_override = SubResource("PhysicsMaterial_jvfqf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="kitchen/Wall16/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.71129)
+shape = SubResource("BoxShape3D_0ogw3")
+
+[node name="Wall17" type="MeshInstance3D" parent="kitchen"]
+transform = Transform3D(2.37, 2.71037e-07, 0, -3.5786e-07, 1.795, 0, 0, 0, -14.795, 11, 0.894, 5.215)
+material_override = SubResource("StandardMaterial3D_06tkv")
+mesh = SubResource("BoxMesh_kymxn")
+skeleton = NodePath("../../enviroment")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="kitchen/Wall17"]
+physics_material_override = SubResource("PhysicsMaterial_jvfqf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kitchen/Wall17/StaticBody3D"]
+shape = SubResource("BoxShape3D_0ogw3")
+
+[node name="Wall18" type="MeshInstance3D" parent="kitchen"]
+transform = Transform3D(-1.14087e-07, 1.18474e-14, -9.03, 3.94099e-07, 1.795, -2.06792e-21, -2.61, 2.71037e-07, 3.94714e-07, -8.213, 0.894, 11.256)
+material_override = SubResource("StandardMaterial3D_tnea6")
+mesh = SubResource("BoxMesh_q24t5")
+skeleton = NodePath("../../enviroment")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="kitchen/Wall18"]
+physics_material_override = SubResource("PhysicsMaterial_jvfqf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kitchen/Wall18/StaticBody3D"]
+shape = SubResource("BoxShape3D_0ogw3")
+
+[node name="Wall19" type="MeshInstance3D" parent="kitchen"]
+transform = Transform3D(2.61, 2.71037e-07, 0, -3.94099e-07, 1.795, 0, 0, 0, -5.9, -11.11, 0.894, 7.05)
+material_override = SubResource("StandardMaterial3D_tnea6")
+mesh = SubResource("BoxMesh_q24t5")
+skeleton = NodePath("../../enviroment")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="kitchen/Wall19"]
+physics_material_override = SubResource("PhysicsMaterial_jvfqf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kitchen/Wall19/StaticBody3D"]
+shape = SubResource("BoxShape3D_0ogw3")
+
+[node name="Wall20" type="MeshInstance3D" parent="kitchen"]
+transform = Transform3D(2.61, 2.71037e-07, 0, -3.94099e-07, 1.795, 0, 0, 0, -3.05, 10.8032, 0.893997, -8.70246)
+material_override = SubResource("StandardMaterial3D_4v58f")
+mesh = SubResource("BoxMesh_otxpr")
+skeleton = NodePath("../../enviroment")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="kitchen/Wall20"]
+physics_material_override = SubResource("PhysicsMaterial_jvfqf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kitchen/Wall20/StaticBody3D"]
+shape = SubResource("BoxShape3D_0ogw3")
+
+[node name="Wall21" type="MeshInstance3D" parent="kitchen"]
+transform = Transform3D(2.61, 2.71037e-07, 0, -3.94099e-07, 1.795, 0, 0, 0, -3.05, -11.1386, 0.894, -9.94507)
+material_override = SubResource("StandardMaterial3D_rwiug")
+mesh = SubResource("BoxMesh_g6kwv")
+skeleton = NodePath("../../enviroment")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="kitchen/Wall21"]
+physics_material_override = SubResource("PhysicsMaterial_jvfqf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kitchen/Wall21/StaticBody3D"]
+shape = SubResource("BoxShape3D_0ogw3")
+
+[node name="Wall22" type="MeshInstance3D" parent="kitchen"]
+transform = Transform3D(2.61, 2.71037e-07, 0, -3.94099e-07, 1.795, 0, 0, 0, -3.05, -11.1386, 0.894, -3.83012)
+material_override = SubResource("StandardMaterial3D_4fhhn")
+mesh = SubResource("BoxMesh_fvuk5")
+skeleton = NodePath("../../enviroment")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="kitchen/Wall22"]
+physics_material_override = SubResource("PhysicsMaterial_jvfqf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kitchen/Wall22/StaticBody3D"]
+shape = SubResource("BoxShape3D_0ogw3")
+
+[node name="Wall23" type="MeshInstance3D" parent="kitchen"]
+transform = Transform3D(1.48, 2.71037e-07, 0, -2.23474e-07, 1.795, 0, 0, 0, -5.94, -11.884, 0.894, 0.769)
+material_override = SubResource("StandardMaterial3D_380wo")
+mesh = SubResource("BoxMesh_itc5i")
+skeleton = NodePath("../../enviroment")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="kitchen/Wall23"]
+physics_material_override = SubResource("PhysicsMaterial_jvfqf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kitchen/Wall23/StaticBody3D"]
 shape = SubResource("BoxShape3D_0ogw3")
 
 [node name="enviroment" type="Node3D" parent="."]
@@ -348,7 +469,6 @@ mesh = SubResource("BoxMesh_36a0s")
 physics_material_override = SubResource("PhysicsMaterial_ruswk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="enviroment/Wall13/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.71129)
 shape = SubResource("BoxShape3D_0ogw3")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
