@@ -1,7 +1,8 @@
-[gd_scene load_steps=49 format=3 uid="uid://c04xpg6q5tfim"]
+[gd_scene load_steps=50 format=3 uid="uid://c04xpg6q5tfim"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i66vg"]
 [ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
+[ext_resource type="Script" path="res://game_manager.gd" id="2_7rypi"]
 [ext_resource type="ArrayMesh" uid="uid://8piu0esrgi53" path="res://wall.obj" id="2_cb21w"]
 [ext_resource type="PackedScene" uid="uid://dip4t3edicgy5" path="res://assets/models/Cabinet2.glb" id="2_itvpa"]
 [ext_resource type="PackedScene" uid="uid://gq3xry62a8f2" path="res://assets/models/Cabinet3.glb" id="3_vffqg"]
@@ -13,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://du4xonpubccn7" path="res://assets/models/Cupboard.glb" id="5_tfiwq"]
 [ext_resource type="PackedScene" uid="uid://c15m3th3sl20i" path="res://assets/models/Sink.glb" id="6_wrqhi"]
 [ext_resource type="PackedScene" uid="uid://cftklxsi4md20" path="res://assets/models/HighCabinet1.glb" id="7_g5wvr"]
-[ext_resource type="PackedScene" uid="uid://chg8jnexjnrdm" path="res://grilling_station.tscn" id="7_t6tr2"]
+[ext_resource type="PackedScene" uid="uid://1yc1amupu3fg" path="res://grilling_station.tscn" id="7_t6tr2"]
 [ext_resource type="PackedScene" uid="uid://c2bf7gptf2nbg" path="res://Order-Window.tscn" id="8_7h5am"]
 [ext_resource type="PackedScene" uid="uid://bebt4gwnj7rdn" path="res://assets/models/HighCabinet2.glb" id="8_412p7"]
 [ext_resource type="Texture2D" uid="uid://b7h54iekwq11r" path="res://assets/textures/Star.png" id="17_lkctv"]
@@ -121,6 +122,16 @@ data = PackedVector3Array(-1.9, 4, -0.25, 1.9, 4, -0.25, -1.9, 4, 0.25, -1.9, 4,
 [node name="mainScene" type="Node3D"]
 transform = Transform3D(2.13394, 0, 0, 0, 2.13394, 0, 0, 0, 2.13394, 0, 0, 0)
 script = ExtResource("1_i66vg")
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_7rypi")
+
+[node name="scorelabel" type="Label3D" parent="GameManager"]
+transform = Transform3D(-1, 0, -8.74228e-08, -3.18886e-08, 0.9311, 0.364763, 8.13994e-08, 0.364763, -0.9311, -32.0267, 14.9738, 10.1503)
+pixel_size = 0.15
+font_size = 40
+outline_size = 10
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_5wdju")

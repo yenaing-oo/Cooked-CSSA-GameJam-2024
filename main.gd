@@ -2,6 +2,8 @@ extends Node3D
 
 var rating = 5
 
+var order = 0 #keeps count of the orders
+
 var stars = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -32,5 +34,15 @@ func setWindowPositionCenter() -> void:
 func lose_rating():
 	rating -= 1
 	stars[rating].visible = false
-	print(rating)
+		
 	
+
+
+func decreaseOrder():
+	if(order>0):
+		order -= 1
+	else: 
+		order = 0	
+
+func increaseOrder(): #used this in the ordeerwindow to take orders
+	order += 1

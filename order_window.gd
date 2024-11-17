@@ -1,5 +1,7 @@
 extends Node3D
 
+@onready var game_manager: Node = %GameManager
+
 
 const ORDER_WINDOW_TIME = 11
 
@@ -7,6 +9,7 @@ const ORDER_WINDOW_TIME = 11
 
 var rating = 5
 var main_scene
+
 
 var time = ORDER_WINDOW_TIME
 
@@ -23,10 +26,13 @@ func _on_timer_timeout() -> void:
 		#rating = rating -1
 		#print(rating)	
 		main_scene.lose_rating()
+		
+		
+		
 		time = ORDER_WINDOW_TIME
 	
 	timer.text = str(time)
 	
 func take_order():
 		time = ORDER_WINDOW_TIME
-#		TODO: take order 
+		main_scene.increaseOrder() #increases the order count in the order variable in main
