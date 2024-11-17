@@ -27,9 +27,10 @@ func _process(delta: float) -> void:
 		update_burning_timer()
 
 func start_cooking():
-	cooking_start_time = Time.get_unix_time_from_system()
-	cooking = true
-	loading_bar.visible = true
+	if not cooking:
+		cooking_start_time = Time.get_unix_time_from_system()
+		cooking = true
+		loading_bar.visible = true
 	
 #Moves the loading bar forward to show the cooking progress
 func update_cooking_timer():
@@ -64,7 +65,7 @@ func grab_cooked_food() -> bool:
 	if cooked:
 		reset_loading_bar()
 		output = true
-	return output	
+	return output
 
 func reset_loading_bar():
 	loading_bar.visible = 0
