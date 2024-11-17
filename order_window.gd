@@ -83,9 +83,12 @@ func _on_difficulty_timer_timeout() -> void:
 		orderWaitingTime = hardOrderWaitingTime
 		difficultyTimer.wait_time = timeBeforeVeryHardDifficulty
 		difficultyTimer.start()
+		hard = true
+		print("entering hard mode")
 	else:
 		minGraceTime = veryHardMinGraceTime
 		maxGraceTime = veryHardMaxGraceTime
+		print("entering very hard mode")
 
 #The player grabs the order if available, start the grace timer and increase order number
 func take_order():
