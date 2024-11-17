@@ -85,10 +85,52 @@ environment = SubResource("Environment_5wdju")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="cabinetBlank" parent="kitchen" instance=ExtResource("5_aaxje")]
-transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 4.09, 0, 1.38)
+transform = Transform3D(-3, 0, -2.62268e-07, 0, 3, 0, 2.62268e-07, 0, -3, 11, 0, -0.56)
 
 [node name="cabinetHorizontalDrawers" parent="kitchen" instance=ExtResource("2_itvpa")]
-transform = Transform3D(-2.99971, -0.0393803, 0.0147254, -0.0393811, 2.99974, -7.51817e-05, -0.0147231, -0.000268475, -2.99996, 1.91, 0, -5.31)
+transform = Transform3D(-2.99971, -0.0393803, 0.0147254, -0.0393811, 2.99974, -7.51817e-05, -0.0147231, -0.000268475, -2.99996, 11, 0, 5.5)
+
+[node name="centerIsland" type="Node3D" parent="kitchen"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.085)
+
+[node name="cabinetVerticalDrawers4" parent="kitchen/centerIsland" instance=ExtResource("3_vffqg")]
+transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, 3, 0, 2.79)
+
+[node name="cabinetHorizontalDrawers4" parent="kitchen/centerIsland" instance=ExtResource("2_itvpa")]
+transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, 0, 0, 2.79)
+
+[node name="cabinetVerticalDrawers5" parent="kitchen/centerIsland" instance=ExtResource("3_vffqg")]
+transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, -3, 0, 2.79)
+
+[node name="cabinetHorizontalDrawers5" parent="kitchen/centerIsland" instance=ExtResource("2_itvpa")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 3.315, 0, 0.09)
+
+[node name="cabinetBlank3" parent="kitchen/centerIsland" instance=ExtResource("5_aaxje")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.845, 0, 1.23)
+
+[node name="cabinetBlank5" parent="kitchen/centerIsland" instance=ExtResource("5_aaxje")]
+transform = Transform3D(-3, 0, -2.62268e-07, 0, 3, 0, 2.62268e-07, 0, -3, -1.55, 0, 1.23)
+
+[node name="cabinetBlank6" parent="kitchen/centerIsland" instance=ExtResource("5_aaxje")]
+transform = Transform3D(-2.99997, -0.00693623, 0.011948, -0.00693112, 2.99999, 0.00129884, -0.011951, 0.0012713, -2.99998, -1.55, 0, -0.73)
+
+[node name="cabinetBlank4" parent="kitchen/centerIsland" instance=ExtResource("5_aaxje")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.845, 0, -0.575)
+
+[node name="cabinetHorizontalDrawers6" parent="kitchen/centerIsland" instance=ExtResource("2_itvpa")]
+transform = Transform3D(-3, 0, -2.62268e-07, 0, 3, 0, 2.62268e-07, 0, -3, -3.315, 0, -0.09)
+
+[node name="cabinetVerticalDrawers3" parent="kitchen/centerIsland" instance=ExtResource("3_vffqg")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 3, 0, -2.79)
+
+[node name="cabinetHorizontalDrawers3" parent="kitchen/centerIsland" instance=ExtResource("2_itvpa")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 0, 0, -2.79)
+
+[node name="cabinetVerticalDrawers2" parent="kitchen/centerIsland" instance=ExtResource("3_vffqg")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -3, 0, -2.79)
+
+[node name="cabinetHorizontalDrawers2" parent="kitchen" instance=ExtResource("2_itvpa")]
+transform = Transform3D(-2.99971, -0.0393803, 0.0147254, -0.0393811, 2.99974, -7.51817e-05, -0.0147231, -0.000268475, -2.99996, 11, 0, 2.47)
 
 [node name="Fridge" parent="kitchen" instance=ExtResource("4_t7cqa")]
 transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, 10.95, 0, -11.71)
@@ -97,7 +139,7 @@ transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, 10.95,
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -11.92, 0, 2.255)
 
 [node name="sink" parent="kitchen" instance=ExtResource("6_wrqhi")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+transform = Transform3D(-3, 0, -2.62268e-07, 0, 3, 0, 2.62268e-07, 0, -3, 11, 0, 8.5)
 
 [node name="rightTop" type="Node3D" parent="kitchen"]
 
@@ -122,6 +164,7 @@ transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 8.145,
 transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 11.17, 0, 11.2)
 
 [node name="enviroment" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="floor" type="MeshInstance3D" parent="enviroment"]
 transform = Transform3D(2.64033, 0, 0, 0, 2.64033, 0, 0, 0, 2.64033, 0, 0, 0)
@@ -294,7 +337,7 @@ transform = Transform3D(0.000185892, 0.000313926, -3, -3.438e-05, 3, 0.000313926
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -11.385, 1, 7.528)
 
 [node name="player" parent="." instance=ExtResource("4_pupp2")]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 5.15478, 2.34308, 0)
+transform = Transform3D(-8.74228e-07, 0, 20, 0, 20, 0, -20, 0, -8.74228e-07, 6.945, 2.343, -6.19)
 
 [node name="GrillingStation" parent="." instance=ExtResource("7_t6tr2")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -11.864, 0.71, -7.183)
