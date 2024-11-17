@@ -27,9 +27,11 @@ class Soda:
 func _ready() -> void:
 	soda_one = Soda.new()
 	soda_one.node = $sodaCup1
+	soda_one.node.visible = false
 	soda_one.fill_timer_node = $sodaCup1/fillTimer
 	soda_one.overflow_timer_node = $sodaCup1/overflowTimer
 	soda_one.loading_bar = $sodaCup1/loadingBar
+	soda_one.loading_bar.visible = false
 	soda_one.loading_bar_filling_front = $sodaCup1/loadingBar/loadingBarFilling
 	soda_one.loading_bar_filling_front_offset = soda_one.loading_bar_filling_front.position.x
 	soda_one.loading_bar_overfill_front = $sodaCup1/loadingBar/loadingBarOverflow
@@ -38,9 +40,11 @@ func _ready() -> void:
 
 	soda_two = Soda.new()
 	soda_two.node = $sodaCup2
+	soda_two.node.visible = false
 	soda_two.fill_timer_node = $sodaCup2/fillTimer
 	soda_two.overflow_timer_node = $sodaCup2/overflowTimer
 	soda_two.loading_bar = $sodaCup2/loadingBar
+	soda_two.loading_bar.visible = false
 	soda_two.loading_bar_filling_front = $sodaCup2/loadingBar/loadingBarFilling
 	soda_two.loading_bar_filling_front_offset = soda_two.loading_bar_filling_front.position.x
 	soda_two.loading_bar_overfill_front = $sodaCup2/loadingBar/loadingBarOverflow
@@ -87,30 +91,32 @@ func _physics_process(_delta: float) -> void:
 		soda_two.loading_bar_overfill_front.position = Vector3((1-time_fraction) * soda_two.loading_bar_overfill_front_offset, 0, 0)
 
 func create_soda() -> void:
-	if (soda_one.node.is_visible_in_tree()):
-		if (soda_two.node.is_visible_in_tree()):
-			pass
-		elif (!soda_two.node.is_visible_in_tree()):
-			soda_two.node.visible = true
-			soda_two.loading_bar.visible = true
-
-			soda_two.fill_timer_node.wait_time = fill_time
-			soda_one.overflow_timer_node.wait_time = overflow_time
-			soda_two.fill_timer_node.start()
-
-			soda_two.filling = true
-			soda_two.audio.play()
-
-	elif (!soda_one.node.is_visible_in_tree()):
+	# Check if soda_one is not visible
+	if (!soda_one.node.is_visible_in_tree()):
+		print("Activating soda_one")
+		# Activate soda_one
 		soda_one.node.visible = true
 		soda_one.loading_bar.visible = true
 
 		soda_one.fill_timer_node.wait_time = fill_time
-		soda_two.overflow_timer_node.wait_time = overflow_time
+		soda_one.overflow_timer_node.wait_time = overflow_time
 		soda_one.fill_timer_node.start()
-		
+
 		soda_one.filling = true
 		soda_one.audio.play()
+
+	# If soda_one is visible and active, then activate soda_two
+	elif (soda_one.node.is_visible_in_tree() and !soda_two.node.is_visible_in_tree()):
+		print("Activating soda_two")
+		soda_two.node.visible = true
+		soda_two.loading_bar.visible = true
+
+		soda_two.fill_timer_node.wait_time = fill_time
+		soda_two.overflow_timer_node.wait_time = overflow_time
+		soda_two.fill_timer_node.start()
+
+		soda_two.filling = true
+		soda_two.audio.play()
 
 func _soda_timeout(extra_arg_0: String) -> void:
 	if (extra_arg_0 == "soda_one"):
@@ -125,10 +131,25 @@ func _soda_timeout(extra_arg_0: String) -> void:
 
 func pick_up_soda() -> void:
 	var cup_picked_up = oldest_cup()
-	if (cup_picked_up != null):
-		cup_picked_up.visible = false
 
-func oldest_cup() -> Node3D:
+	if cup_picked_up == null:
+		return
+
+	# Check if the selected cup is still filling
+	if cup_picked_up == soda_one and soda_one.filling:
+		print("Cannot pick up soda_one; it's still filling.")
+		return
+	elif cup_picked_up == soda_two and soda_two.filling:
+		print("Cannot pick up soda_two; it's still filling.")
+		return
+	
+	# Proceed to pick up the cup
+	cup_picked_up.node.visible = false
+	cup_picked_up.fill_timer_node.stop()
+	cup_picked_up.overflow_timer_node.stop()
+	print("Picked up:", cup_picked_up.node.name)
+
+func oldest_cup() -> Soda:
 	var oldest_soda_cup = null
 	var cup_one_time = null
 	var cup_two_time = null
@@ -147,18 +168,18 @@ func oldest_cup() -> Node3D:
 	if cup_one_time ==  null:
 		if cup_two_time == null:
 			return null
-		oldest_soda_cup = soda_two.node
+		oldest_soda_cup = soda_two
 		return oldest_soda_cup
 	elif cup_two_time == null:
 		if cup_one_time == null:
 			return
-		oldest_soda_cup = soda_one.node
+		oldest_soda_cup = soda_one
 		return oldest_soda_cup
 
 	if cup_one_time < cup_two_time:
-		oldest_soda_cup = soda_one.node
+		oldest_soda_cup = soda_one
 	if cup_two_time < cup_one_time:
-		oldest_soda_cup = soda_two.node
+		oldest_soda_cup = soda_two
 	
 	return oldest_soda_cup
 
