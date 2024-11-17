@@ -14,6 +14,7 @@ extends Node3D
 @export var easyOrderWaitingTime = 15.0
 @export var hardOrderWaitingTime = 10.0
 @export var timeBeforeHardDifficulty = 60.0
+@export var max_orders = 3
 
 const GRACE_PEROID = 5 #The time before an order first shows up
 
@@ -76,7 +77,7 @@ func _on_difficulty_timer_timeout() -> void:
 
 #The player grabs the order if available, start the grace timer and increase order number
 func take_order():
-	if order:
+	if order and game_manager.order < max_orders:
 		hide_loading_bar()
 		game_manager.increaseOrder() #increases the order count in the order variable in main
 		start_grace_timer()

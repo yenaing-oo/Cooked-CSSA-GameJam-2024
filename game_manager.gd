@@ -3,9 +3,7 @@ extends Node
 @onready var scorelabel: Label3D = $scorelabel
 @onready var orderlabel: Label3D = $orderlabel
 
-
 var score = 0
-
 var order = 0
 
 func add_point():
