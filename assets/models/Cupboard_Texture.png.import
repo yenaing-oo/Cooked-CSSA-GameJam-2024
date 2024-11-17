@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtl2gtcpmqvvr"
 path.s3tc="res://.godot/imported/Cupboard_Texture.png-0858d3f947de59bd9a7f83791301ce71.s3tc.ctex"
+path.etc2="res://.godot/imported/Cupboard_Texture.png-0858d3f947de59bd9a7f83791301ce71.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/Cupboard_Texture.png"
-dest_files=["res://.godot/imported/Cupboard_Texture.png-0858d3f947de59bd9a7f83791301ce71.s3tc.ctex"]
+dest_files=["res://.godot/imported/Cupboard_Texture.png-0858d3f947de59bd9a7f83791301ce71.s3tc.ctex", "res://.godot/imported/Cupboard_Texture.png-0858d3f947de59bd9a7f83791301ce71.etc2.ctex"]
 
 [params]
 
