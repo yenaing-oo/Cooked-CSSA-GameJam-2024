@@ -22,6 +22,8 @@ func _ready() -> void:
 		restart_button.connect("pressed", self.restart_game)
 	if continueButton:
 		continueButton.connect("pressed", continueGame)
+		
+	Engine.time_scale = 5
 
 func continueGame():
 	paused = false
