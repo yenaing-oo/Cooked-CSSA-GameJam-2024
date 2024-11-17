@@ -637,4 +637,5 @@ offset_right = -576.0
 offset_bottom = -324.0
 
 [node name="newPause" parent="." instance=ExtResource("22_olink")]
+visible = false
 scale = Vector2(4, 4)
