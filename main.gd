@@ -12,6 +12,7 @@ var flashing = false # Indicates if the stars are currently flashing
 @onready var howToPlayScene = $howToPlay
 @onready var howToPlaySceneReturn = $howToPlay/Button
 @onready var paused = false
+@onready var masterAudio = AudioServer.get_bus_index("Master")
 
 @onready var timescaleValue = 1
 
@@ -61,6 +62,7 @@ func checkPauseState():
 func lose_rating():
 	rating -= 1
 	if rating <= 0:
+		AudioServer.set_bus_mute(masterAudio, true)
 		$GameOver.visible = true
 	stars[rating].visible = false
 	
@@ -92,9 +94,9 @@ func quit_game():
 	get_tree().quit()
 
 func restart_game():
+	AudioServer.set_bus_mute(masterAudio, false)
 	# Reload the current scene
 	var current_scene = get_tree().current_scene
 	if current_scene:
 		$GameOver.visible = false
 		get_tree().reload_current_scene()
-		
