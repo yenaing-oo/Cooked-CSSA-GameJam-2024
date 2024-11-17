@@ -56,7 +56,6 @@ func _physics_process(_delta: float) -> void:
 		var time_elapsed = fill_time - soda_one.fill_timer_node.time_left
 		var time_fraction = time_elapsed / fill_time
 
-		print(time_fraction)
 		soda_one.loading_bar_filling_front.scale = Vector3(time_fraction, 1, 1)
 		soda_one.loading_bar_filling_front.position = Vector3((1-time_fraction) * soda_one.loading_bar_filling_front_offset, 0, 0)
 
