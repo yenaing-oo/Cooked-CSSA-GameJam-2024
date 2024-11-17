@@ -3,17 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k244n7epwn4t"
-path.s3tc="res://.godot/imported/left_arrow.png-f8e6a7d4ef0ba19624f9c9a468b05260.s3tc.ctex"
-path.etc2="res://.godot/imported/left_arrow.png-f8e6a7d4ef0ba19624f9c9a468b05260.etc2.ctex"
+path="res://.godot/imported/left_arrow_outline.png-1a0f5ce8538a62c13f05ebcbc0746002.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/left_arrow.png"
-dest_files=["res://.godot/imported/left_arrow.png-f8e6a7d4ef0ba19624f9c9a468b05260.s3tc.ctex", "res://.godot/imported/left_arrow.png-f8e6a7d4ef0ba19624f9c9a468b05260.etc2.ctex"]
+source_file="res://assets/textures/left_arrow_outline.png"
+dest_files=["res://.godot/imported/left_arrow_outline.png-1a0f5ce8538a62c13f05ebcbc0746002.ctex"]
 
 [params]
 
