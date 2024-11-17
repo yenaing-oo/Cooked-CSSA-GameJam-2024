@@ -1,9 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://c04xpg6q5tfim"]
+[gd_scene load_steps=21 format=3 uid="uid://c04xpg6q5tfim"]
 
+[ext_resource type="Script" path="res://main.gd" id="1_i66vg"]
 [ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
 [ext_resource type="ArrayMesh" uid="uid://8piu0esrgi53" path="res://wall.obj" id="2_cb21w"]
 [ext_resource type="ArrayMesh" uid="uid://c3ind6wwx42xs" path="res://wall_half.obj" id="3_2rqgw"]
 [ext_resource type="AudioStream" uid="uid://crt86wtwyuw5x" path="res://cookedmusic.mp3" id="4_ibftd"]
+[ext_resource type="Texture2D" uid="uid://b7h54iekwq11r" path="res://assets/textures/Star.png" id="6_uatpx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cajwv"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -61,6 +63,7 @@ data = PackedVector3Array(-1.9, 4, -0.25, 1.9, 4, -0.25, -1.9, 4, 0.25, -1.9, 4,
 
 [node name="mainScene" type="Node3D"]
 transform = Transform3D(2.13394, 0, 0, 0, 2.13394, 0, 0, 0, 2.13394, 0, 0, 0)
+script = ExtResource("1_i66vg")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_5wdju")
@@ -177,3 +180,25 @@ fov = 40.0
 [node name="bgm" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_ibftd")
 autoplay = true
+
+[node name="Stars" type="Node3D" parent="."]
+transform = Transform3D(0.225, 0, 0, 0, 0.16589, -0.152005, 0, 0.152005, 0.16589, 17.4619, 8.27, 5.57857)
+
+[node name="1" type="Sprite3D" parent="Stars"]
+texture = ExtResource("6_uatpx")
+
+[node name="2" type="Sprite3D" parent="Stars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+texture = ExtResource("6_uatpx")
+
+[node name="3" type="Sprite3D" parent="Stars"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.98023e-08, 0, -2.98023e-08, 1, -20, 0, 0)
+texture = ExtResource("6_uatpx")
+
+[node name="4" type="Sprite3D" parent="Stars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 0)
+texture = ExtResource("6_uatpx")
+
+[node name="5" type="Sprite3D" parent="Stars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 0)
+texture = ExtResource("6_uatpx")
