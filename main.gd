@@ -13,6 +13,8 @@ var flashing = false # Indicates if the stars are currently flashing
 @onready var howToPlaySceneReturn = $howToPlay/Button
 @onready var paused = false
 
+@onready var timescaleValue = 1
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#pass # Replace with function body.
@@ -28,7 +30,6 @@ func _ready() -> void:
 		howToButton.connect("pressed", showHowToPlay)
 	if howToPlaySceneReturn:
 		howToPlaySceneReturn.connect("pressed", showPause)
-		pass
 
 func showHowToPlay():
 	pauseScene.visible = false
@@ -40,17 +41,22 @@ func showPause():
 
 func continueGame():
 	paused = false
+	checkPauseState()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
-		pauseScene.visible = true
-		paused = true
+		if !howToPlayScene.is_visible_in_tree():
+			pauseScene.visible = true
+			paused = true
+			checkPauseState()
+
+func checkPauseState():
 	if paused:
 		Engine.time_scale = 0
 	elif !paused:
 		pauseScene.visible = false
-		Engine.time_scale = 1
+		Engine.time_scale = timescaleValue
 
 func lose_rating():
 	rating -= 1
