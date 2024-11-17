@@ -2,6 +2,7 @@ extends Node3D
 
 @onready var game_manager: Node = %GameManager
 
+
 const DIRECTIONS = ["up", "down", "left", "right"]
 const ARROW_SCALE = Vector3(0.07, 0.07, 0.07)
 const ARROW_ANCHOR = Vector3(0, 1.3, 0)
@@ -16,10 +17,10 @@ var drawn_arrows = [] 	#The Sprite3D arrows that are currently drawn, keep track
 
 #A dictionary of the texture for each direction
 var arrow_textures = {
-	"up": preload("res://assets/textures/up_arrow.png"),
-	"down": preload("res://assets/textures/down_arrow.png"),
-	"left": preload("res://assets/textures/left_arrow.png"),
-	"right": preload("res://assets/textures/right_arrow.png"),
+	"up": preload("res://assets/textures/up_arrow_outline.png"),
+	"down": preload("res://assets/textures/down_arrow_outline.png"),
+	"left": preload("res://assets/textures/left_arrow_outline.png"),
+	"right": preload("res://assets/textures/right_arrow_outline.png"),
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -114,10 +115,9 @@ func check_input(input: String):
 		draw_arrows(sequence)
 	
 func use_station() -> void:
-	# This is where you handle the logic when the player interacts with the assembly station.
-	# For example, start a minigame:
-	print("Player is using the assembly station")
-	start_minigame()  # Start the minigame or other logic
+	if game_manager.order > 0:
+		print("Player is using the assembly station")
+		start_minigame()  # Start the minigame or other logic
 
 func increase_difficulty():
 	sequence_length += 1

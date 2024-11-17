@@ -81,7 +81,7 @@ texture = SubResource("GradientTexture2D_sk4pd")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="sodaCup1"]
 stream = ExtResource("4_c46mu")
-volume_db = -10.0
+volume_db = -18.0
 
 [node name="sodaCup2" parent="." instance=ExtResource("3_e6nhw")]
 transform = Transform3D(0.013, 0, 0, 0, 0.013, 0, 0, 0, 0.013, -0.27107, -0.279006, 0.163954)
