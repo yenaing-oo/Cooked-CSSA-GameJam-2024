@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 	check_interaction()
 
 func check_interaction() -> void:
-	if Input.is_action_pressed("interact"):
+	if Input.is_action_just_pressed("interact"):
 		if assembly_station and global_transform.origin.distance_to(assembly_station.global_transform.origin) <= INTERACTION_DISTANCE:
 			print("Use assembly station")
 			assembly_station.start_minigame()
