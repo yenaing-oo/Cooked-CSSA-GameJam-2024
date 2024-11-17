@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2bf7gptf2nbg"]
+[gd_scene load_steps=7 format=3 uid="uid://c2bf7gptf2nbg"]
 
 [ext_resource type="ArrayMesh" uid="uid://da53wswqtm50o" path="res://assets/models/window.obj" id="1_7tafq"]
 [ext_resource type="Script" path="res://order_window.gd" id="1_xrn8n"]
+[ext_resource type="PackedScene" uid="uid://odbjp2aqwxn5" path="res://assets/models/OrderWindow.glb" id="2_jef6m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ktab2"]
 size = Vector3(0.439087, 1.98834, 2.00159)
@@ -21,6 +22,7 @@ autostart = true
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Window"]
+visible = false
 mesh = ExtResource("1_7tafq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Window"]
@@ -29,25 +31,31 @@ shape = SubResource("BoxShape3D_ktab2")
 
 [node name="button" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.63, 0)
+visible = false
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="button"]
 transform = Transform3D(0.2, 0, 0, 0, 0.06, 0, 0, 0, 0.2, 0, 0, 0)
+visible = false
 mesh = SubResource("CylinderMesh_118w3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="button"]
 transform = Transform3D(0.2, 0, 0, 0, 0.06, 0, 0, 0, 0.2, 0, 0, 0)
+visible = false
 shape = SubResource("CylinderShape3D_apg3s")
 
 [node name="timer" type="Label3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.100913, 0.97863, 0)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.209107, 0.97863, 0)
 double_sided = false
 text = "timer"
 
 [node name="instruction" type="Label3D" parent="timer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20921e-08, 0.406995, -0.276635)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.407, 0)
 no_depth_test = true
 text = "press \"E\" to take 
 the order"
+
+[node name="OrderWindow" parent="." instance=ExtResource("2_jef6m")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 0, 0, 0)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
