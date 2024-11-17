@@ -579,5 +579,5 @@ texture = ExtResource("17_lkctv")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_d84a0")
-volume_db = -10.0
+volume_db = -8.0
 autoplay = true
