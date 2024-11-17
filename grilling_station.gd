@@ -12,6 +12,8 @@ var loading_bar
 var loading_bar_front
 var loading_bar_front_offset
 
+@onready var player = get_parent().get_node("player")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	loading_bar = $LoadingBar
@@ -27,9 +29,10 @@ func _process(delta: float) -> void:
 		update_burning_timer()
 
 func start_cooking():
-	cooking_start_time = Time.get_unix_time_from_system()
-	cooking = true
-	loading_bar.visible = true
+	if not (cooking or burning):
+		cooking_start_time = Time.get_unix_time_from_system()
+		cooking = true
+		loading_bar.visible = true
 	
 #Moves the loading bar forward to show the cooking progress
 func update_cooking_timer():
@@ -61,10 +64,10 @@ func update_burning_timer():
 func grab_cooked_food() -> bool:
 	var output = false
 	
-	if cooked:
+	if cooked and not player.carrying_burger:
 		reset_loading_bar()
 		output = true
-	return output	
+	return output
 
 func reset_loading_bar():
 	loading_bar.visible = 0
