@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2561xajuh770"]
+[gd_scene load_steps=4 format=3 uid="uid://b2561xajuh770"]
 
+[ext_resource type="Script" path="res://Scenes/how_to_play.gd" id="1_djwv2"]
 [ext_resource type="Texture2D" uid="uid://chvjsprrvr3qb" path="res://assets/Screenshot 2024-11-17 114140.png" id="1_f8cke"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_05s5o"]
 font_size = 176
 
 [node name="How to play" type="Node2D"]
+script = ExtResource("1_djwv2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.422371, 0.422371, 0.422371, 1)
@@ -19,10 +21,11 @@ zoom = Vector2(0.41, 0.41)
 
 [node name="Label" type="Label" parent="."]
 offset_left = -2628.0
-offset_top = -2771.0
-offset_right = 2528.0
-offset_bottom = 2489.0
+offset_top = -2297.0
+offset_right = 2433.0
+offset_bottom = 1899.0
 text = "Controls
+W,A,S,D - Move Character
 Enter(⏎) - Interact with a station
 Shift(⇧) - Pickup prepared item
 Escape - Pause
@@ -40,3 +43,18 @@ rating goes down"
 label_settings = SubResource("LabelSettings_05s5o")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -456.0
+offset_top = 1809.0
+offset_right = -328.0
+offset_bottom = 1868.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5.665, 5.665)
+text = "Return"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
