@@ -14,7 +14,7 @@ var flashing = false # Indicates if the stars are currently flashing
 @onready var paused = false
 @onready var masterAudio = AudioServer.get_bus_index("Master")
 
-@onready var timescaleValue = 10
+@onready var timescaleValue = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
