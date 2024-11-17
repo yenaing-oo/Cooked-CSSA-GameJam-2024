@@ -40,7 +40,7 @@ transform = Transform3D(0.2, 0, 0, 0, 0.06, 0, 0, 0, 0.2, 0, 0, 0)
 shape = SubResource("CylinderShape3D_apg3s")
 
 [node name="timer" type="Label3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.100913, 1.17863, 0)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.100913, 0.97863, 0)
 double_sided = false
 text = "timer"
 
