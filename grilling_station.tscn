@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://1yc1amupu3fg"]
+[gd_scene load_steps=11 format=3 uid="uid://chg8jnexjnrdm"]
 
 [ext_resource type="Script" path="res://grilling_station.gd" id="1_msga3"]
 [ext_resource type="PackedScene" uid="uid://3pbnq7adse1r" path="res://assets/models/StovetopOven.glb" id="2_yvyjs"]
@@ -18,9 +18,14 @@ width = 100
 height = 20
 
 [sub_resource type="Gradient" id="Gradient_gxtw6"]
-colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_670po"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_r1e47"]
+gradient = SubResource("Gradient_gxtw6")
+width = 100
+height = 20
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dta23"]
 gradient = SubResource("Gradient_gxtw6")
 width = 100
 height = 20
@@ -45,10 +50,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.53268, 0)
 visible = false
 texture = SubResource("GradientTexture2D_thl2v")
 
-[node name="LoadingBarFront" type="Sprite3D" parent="LoadingBar"]
+[node name="LoadingBarCooking" type="Sprite3D" parent="LoadingBar"]
 transform = Transform3D(0.001, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+visible = false
 sorting_offset = 1.0
-texture = SubResource("GradientTexture2D_670po")
+render_priority = 1
+texture = SubResource("GradientTexture2D_r1e47")
+
+[node name="LoadingBarBurnt" type="Sprite3D" parent="LoadingBar"]
+transform = Transform3D(0.001, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+visible = false
+sorting_offset = 1.0
+modulate = Color(1, 0, 0, 1)
+render_priority = 1
+texture = SubResource("GradientTexture2D_dta23")
 
 [node name="StovetopOven" parent="." instance=ExtResource("2_yvyjs")]
 transform = Transform3D(0.0758921, 0, 0, 0, 0.0605597, 0, 0, 0, 0.0758921, 0, 0.552112, 0)
