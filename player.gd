@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
+@export var SPEED = 10.0
 const GRAVITY = -9.8  # Gravity force (default Earth gravity)
-const INTERACTION_DISTANCE = 2.0  # Distance threshold for interaction
+const INTERACTION_DISTANCE = 8.0  # Distance threshold for interaction
 
 @onready var assembly_station = get_parent().get_node("AssemblyStation")  # Reference to AssemblyStation node in the main scene
 
