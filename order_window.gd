@@ -19,7 +19,7 @@ extends Node3D
 @export var easyOrderWaitingTime = 15.0
 @export var hardOrderWaitingTime = 10.0
 @export var timeBeforeHardDifficulty = 120.0
-@export var timeBeforeVeryHardDifficulty = 300 #This amount of seconds AFTER it becomes 'hard'
+@export var timeBeforeVeryHardDifficulty = 150 #This amount of seconds AFTER it becomes 'hard'
 @export var max_orders = 3
 
 const GRACE_PEROID = 5 #The time before an order first shows up
@@ -87,11 +87,11 @@ func _on_difficulty_timer_timeout() -> void:
 		difficultyTimer.wait_time = timeBeforeVeryHardDifficulty
 		difficultyTimer.start()
 		hard = true
-		print("entering hard mode")
+		print("\nentering hard mode\n")
 	else:
 		minGraceTime = veryHardMinGraceTime
 		maxGraceTime = veryHardMaxGraceTime
-		print("entering very hard mode")
+		print("\nentering very hard mode\n")
 
 #The player grabs the order if available, start the grace timer and increase order number
 func take_order():
