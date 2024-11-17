@@ -1,7 +1,9 @@
 extends Node3D
 
 var rating = 5
-var order = 0 #keeps count of the orders
+
+
+
 var stars = []
 var flashing = false # Indicates if the stars are currently flashing
 
@@ -60,15 +62,3 @@ func _flash_stars():
 		flashing = false
 		$Timer.stop()
 		$Timer.queue_free()
-
-
-
-
-func decreaseOrder():
-	if(order>0):
-		order -= 1
-	else: 
-		order = 0	
-
-func increaseOrder(): #used this in the ordeerwindow to take orders
-	order += 1

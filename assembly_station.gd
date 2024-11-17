@@ -99,6 +99,7 @@ func check_input(input: String):
 			clear_arrows()
 			
 			game_manager.add_point()  # adds point for the game
+			game_manager.decreaseOrder()
 			
 			#Add some functionality for the player to interacte with
 			player.reset_inventory()
