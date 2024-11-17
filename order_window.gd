@@ -6,6 +6,7 @@ extends Node3D
 @onready var difficultyTimer: Timer = $DifficultyTimer
 @onready var loadingBar: Sprite3D = $loadingBar
 @onready var loadingBarFilling: Sprite3D = $loadingBar/loadingBarFilling
+@onready var assembly_table: Node3D = %AssemblyStation
 
 @export var easyMinGraceTime = 7.0
 @export var easyMaxGraceTime = 30.0
@@ -75,6 +76,7 @@ func _on_order_timer_timeout() -> void:
 #turn up the difficulty a bit if they go for over a minute
 func _on_difficulty_timer_timeout() -> void:
 	difficultyTimer.stop()
+	assembly_table.increase_difficulty()
 	if not hard:
 		minGraceTime = hardMinGraceTime
 		maxGraceTime = hardMaxGraceTime

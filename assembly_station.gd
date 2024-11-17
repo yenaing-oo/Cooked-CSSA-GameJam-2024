@@ -3,9 +3,10 @@ extends Node3D
 @onready var game_manager: Node = %GameManager
 
 const DIRECTIONS = ["up", "down", "left", "right"]
-const ARROW_SCALE = Vector3(0.1, 0.1, 0.1)
+const ARROW_SCALE = Vector3(0.07, 0.07, 0.07)
 const ARROW_ANCHOR = Vector3(0, 1.3, 0)
 @onready var player = get_parent().get_node("player")
+@onready var arrow_anchor = $ArrowAnchor
 
 var sequence_length = 6
 var inMinigame = false
@@ -47,11 +48,11 @@ func draw_arrows(sequence: Array):
 		var arrow = Sprite3D.new()
 		arrow.texture = arrow_textures.get(sequence[i])
 		
-		var xPos = ARROW_ANCHOR.x - sequence.size()/2.0 + i + 0.5
-		arrow.position = ARROW_ANCHOR + Vector3(xPos * 1.1, 0, 0)
+		var xPos = arrow_anchor.position.x - sequence.size()/2.0 + i + 0.5
+		arrow.position = Vector3(xPos * 0.8, 0, 0)
 		arrow.scale = ARROW_SCALE
 		arrow.render_priority = 2
-		add_child(arrow)
+		arrow_anchor.add_child(arrow)
 		drawn_arrows.append(arrow)
 		
 func clear_arrows():

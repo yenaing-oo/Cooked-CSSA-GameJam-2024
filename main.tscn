@@ -543,6 +543,7 @@ fov = 40.0
 transform = Transform3D(-3, 0, -4.52987e-07, 0, 3, 0, 4.52987e-07, 0, -3, -11, 3.139, 7.35873)
 
 [node name="AssemblyStation" parent="." instance=ExtResource("5_ryx4q")]
+unique_name_in_owner = true
 transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 5.96677, 1, 11.528)
 
 [node name="player" parent="." instance=ExtResource("4_pupp2")]
