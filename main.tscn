@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://du4xonpubccn7" path="res://assets/models/Cupboard.glb" id="5_tfiwq"]
 [ext_resource type="PackedScene" uid="uid://c15m3th3sl20i" path="res://assets/models/Sink.glb" id="6_wrqhi"]
 [ext_resource type="PackedScene" uid="uid://cftklxsi4md20" path="res://assets/models/HighCabinet1.glb" id="7_g5wvr"]
-[ext_resource type="PackedScene" uid="uid://1yc1amupu3fg" path="res://grilling_station.tscn" id="7_t6tr2"]
+[ext_resource type="PackedScene" uid="uid://chg8jnexjnrdm" path="res://grilling_station.tscn" id="7_t6tr2"]
 [ext_resource type="PackedScene" uid="uid://c2bf7gptf2nbg" path="res://Order-Window.tscn" id="8_7h5am"]
 [ext_resource type="PackedScene" uid="uid://bebt4gwnj7rdn" path="res://assets/models/HighCabinet2.glb" id="8_412p7"]
 [ext_resource type="Texture2D" uid="uid://b7h54iekwq11r" path="res://assets/textures/Star.png" id="17_lkctv"]
