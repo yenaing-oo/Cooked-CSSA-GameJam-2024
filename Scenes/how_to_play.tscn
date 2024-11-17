@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2561xajuh770"]
+
+[ext_resource type="Texture2D" uid="uid://chvjsprrvr3qb" path="res://assets/Screenshot 2024-11-17 114140.png" id="1_f8cke"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_05s5o"]
+font_size = 176
+
+[node name="How to play" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.422371, 0.422371, 0.422371, 1)
+self_modulate = Color(0.359069, 0.359069, 0.359069, 1)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_f8cke")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(2, 2)
+zoom = Vector2(0.41, 0.41)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -2628.0
+offset_top = -2771.0
+offset_right = 2528.0
+offset_bottom = 2489.0
+text = "Controls
+Enter(⏎) - Interact with a station
+Shift(⇧) - Pickup prepared item
+Escape - Pause
+Arrow Keys (↑ ↓ ← →)- Assembly Table minigame
+
+Guide
+Accept an order by interacting with the
+Ordering Window when an order is available.
+
+Fulfill an order by interacting with Assembly
+Table while holding a burger and drink.
+
+If you don't pick up an order in time, your
+rating goes down"
+label_settings = SubResource("LabelSettings_05s5o")
+horizontal_alignment = 1
+vertical_alignment = 1
