@@ -626,6 +626,7 @@ volume_db = -8.0
 autoplay = true
 
 [node name="How to play" parent="." instance=ExtResource("20_57yxg")]
+visible = false
 
 [node name="GameOver" parent="." instance=ExtResource("20_kawj3")]
 unique_name_in_owner = true
