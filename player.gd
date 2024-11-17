@@ -15,8 +15,18 @@ var carrying_drink = false
 
 
 func _physics_process(delta: float) -> void:
-	# Get the input direction from the player.
-	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var input_dir := Vector2.ZERO
+
+	# Check if movement actions are being pressed
+	if Input.is_action_pressed("move_left"):
+		input_dir.x -= 1
+	if Input.is_action_pressed("move_right"):
+		input_dir.x += 1
+	if Input.is_action_pressed("move_up"):
+		input_dir.y -= 1
+	if Input.is_action_pressed("move_down"):
+		input_dir.y += 1
+	input_dir = input_dir.normalized()
 	
 	# Get the camera's forward and right directions, ignoring vertical orientation.
 	var camera_transform := get_viewport().get_camera_3d().global_transform.basis
