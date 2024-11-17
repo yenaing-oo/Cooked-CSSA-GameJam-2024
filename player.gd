@@ -1,10 +1,15 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
+@export var SPEED = 10.0
 const GRAVITY = -9.8  # Gravity force (default Earth gravity)
-const INTERACTION_DISTANCE = 2.0  # Distance threshold for interaction
+const INTERACTION_DISTANCE = 8.0  # Distance threshold for interaction
 
 @onready var assembly_station = get_parent().get_node("AssemblyStation")  # Reference to AssemblyStation node in the main scene
+@onready var grilling_station = get_parent().get_node("GrillingStation")
+@onready var drink_station = get_parent().get_node("DrinkStation")
+@onready var order_window = get_parent().get_node("OrderWindow")
+
+
 
 func _physics_process(delta: float) -> void:
 	# Get the input direction from the player.
@@ -40,7 +45,25 @@ func _physics_process(delta: float) -> void:
 	check_interaction()
 
 func check_interaction() -> void:
-	if assembly_station and global_transform.origin.distance_to(assembly_station.global_transform.origin) <= INTERACTION_DISTANCE:
-		if Input.is_action_pressed("use"):
-			print("Use station")
-			assembly_station.start_minigame()  # Or any method to start the interaction in AssemblyStation
+	if Input.is_action_pressed("interact"):
+		if assembly_station and global_transform.origin.distance_to(assembly_station.global_transform.origin) <= INTERACTION_DISTANCE:
+			print("Use assembly station")
+			assembly_station.start_minigame()
+		elif drink_station and global_transform.origin.distance_to(drink_station.global_transform.origin) <= INTERACTION_DISTANCE:
+			print("Drinks being created...")
+			drink_station.create_soda()
+		elif grilling_station and global_transform.origin.distance_to(grilling_station.global_transform.origin) <= INTERACTION_DISTANCE:
+			print("Begin cooking...")
+			grilling_station.start_cooking()
+		elif order_window and global_transform.origin.distance_to(order_window.global_transform.origin) <= INTERACTION_DISTANCE:
+			print("Took order.")
+			order_window.take_order()
+	elif Input.is_action_just_pressed("pick_up"):
+		if drink_station and global_transform.origin.distance_to(drink_station.global_transform.origin) <= INTERACTION_DISTANCE:
+			print("Drink picked up")
+			drink_station.pick_up_soda()
+		elif grilling_station and global_transform.origin.distance_to(grilling_station.global_transform.origin) <= INTERACTION_DISTANCE:
+			print("Food picked up")
+			grilling_station.grab_cooked_food()
+
+		
