@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://c04xpg6q5tfim"]
+[gd_scene load_steps=49 format=3 uid="uid://c04xpg6q5tfim"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i66vg"]
 [ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://c2bf7gptf2nbg" path="res://Order-Window.tscn" id="8_7h5am"]
 [ext_resource type="PackedScene" uid="uid://bebt4gwnj7rdn" path="res://assets/models/HighCabinet2.glb" id="8_412p7"]
 [ext_resource type="Texture2D" uid="uid://b7h54iekwq11r" path="res://assets/textures/Star.png" id="17_lkctv"]
+[ext_resource type="AudioStream" uid="uid://crt86wtwyuw5x" path="res://cookedmusic.mp3" id="18_d84a0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cajwv"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -492,7 +493,7 @@ transform = Transform3D(-8.74228e-07, 0, 20, 0, 20, 0, -20, 0, -8.74228e-07, 6.9
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -11.6878, 0.71, -7.15625)
 
 [node name="OrderWindow" parent="." instance=ExtResource("8_7h5am")]
-transform = Transform3D(0.00305158, 0.0054984, -2.99999, 0.000343578, 2.99999, 0.0054992, 2, -0.000523757, 0.00457642, 0, 0, 12.562)
+transform = Transform3D(0.00305158, 0.0054984, -2.99999, 0.000343578, 2.99999, 0.0054992, 2, -0.000523757, 0.00457642, 0, 0, 13)
 
 [node name="Stars" type="Node3D" parent="."]
 transform = Transform3D(0.135, 0, 0, 0, 0.105298, -0.0844831, 0, 0.0844831, 0.105298, 18.8948, 8.33725, 5.58695)
@@ -515,3 +516,8 @@ texture = ExtResource("17_lkctv")
 [node name="5" type="Sprite3D" parent="Stars"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 0)
 texture = ExtResource("17_lkctv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_d84a0")
+volume_db = -18.0
+autoplay = true
