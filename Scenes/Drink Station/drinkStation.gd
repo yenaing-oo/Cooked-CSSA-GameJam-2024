@@ -8,10 +8,6 @@ extends Node3D
 
 @onready var player = get_parent().get_node("player")
 
-# Scotts variables
-var loading_bar_filling_front
-var loading_bar_filling_front_offset
-
 class Soda:
 	var node
 	var fill_timer_node
@@ -60,8 +56,10 @@ func _physics_process(_delta: float) -> void:
 		var time_elapsed = fill_time - soda_one.fill_timer_node.time_left
 		var time_fraction = time_elapsed / fill_time
 
+		print(time_fraction)
 		soda_one.loading_bar_filling_front.scale = Vector3(time_fraction, 1, 1)
 		soda_one.loading_bar_filling_front.position = Vector3((1-time_fraction) * soda_one.loading_bar_filling_front_offset, 0, 0)
+
 	elif (soda_one.overflow):
 		soda_one.loading_bar_filling_front.visible = false
 		soda_one.loading_bar_overfill_front.visible = true
