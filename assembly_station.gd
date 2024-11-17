@@ -2,6 +2,7 @@ extends Node3D
 
 @onready var game_manager: Node = %GameManager
 
+
 const DIRECTIONS = ["up", "down", "left", "right"]
 const ARROW_SCALE = Vector3(0.07, 0.07, 0.07)
 const ARROW_ANCHOR = Vector3(0, 1.3, 0)
