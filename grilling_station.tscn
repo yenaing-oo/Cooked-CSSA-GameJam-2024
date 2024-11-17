@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dlf1ycdciq1tb"]
+[gd_scene load_steps=10 format=3 uid="uid://1yc1amupu3fg"]
 
 [ext_resource type="Script" path="res://grilling_station.gd" id="1_msga3"]
 [ext_resource type="PackedScene" uid="uid://3pbnq7adse1r" path="res://assets/models/StovetopOven.glb" id="2_yvyjs"]
@@ -56,9 +56,3 @@ transform = Transform3D(0.0758921, 0, 0, 0, 0.0605597, 0, 0, 0, 0.0758921, 0, 0.
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_vdde7")
 autoplay = true
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.948777, 0.315947, 0, -0.315947, 0.948777, 0.0121503, 2.28876, 2.91884)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.836269, 5.19888)
