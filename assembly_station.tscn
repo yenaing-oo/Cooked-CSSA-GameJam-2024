@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://10cthbxiv8n1"]
+[gd_scene load_steps=5 format=3 uid="uid://88sdvjr4vjyk"]
 
 [ext_resource type="Script" path="res://assembly_station.gd" id="1_1ik1v"]
 [ext_resource type="PackedScene" uid="uid://ckeuqjnam448j" path="res://assets/models/KitchenTable.glb" id="2_5nni0"]
