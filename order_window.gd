@@ -20,7 +20,6 @@ func _ready() -> void:
 
 func _on_timer_timeout() -> void:
 	time = time -1
-	print(main_scene.order)
 	if(time == 0):	
 		#rating = rating -1
 		#print(rating)	
@@ -31,4 +30,4 @@ func _on_timer_timeout() -> void:
 	
 func take_order():
 		time = ORDER_WINDOW_TIME
-		main_scene.increaseOrder()
+		main_scene.increaseOrder() #increases the order count in the order variable in main

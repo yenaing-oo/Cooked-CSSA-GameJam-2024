@@ -29,5 +29,5 @@ func decreaseOrder():
 	else: 
 		order = 0	
 
-func increaseOrder():
+func increaseOrder(): #used this in the ordeerwindow to take orders
 	order += 1
