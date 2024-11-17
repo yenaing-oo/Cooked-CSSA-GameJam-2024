@@ -70,6 +70,7 @@ text = "Order Available!"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.617826, 0)
 stream = ExtResource("4_42mml")
+volume_db = 20.0
 
 [connection signal="timeout" from="OrderTimer" to="." method="_on_order_timer_timeout"]
 [connection signal="timeout" from="GraceTimer" to="." method="_on_grace_timer_timeout"]
