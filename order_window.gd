@@ -6,14 +6,19 @@ extends Node3D
 @onready var difficultyTimer: Timer = $DifficultyTimer
 @onready var loadingBar: Sprite3D = $loadingBar
 @onready var loadingBarFilling: Sprite3D = $loadingBar/loadingBarFilling
+@onready var assembly_table: Node3D = %AssemblyStation
 
 @export var easyMinGraceTime = 7.0
 @export var easyMaxGraceTime = 30.0
 @export var hardMinGraceTime = 1.0
 @export var hardMaxGraceTime = 15.0
+@export var veryHardMinGraceTime = 1.0
+@export var veryHardMaxGraceTime = 13.0
 @export var easyOrderWaitingTime = 15.0
 @export var hardOrderWaitingTime = 10.0
-@export var timeBeforeHardDifficulty = 60.0
+@export var timeBeforeHardDifficulty = 120.0
+@export var timeBeforeVeryHardDifficulty = 300 #This amount of seconds AFTER it becomes 'hard'
+@export var max_orders = 3
 
 const GRACE_PEROID = 5 #The time before an order first shows up
 
@@ -23,6 +28,7 @@ var maxGraceTime = easyMaxGraceTime
 var orderWaitingTime = easyOrderWaitingTime
 var order = false
 var loadingBarFillingOffset
+var hard = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -70,13 +76,23 @@ func _on_order_timer_timeout() -> void:
 #turn up the difficulty a bit if they go for over a minute
 func _on_difficulty_timer_timeout() -> void:
 	difficultyTimer.stop()
-	minGraceTime = hardMinGraceTime
-	maxGraceTime = hardMaxGraceTime
-	orderWaitingTime = hardOrderWaitingTime
+	assembly_table.increase_difficulty()
+	if not hard:
+		minGraceTime = hardMinGraceTime
+		maxGraceTime = hardMaxGraceTime
+		orderWaitingTime = hardOrderWaitingTime
+		difficultyTimer.wait_time = timeBeforeVeryHardDifficulty
+		difficultyTimer.start()
+		hard = true
+		print("entering hard mode")
+	else:
+		minGraceTime = veryHardMinGraceTime
+		maxGraceTime = veryHardMaxGraceTime
+		print("entering very hard mode")
 
 #The player grabs the order if available, start the grace timer and increase order number
 func take_order():
-	if order:
+	if order and game_manager.order < max_orders:
 		hide_loading_bar()
 		game_manager.increaseOrder() #increases the order count in the order variable in main
 		start_grace_timer()
