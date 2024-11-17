@@ -5,7 +5,7 @@ const DIRECTIONS = ["up", "down", "left", "right"]
 const ARROW_SCALE = Vector3(0.1, 0.1, 0.1)
 const ARROW_ANCHOR = Vector3(0, 1.3, 0)
 
-var inMinigame = true
+var inMinigame = false
 var sequence = [] 		#The current sequence of directions for the minigame
 var sequence_number = 0	#The index of the direction the player has to press next
 var drawn_arrows = [] 	#The Sprite3D arrows that are currently drawn, keep track to erase later
