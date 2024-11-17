@@ -6,6 +6,10 @@ var flashing = false # Indicates if the stars are currently flashing
 @onready var quit_button = $GameOver/QuitButton
 @onready var restart_button = $GameOver/"RestartButton"
 
+@onready var pauseScene = $newPause
+@onready var continueButton = $newPause/VBoxContainer/continueButton
+@onready var howToButton = $newPause/VBoxContainer/howToPlayButton
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#pass # Replace with function body.
