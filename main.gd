@@ -15,8 +15,6 @@ func _ready() -> void:
 		quit_button.connect("pressed", self.quit_game)
 	if restart_button:
 		restart_button.connect("pressed", self.restart_game)
-		
-	Engine.time_scale = 5
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
