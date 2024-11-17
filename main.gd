@@ -3,18 +3,24 @@ extends Node3D
 var rating = 5
 var stars = []
 var flashing = false # Indicates if the stars are currently flashing
-@onready var quit_button = $GameOver/QuitButton
-@onready var restart_button = $GameOver/"RestartButton"
+@onready var game_over_quit_button = $GameOver/QuitButton
+@onready var game_over_restart_button = $GameOver/RestartButton
+@onready var game_start_quit_button = $StartMenu/QuitButton
+@onready var game_start_button = $StartMenu/StartButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#pass # Replace with function body.
 	for star in $Stars.get_children():
 		stars.append(star)
-	if quit_button:
-		quit_button.connect("pressed", self.quit_game)
-	if restart_button:
-		restart_button.connect("pressed", self.restart_game)
+	if game_over_quit_button:
+		game_over_quit_button.connect("pressed", self.quit_game)
+	if game_over_restart_button:
+		game_over_restart_button.connect("pressed", self.restart_game)
+	if game_start_quit_button:
+		game_start_quit_button.connect("pressed", self.quit_game)
+	if game_start_button:
+		game_start_button.connect("pressed", self.start_game)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -76,4 +82,8 @@ func restart_game():
 	if current_scene:
 		$GameOver.visible = false
 		get_tree().reload_current_scene()
+		
+func start_game():
+	$StartMenu.visible = false
+	Engine.time_scale = 1
 		

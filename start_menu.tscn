@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjd4v2wckcjmc"]
+
+[ext_resource type="Texture2D" uid="uid://4jr8mb4oljy" path="res://assets/StartScreen.jpg" id="1_srp71"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2.6654, 2.66031)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -757.485
+offset_top = -425.89
+offset_right = -717.485
+offset_bottom = -385.89
+scale = Vector2(38.4071, 22.5663)
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -580.0
+offset_top = -325.0
+offset_right = 1340.0
+offset_bottom = 755.0
+scale = Vector2(0.601052, 0.598873)
+texture = ExtResource("1_srp71")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(0.0967163, 0.421563)
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 303.519
+offset_top = -37.5646
+offset_right = 368.519
+offset_bottom = -6.56464
+scale = Vector2(2.21005, 2.25518)
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 97.1712
+offset_top = -37.5896
+offset_right = 162.171
+offset_bottom = -6.58963
+scale = Vector2(2.21005, 2.25518)
+text = "Quit
+"
