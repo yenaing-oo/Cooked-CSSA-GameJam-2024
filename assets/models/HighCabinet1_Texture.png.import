@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://wujrxdnvay6m"
 path.s3tc="res://.godot/imported/HighCabinet1_Texture.png-209742063697f3c61f4b1cd89adf49cc.s3tc.ctex"
+path.etc2="res://.godot/imported/HighCabinet1_Texture.png-209742063697f3c61f4b1cd89adf49cc.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/HighCabinet1_Texture.png"
-dest_files=["res://.godot/imported/HighCabinet1_Texture.png-209742063697f3c61f4b1cd89adf49cc.s3tc.ctex"]
+dest_files=["res://.godot/imported/HighCabinet1_Texture.png-209742063697f3c61f4b1cd89adf49cc.s3tc.ctex", "res://.godot/imported/HighCabinet1_Texture.png-209742063697f3c61f4b1cd89adf49cc.etc2.ctex"]
 
 [params]
 

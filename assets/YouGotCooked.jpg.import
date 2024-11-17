@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k244n7epwn4t"
-path="res://.godot/imported/left_arrow_outline.png-1a0f5ce8538a62c13f05ebcbc0746002.ctex"
+uid="uid://c53oytlsqlis4"
+path="res://.godot/imported/YouGotCooked.jpg-6c3d44f54e535fa3bc75a194c8cc8e96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/left_arrow_outline.png"
-dest_files=["res://.godot/imported/left_arrow_outline.png-1a0f5ce8538a62c13f05ebcbc0746002.ctex"]
+source_file="res://assets/YouGotCooked.jpg"
+dest_files=["res://.godot/imported/YouGotCooked.jpg-6c3d44f54e535fa3bc75a194c8cc8e96.ctex"]
 
 [params]
 
