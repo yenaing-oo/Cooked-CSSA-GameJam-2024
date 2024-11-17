@@ -2,8 +2,8 @@ extends Node3D
 
 const SEQUENCE_LENGTH = 6
 const DIRECTIONS = ["up", "down", "left", "right"]
-const ARROW_SCALE = Vector3(0.03, 0.03, 0.03)
-const ARROW_ANCHOR = Vector3(0, 0.8, 0)
+const ARROW_SCALE = Vector3(0.1, 0.1, 0.1)
+const ARROW_ANCHOR = Vector3(0, 1.3, 0)
 
 var inMinigame = true
 var sequence = [] 		#The current sequence of directions for the minigame
@@ -45,7 +45,7 @@ func draw_arrows(sequence: Array):
 		arrow.texture = arrow_textures.get(sequence[i])
 		
 		var xPos = ARROW_ANCHOR.x - sequence.size()/2.0 + i + 0.5
-		arrow.position = ARROW_ANCHOR + Vector3(xPos * 0.4, 0, 0)
+		arrow.position = ARROW_ANCHOR + Vector3(xPos * 1, 0, 0)
 		arrow.scale = ARROW_SCALE
 		add_child(arrow)
 		drawn_arrows.append(arrow)
