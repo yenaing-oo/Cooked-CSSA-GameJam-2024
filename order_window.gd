@@ -74,11 +74,12 @@ func _on_difficulty_timer_timeout() -> void:
 	maxGraceTime = hardMaxGraceTime
 	orderWaitingTime = hardOrderWaitingTime
 
-#The player grabs the order that's available, start the grace timer and increase order number
+#The player grabs the order if available, start the grace timer and increase order number
 func take_order():
-	hide_loading_bar()
-	game_manager.increaseOrder() #increases the order count in the order variable in main
-	start_grace_timer()
+	if order:
+		hide_loading_bar()
+		game_manager.increaseOrder() #increases the order count in the order variable in main
+		start_grace_timer()
 
 func hide_loading_bar():
 	order = false
