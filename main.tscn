@@ -128,10 +128,10 @@ unique_name_in_owner = true
 script = ExtResource("2_7rypi")
 
 [node name="scorelabel" type="Label3D" parent="GameManager"]
-transform = Transform3D(-1, 0, -8.74228e-08, -3.18886e-08, 0.9311, 0.364763, 8.13994e-08, 0.364763, -0.9311, -32.0267, 14.9738, 10.1503)
-pixel_size = 0.15
-font_size = 40
-outline_size = 10
+transform = Transform3D(-1, -6.69697e-08, 5.61943e-08, 0, 0.642787, 0.766044, -8.74228e-08, 0.766044, -0.642787, -33.872, 16.974, 10.405)
+pixel_size = 0.25
+alpha_antialiasing_mode = 1
+outline_size = 4
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_5wdju")
@@ -488,7 +488,7 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.468617, -3.13831e-08, 2.63336e-08, 0, 0.301221, 0.358981, -4.09677e-08, 0.358981, -0.301221, 0, 25.935, -21.325)
+transform = Transform3D(-0.468617, -5.42046e-08, 4.54831e-08, 0, 0.301221, 0.358981, -7.07592e-08, 0.358981, -0.301221, 0, 25.935, -21.325)
 fov = 40.0
 
 [node name="DrinkStation" parent="." instance=ExtResource("4_xr7el")]

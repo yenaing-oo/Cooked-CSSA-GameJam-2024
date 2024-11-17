@@ -20,6 +20,10 @@ config/icon="res://cookedlogo.png"
 
 window/size/mode=3
 
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
+
 [input]
 
 interact={
