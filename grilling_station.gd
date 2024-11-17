@@ -18,6 +18,9 @@ var burger_cooked
 
 @onready var player = get_parent().get_node("player")
 
+@onready var audio_stream_player_3d: AudioStreamPlayer = $AudioStreamPlayer3D
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	loading_bar = $LoadingBar
@@ -41,6 +44,7 @@ func start_cooking():
 		cooking = true
 		loading_bar.visible = true
 		burger_raw.visible = true
+		audio_stream_player_3d.play()
 	
 #Moves the loading bar forward to show the cooking progress
 func update_cooking_timer():
@@ -102,3 +106,5 @@ func reset_loading_bar():
 	loading_bar_burnt.visible = false
 	loading_bar_burnt.scale = Vector3(0.001, 1, 1)
 	loading_bar_burnt.position = Vector3(loading_bar_burnt_offset, 0, 0)
+	
+	audio_stream_player_3d.stop()
