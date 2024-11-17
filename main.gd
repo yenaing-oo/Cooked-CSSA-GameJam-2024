@@ -10,9 +10,25 @@ func _ready() -> void:
 		stars.append(star)
 
 
+func setWindowSize() -> void:
+	var windowWidth := 1152
+	var windowHeight := 648
+
+	get_window().size.x = windowWidth
+	get_window().size.y = windowHeight
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-	#pass
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		setWindowSize()
+		setWindowPositionCenter()
+
+func setWindowPositionCenter() -> void:
+	var center_screen := DisplayServer.screen_get_position() + DisplayServer.screen_get_size() /2 
+	var window_size := get_window().get_size_with_decorations()
+	var new_window_position := center_screen - window_size /2
+	get_window().set_position(new_window_position)
 
 func lose_rating():
 	rating -= 1
