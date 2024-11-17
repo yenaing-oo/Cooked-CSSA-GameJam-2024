@@ -1,11 +1,12 @@
-[gd_scene load_steps=35 format=3 uid="uid://c04xpg6q5tfim"]
+[gd_scene load_steps=36 format=3 uid="uid://c04xpg6q5tfim"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i66vg"]
 [ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
+[ext_resource type="Script" path="res://game_manager.gd" id="2_7rypi"]
 [ext_resource type="ArrayMesh" uid="uid://8piu0esrgi53" path="res://wall.obj" id="2_cb21w"]
 [ext_resource type="PackedScene" uid="uid://dip4t3edicgy5" path="res://assets/models/Cabinet2.glb" id="2_itvpa"]
 [ext_resource type="PackedScene" uid="uid://gq3xry62a8f2" path="res://assets/models/Cabinet3.glb" id="3_vffqg"]
-[ext_resource type="PackedScene" path="res://player.tscn" id="4_pupp2"]
+[ext_resource type="PackedScene" uid="uid://cow1ybcm04vem" path="res://player.tscn" id="4_pupp2"]
 [ext_resource type="PackedScene" uid="uid://jwufiv1utahh" path="res://assets/models/Fridge.glb" id="4_t7cqa"]
 [ext_resource type="PackedScene" uid="uid://6ds8ggegs0ff" path="res://Scenes/Drink Station/drinkStation.tscn" id="4_xr7el"]
 [ext_resource type="PackedScene" uid="uid://b6gvwlqeiywew" path="res://assets/models/Cabinet1.glb" id="5_aaxje"]
@@ -82,6 +83,10 @@ albedo_color = Color(1, 1, 1, 0)
 [node name="mainScene" type="Node3D"]
 transform = Transform3D(2.13394, 0, 0, 0, 2.13394, 0, 0, 0, 2.13394, 0, 0, 0)
 script = ExtResource("1_i66vg")
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_7rypi")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_5wdju")
