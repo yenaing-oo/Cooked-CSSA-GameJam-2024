@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://du4xonpubccn7" path="res://assets/models/Cupboard.glb" id="5_tfiwq"]
 [ext_resource type="PackedScene" uid="uid://c15m3th3sl20i" path="res://assets/models/Sink.glb" id="6_wrqhi"]
 [ext_resource type="PackedScene" uid="uid://cftklxsi4md20" path="res://assets/models/HighCabinet1.glb" id="7_g5wvr"]
-[ext_resource type="PackedScene" uid="uid://1yc1amupu3fg" path="res://grilling_station.tscn" id="7_t6tr2"]
+[ext_resource type="PackedScene" uid="uid://chg8jnexjnrdm" path="res://grilling_station.tscn" id="7_t6tr2"]
 [ext_resource type="PackedScene" uid="uid://c2bf7gptf2nbg" path="res://Order-Window.tscn" id="8_7h5am"]
 [ext_resource type="PackedScene" uid="uid://bebt4gwnj7rdn" path="res://assets/models/HighCabinet2.glb" id="8_412p7"]
 [ext_resource type="Texture2D" uid="uid://b7h54iekwq11r" path="res://assets/textures/Star.png" id="17_lkctv"]
@@ -492,7 +492,7 @@ transform = Transform3D(-0.468617, -3.13831e-08, 2.63336e-08, 0, 0.301221, 0.358
 fov = 40.0
 
 [node name="DrinkStation" parent="." instance=ExtResource("4_xr7el")]
-transform = Transform3D(-3, 0, -2.62268e-07, 0, 3, 0, 2.62268e-07, 0, -3, -11, 3.139, 7.35873)
+transform = Transform3D(-3, 0, -4.52987e-07, 0, 3, 0, 4.52987e-07, 0, -3, -11, 3.139, 7.35873)
 
 [node name="AssemblyStation" parent="." instance=ExtResource("5_ryx4q")]
 transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 5.96677, 1, 11.528)
