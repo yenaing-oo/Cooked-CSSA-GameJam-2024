@@ -72,7 +72,7 @@ transform = Transform3D(0.0758921, 0, 0, 0, 0.0605597, 0, 0, 0, 0.0758921, 0, 0.
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_vdde7")
-volume_db = -10.0
+volume_db = -18.0
 bus = &"burgerbgm"
 
 [node name="BurgerPattyCooked" parent="." instance=ExtResource("4_tk10t")]
