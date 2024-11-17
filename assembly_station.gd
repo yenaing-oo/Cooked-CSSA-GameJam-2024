@@ -17,10 +17,10 @@ var drawn_arrows = [] 	#The Sprite3D arrows that are currently drawn, keep track
 
 #A dictionary of the texture for each direction
 var arrow_textures = {
-	"up": preload("res://assets/textures/up_arrow.png"),
-	"down": preload("res://assets/textures/down_arrow.png"),
-	"left": preload("res://assets/textures/left_arrow.png"),
-	"right": preload("res://assets/textures/right_arrow.png"),
+	"up": preload("res://assets/textures/up_arrow_outline.png"),
+	"down": preload("res://assets/textures/down_arrow_outline.png"),
+	"left": preload("res://assets/textures/left_arrow_outline.png"),
+	"right": preload("res://assets/textures/right_arrow_outline.png"),
 }
 
 # Called when the node enters the scene tree for the first time.
