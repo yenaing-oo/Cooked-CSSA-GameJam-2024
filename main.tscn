@@ -1,7 +1,8 @@
-[gd_scene load_steps=49 format=3 uid="uid://c04xpg6q5tfim"]
+[gd_scene load_steps=50 format=3 uid="uid://c04xpg6q5tfim"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i66vg"]
 [ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
+[ext_resource type="Script" path="res://game_manager.gd" id="2_7rypi"]
 [ext_resource type="ArrayMesh" uid="uid://8piu0esrgi53" path="res://wall.obj" id="2_cb21w"]
 [ext_resource type="PackedScene" uid="uid://dip4t3edicgy5" path="res://assets/models/Cabinet2.glb" id="2_itvpa"]
 [ext_resource type="PackedScene" uid="uid://gq3xry62a8f2" path="res://assets/models/Cabinet3.glb" id="3_vffqg"]
@@ -121,6 +122,16 @@ data = PackedVector3Array(-1.9, 4, -0.25, 1.9, 4, -0.25, -1.9, 4, 0.25, -1.9, 4,
 [node name="mainScene" type="Node3D"]
 transform = Transform3D(2.13394, 0, 0, 0, 2.13394, 0, 0, 0, 2.13394, 0, 0, 0)
 script = ExtResource("1_i66vg")
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_7rypi")
+
+[node name="scorelabel" type="Label3D" parent="GameManager"]
+transform = Transform3D(-1, 0, -8.74228e-08, -3.18886e-08, 0.9311, 0.364763, 8.13994e-08, 0.364763, -0.9311, -32.0267, 14.9738, 10.1503)
+pixel_size = 0.15
+font_size = 40
+outline_size = 10
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_5wdju")

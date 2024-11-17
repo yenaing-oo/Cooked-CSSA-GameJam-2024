@@ -1,5 +1,7 @@
 extends Node3D
 
+@onready var game_manager: Node = %GameManager
+
 const SEQUENCE_LENGTH = 6
 const DIRECTIONS = ["up", "down", "left", "right"]
 const ARROW_SCALE = Vector3(0.1, 0.1, 0.1)
@@ -95,6 +97,10 @@ func check_input(input: String):
 			print("Minigame Complete!")
 			inMinigame = false
 			clear_arrows()
+			
+			game_manager.add_point()  # adds point for the game
+			
+			#Add some functionality for the player to interacte with
 			player.reset_inventory()
 			
 	#Incorrect, restart

@@ -35,7 +35,7 @@ func setWindowPositionCenter() -> void:
 func lose_rating():
 	rating -= 1
 	stars[rating].visible = false
-	print(rating)
+		
 	
 
 
