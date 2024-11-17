@@ -5,7 +5,7 @@
 [ext_resource type="ArrayMesh" uid="uid://8piu0esrgi53" path="res://wall.obj" id="2_cb21w"]
 [ext_resource type="PackedScene" uid="uid://dip4t3edicgy5" path="res://assets/models/Cabinet2.glb" id="2_itvpa"]
 [ext_resource type="PackedScene" uid="uid://gq3xry62a8f2" path="res://assets/models/Cabinet3.glb" id="3_vffqg"]
-[ext_resource type="PackedScene" uid="uid://cow1ybcm04vem" path="res://player.tscn" id="4_pupp2"]
+[ext_resource type="PackedScene" uid="uid://bq05pqu66wwbu" path="res://player.tscn" id="4_pupp2"]
 [ext_resource type="PackedScene" uid="uid://jwufiv1utahh" path="res://assets/models/Fridge.glb" id="4_t7cqa"]
 [ext_resource type="PackedScene" uid="uid://6ds8ggegs0ff" path="res://Scenes/Drink Station/drinkStation.tscn" id="4_xr7el"]
 [ext_resource type="PackedScene" uid="uid://b6gvwlqeiywew" path="res://assets/models/Cabinet1.glb" id="5_aaxje"]
