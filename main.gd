@@ -2,6 +2,10 @@ extends Node3D
 
 var rating = 5
 
+@onready var pausemenu: Control = %Pause
+var paused = false
+
+
 
 
 var stars = []
@@ -19,6 +23,8 @@ func _process(delta: float) -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		setWindowSize()
 		setWindowPositionCenter()
+		
+	
 
 func setWindowSize() -> void:
 	var windowWidth := 1152
@@ -62,3 +68,24 @@ func _flash_stars():
 		flashing = false
 		$Timer.stop()
 		$Timer.queue_free()
+		
+
+func pause_fun(delta):
+	if Input.is_action_just_pressed("pause"):
+		pass
+
+func pause_menu():
+	if paused:
+		pausemenu.hide()
+		Engine.time_scale = 1
+	else:
+		pausemenu.show()
+		Engine.time_scale = 0
+		
+	paused = !paused
+		
+	
+	
+	
+	
+	
