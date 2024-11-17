@@ -76,6 +76,7 @@ func grab_cooked_food() -> bool:
 	var output = false
 	
 	if cooked and not player.carrying_burger:
+		cooked = false
 		reset_loading_bar()
 		output = true
 	return output
