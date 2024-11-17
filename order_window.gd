@@ -7,6 +7,8 @@ extends Node3D
 @onready var loadingBar: Sprite3D = $loadingBar
 @onready var loadingBarFilling: Sprite3D = $loadingBar/loadingBarFilling
 @onready var assembly_table: Node3D = %AssemblyStation
+@onready var audio_stream_player: AudioStreamPlayer3D = $AudioStreamPlayer
+
 
 @export var easyMinGraceTime = 7.0
 @export var easyMaxGraceTime = 30.0
@@ -63,6 +65,7 @@ func start_order_timer():
 	orderTimer.wait_time = orderWaitingTime
 	orderTimer.start()
 	order = true
+	audio_stream_player.play()
 	
 func _on_grace_timer_timeout() -> void:
 	start_order_timer()
