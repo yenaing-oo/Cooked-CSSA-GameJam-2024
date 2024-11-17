@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://du4xonpubccn7" path="res://assets/models/Cupboard.glb" id="5_tfiwq"]
 [ext_resource type="PackedScene" uid="uid://c15m3th3sl20i" path="res://assets/models/Sink.glb" id="6_wrqhi"]
 [ext_resource type="PackedScene" uid="uid://cftklxsi4md20" path="res://assets/models/HighCabinet1.glb" id="7_g5wvr"]
-[ext_resource type="PackedScene" uid="uid://chg8jnexjnrdm" path="res://grilling_station.tscn" id="7_t6tr2"]
+[ext_resource type="PackedScene" uid="uid://1yc1amupu3fg" path="res://grilling_station.tscn" id="7_t6tr2"]
 [ext_resource type="PackedScene" uid="uid://c2bf7gptf2nbg" path="res://Order-Window.tscn" id="8_7h5am"]
 [ext_resource type="PackedScene" uid="uid://bebt4gwnj7rdn" path="res://assets/models/HighCabinet2.glb" id="8_412p7"]
 [ext_resource type="Texture2D" uid="uid://b7h54iekwq11r" path="res://assets/textures/Star.png" id="17_lkctv"]
@@ -337,17 +337,17 @@ To process an order
  the assembly table"
 
 [node name="DrinksStationLabel" type="Label3D" parent="kitchen/TipsLabel"]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 8.75803, 9.42113, -3.07923)
+transform = Transform3D(-4.37114e-08, 1, 1.05879e-22, -1, -4.37114e-08, 8.88178e-16, 8.88178e-16, 0, 1, 8.75803, 9.42113, -3.39894)
 pixel_size = 0.0165
 text = "Drinks Station"
 
 [node name="GrillLabel" type="Label3D" parent="kitchen/TipsLabel"]
-transform = Transform3D(-4.37114e-08, 1, 1.05879e-22, -1, -4.37114e-08, 0, -8.88178e-16, -1.05879e-22, 1, 8.82171, -4.5687, -3.08027)
+transform = Transform3D(-4.37114e-08, 1, 2.11758e-22, -1, -4.37114e-08, 8.88178e-16, 0, -1.05879e-22, 1, 8.82171, -4.5687, -3.43712)
 pixel_size = 0.014
 text = "Grill"
 
 [node name="AssemblyTableLabel" type="Label3D" parent="kitchen/TipsLabel"]
-transform = Transform3D(1, 0, 5.29396e-22, 0, 1, 0, 0, 0, 1, -5.40826, 10.9072, -2.85371)
+transform = Transform3D(1, 0, 5.29396e-22, 0, 1, 8.88178e-16, 0, -8.88178e-16, 1, -5.40826, 10.9072, -3.38623)
 pixel_size = 0.017
 text = "Assembly Table"
 
