@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dlf1ycdciq1tb"]
+[gd_scene load_steps=10 format=3 uid="uid://1yc1amupu3fg"]
 
 [ext_resource type="Script" path="res://grilling_station.gd" id="1_msga3"]
 [ext_resource type="PackedScene" uid="uid://3pbnq7adse1r" path="res://assets/models/StovetopOven.glb" id="2_yvyjs"]
+[ext_resource type="AudioStream" uid="uid://cwj8wkn3mxeaa" path="res://fried.mp3" id="3_vdde7"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_begt6"]
 
@@ -51,3 +52,7 @@ texture = SubResource("GradientTexture2D_670po")
 
 [node name="StovetopOven" parent="." instance=ExtResource("2_yvyjs")]
 transform = Transform3D(0.0758921, 0, 0, 0, 0.0605597, 0, 0, 0, 0.0758921, 0, 0.552112, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_vdde7")
+autoplay = true

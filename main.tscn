@@ -1,18 +1,9 @@
-[gd_scene load_steps=31 format=3 uid="uid://c04xpg6q5tfim"]
+[gd_scene load_steps=19 format=3 uid="uid://c04xpg6q5tfim"]
 
 [ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
 [ext_resource type="ArrayMesh" uid="uid://8piu0esrgi53" path="res://wall.obj" id="2_cb21w"]
-[ext_resource type="PackedScene" uid="uid://dip4t3edicgy5" path="res://assets/models/Cabinet2.glb" id="2_itvpa"]
-[ext_resource type="PackedScene" uid="uid://gq3xry62a8f2" path="res://assets/models/Cabinet3.glb" id="3_vffqg"]
-[ext_resource type="PackedScene" uid="uid://cow1ybcm04vem" path="res://player.tscn" id="4_pupp2"]
-[ext_resource type="PackedScene" uid="uid://jwufiv1utahh" path="res://assets/models/Fridge.glb" id="4_t7cqa"]
-[ext_resource type="PackedScene" uid="uid://6ds8ggegs0ff" path="res://Scenes/Drink Station/drinkStation.tscn" id="4_xr7el"]
-[ext_resource type="PackedScene" uid="uid://b6gvwlqeiywew" path="res://assets/models/Cabinet1.glb" id="5_aaxje"]
-[ext_resource type="PackedScene" uid="uid://88sdvjr4vjyk" path="res://assembly_station.tscn" id="5_ryx4q"]
-[ext_resource type="PackedScene" uid="uid://du4xonpubccn7" path="res://assets/models/Cupboard.glb" id="5_tfiwq"]
-[ext_resource type="PackedScene" uid="uid://c15m3th3sl20i" path="res://assets/models/Sink.glb" id="6_wrqhi"]
-[ext_resource type="PackedScene" uid="uid://chg8jnexjnrdm" path="res://grilling_station.tscn" id="7_t6tr2"]
-[ext_resource type="PackedScene" uid="uid://c2bf7gptf2nbg" path="res://Order-Window.tscn" id="8_7h5am"]
+[ext_resource type="ArrayMesh" uid="uid://c3ind6wwx42xs" path="res://wall_half.obj" id="3_2rqgw"]
+[ext_resource type="AudioStream" uid="uid://crt86wtwyuw5x" path="res://cookedmusic.mp3" id="4_ibftd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cajwv"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -330,17 +321,6 @@ shadow_enabled = true
 transform = Transform3D(-0.468617, -3.13831e-08, 2.63336e-08, 0, 0.301221, 0.358981, -4.09677e-08, 0.358981, -0.301221, 0, 25.935, -21.325)
 fov = 40.0
 
-[node name="drinkStation" parent="." instance=ExtResource("4_xr7el")]
-transform = Transform3D(0.000185892, 0.000313926, -3, -3.438e-05, 3, 0.000313926, 3, 3.438e-05, 0.000185892, 8.176, 3.137, 11.466)
-
-[node name="AssemblyStation" parent="." instance=ExtResource("5_ryx4q")]
-transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -11.385, 1, 7.528)
-
-[node name="player" parent="." instance=ExtResource("4_pupp2")]
-transform = Transform3D(-8.74228e-07, 0, 20, 0, 20, 0, -20, 0, -8.74228e-07, 6.945, 2.343, -6.19)
-
-[node name="GrillingStation" parent="." instance=ExtResource("7_t6tr2")]
-transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -11.864, 0.71, -7.183)
-
-[node name="orderWindow" parent="." instance=ExtResource("8_7h5am")]
-transform = Transform3D(0.00305158, 0.0054984, -2.99999, 0.000343578, 2.99999, 0.0054992, 2, -0.000523757, 0.00457642, 0, 0, 12.562)
+[node name="bgm" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_ibftd")
+autoplay = true

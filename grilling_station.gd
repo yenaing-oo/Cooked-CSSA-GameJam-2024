@@ -18,7 +18,6 @@ func _ready() -> void:
 	loading_bar_front = $LoadingBar/LoadingBarFront
 	loading_bar_front_offset = loading_bar_front.position.x
 	
-	start_cooking() #THIS FUNCTION SHOULD BE CALLED BY THE PLAYER NOT HERE, just for testing
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
