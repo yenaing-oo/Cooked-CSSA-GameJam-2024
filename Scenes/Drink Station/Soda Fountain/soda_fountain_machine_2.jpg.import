@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bd4a1exp18d8a"
 path.s3tc="res://.godot/imported/soda_fountain_machine_2.jpg-bb3541c4956486733928031c5809dd6a.s3tc.ctex"
+path.etc2="res://.godot/imported/soda_fountain_machine_2.jpg-bb3541c4956486733928031c5809dd6a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Scenes/Drink Station/Soda Fountain/soda_fountain_machine_2.jpg"
-dest_files=["res://.godot/imported/soda_fountain_machine_2.jpg-bb3541c4956486733928031c5809dd6a.s3tc.ctex"]
+dest_files=["res://.godot/imported/soda_fountain_machine_2.jpg-bb3541c4956486733928031c5809dd6a.s3tc.ctex", "res://.godot/imported/soda_fountain_machine_2.jpg-bb3541c4956486733928031c5809dd6a.etc2.ctex"]
 
 [params]
 

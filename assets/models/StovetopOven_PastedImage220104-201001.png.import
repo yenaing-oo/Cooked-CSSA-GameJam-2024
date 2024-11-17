@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://4c7clamvwain"
 path.s3tc="res://.godot/imported/StovetopOven_PastedImage220104-201001.png-f9f245e84fd2893fe7936fc7469ee09b.s3tc.ctex"
+path.etc2="res://.godot/imported/StovetopOven_PastedImage220104-201001.png-f9f245e84fd2893fe7936fc7469ee09b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/StovetopOven_PastedImage220104-201001.png"
-dest_files=["res://.godot/imported/StovetopOven_PastedImage220104-201001.png-f9f245e84fd2893fe7936fc7469ee09b.s3tc.ctex"]
+dest_files=["res://.godot/imported/StovetopOven_PastedImage220104-201001.png-f9f245e84fd2893fe7936fc7469ee09b.s3tc.ctex", "res://.godot/imported/StovetopOven_PastedImage220104-201001.png-f9f245e84fd2893fe7936fc7469ee09b.etc2.ctex"]
 
 [params]
 

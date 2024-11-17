@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch78834dsk83"
 path.s3tc="res://.godot/imported/KitchenTableSmall_Texture.png-33c92fbc9e819b6bdf5821ec79aae424.s3tc.ctex"
+path.etc2="res://.godot/imported/KitchenTableSmall_Texture.png-33c92fbc9e819b6bdf5821ec79aae424.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/KitchenTableSmall_Texture.png"
-dest_files=["res://.godot/imported/KitchenTableSmall_Texture.png-33c92fbc9e819b6bdf5821ec79aae424.s3tc.ctex"]
+dest_files=["res://.godot/imported/KitchenTableSmall_Texture.png-33c92fbc9e819b6bdf5821ec79aae424.s3tc.ctex", "res://.godot/imported/KitchenTableSmall_Texture.png-33c92fbc9e819b6bdf5821ec79aae424.etc2.ctex"]
 
 [params]
 
