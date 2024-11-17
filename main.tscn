@@ -1,10 +1,11 @@
-[gd_scene load_steps=33 format=3 uid="uid://c04xpg6q5tfim"]
+[gd_scene load_steps=35 format=3 uid="uid://c04xpg6q5tfim"]
 
+[ext_resource type="Script" path="res://main.gd" id="1_i66vg"]
 [ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
 [ext_resource type="ArrayMesh" uid="uid://8piu0esrgi53" path="res://wall.obj" id="2_cb21w"]
 [ext_resource type="PackedScene" uid="uid://dip4t3edicgy5" path="res://assets/models/Cabinet2.glb" id="2_itvpa"]
 [ext_resource type="PackedScene" uid="uid://gq3xry62a8f2" path="res://assets/models/Cabinet3.glb" id="3_vffqg"]
-[ext_resource type="PackedScene" uid="uid://cow1ybcm04vem" path="res://player.tscn" id="4_pupp2"]
+[ext_resource type="PackedScene" path="res://player.tscn" id="4_pupp2"]
 [ext_resource type="PackedScene" uid="uid://jwufiv1utahh" path="res://assets/models/Fridge.glb" id="4_t7cqa"]
 [ext_resource type="PackedScene" uid="uid://6ds8ggegs0ff" path="res://Scenes/Drink Station/drinkStation.tscn" id="4_xr7el"]
 [ext_resource type="PackedScene" uid="uid://b6gvwlqeiywew" path="res://assets/models/Cabinet1.glb" id="5_aaxje"]
@@ -12,9 +13,10 @@
 [ext_resource type="PackedScene" uid="uid://du4xonpubccn7" path="res://assets/models/Cupboard.glb" id="5_tfiwq"]
 [ext_resource type="PackedScene" uid="uid://c15m3th3sl20i" path="res://assets/models/Sink.glb" id="6_wrqhi"]
 [ext_resource type="PackedScene" uid="uid://cftklxsi4md20" path="res://assets/models/HighCabinet1.glb" id="7_g5wvr"]
-[ext_resource type="PackedScene" uid="uid://chg8jnexjnrdm" path="res://grilling_station.tscn" id="7_t6tr2"]
+[ext_resource type="PackedScene" uid="uid://1yc1amupu3fg" path="res://grilling_station.tscn" id="7_t6tr2"]
 [ext_resource type="PackedScene" uid="uid://c2bf7gptf2nbg" path="res://Order-Window.tscn" id="8_7h5am"]
 [ext_resource type="PackedScene" uid="uid://bebt4gwnj7rdn" path="res://assets/models/HighCabinet2.glb" id="8_412p7"]
+[ext_resource type="Texture2D" uid="uid://b7h54iekwq11r" path="res://assets/textures/Star.png" id="17_lkctv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cajwv"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -79,6 +81,7 @@ albedo_color = Color(1, 1, 1, 0)
 
 [node name="mainScene" type="Node3D"]
 transform = Transform3D(2.13394, 0, 0, 0, 2.13394, 0, 0, 0, 2.13394, 0, 0, 0)
+script = ExtResource("1_i66vg")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_5wdju")
@@ -359,3 +362,25 @@ transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -11.68
 
 [node name="OrderWindow" parent="." instance=ExtResource("8_7h5am")]
 transform = Transform3D(0.00305158, 0.0054984, -2.99999, 0.000343578, 2.99999, 0.0054992, 2, -0.000523757, 0.00457642, 0, 0, 12.562)
+
+[node name="Stars" type="Node3D" parent="."]
+transform = Transform3D(0.135, 0, 0, 0, 0.105298, -0.0844831, 0, 0.0844831, 0.105298, 18.0915, 8.33725, 5.58695)
+
+[node name="1" type="Sprite3D" parent="Stars"]
+texture = ExtResource("17_lkctv")
+
+[node name="2" type="Sprite3D" parent="Stars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+texture = ExtResource("17_lkctv")
+
+[node name="3" type="Sprite3D" parent="Stars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0)
+texture = ExtResource("17_lkctv")
+
+[node name="4" type="Sprite3D" parent="Stars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 0)
+texture = ExtResource("17_lkctv")
+
+[node name="5" type="Sprite3D" parent="Stars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 0)
+texture = ExtResource("17_lkctv")

@@ -6,6 +6,7 @@ const ORDER_WINDOW_TIME = 11
 @onready var timer: Label3D = $timer
 
 var rating = 5
+var main_scene
 
 var time = ORDER_WINDOW_TIME
 
@@ -13,14 +14,15 @@ var time = ORDER_WINDOW_TIME
 func _ready() -> void:
 	set_process_input(true)
 	$Timer.start()
-	print(rating)
+	main_scene = get_parent()
 
 
 func _on_timer_timeout() -> void:
 	time = time -1
 	if(time == 0):	
-		rating = rating -1
-		print(rating)	
+		#rating = rating -1
+		#print(rating)	
+		main_scene.lose_rating()
 		time = ORDER_WINDOW_TIME
 	
 	timer.text = str(time)

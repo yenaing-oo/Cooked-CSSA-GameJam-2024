@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var SPEED = 15.0
+@export var SPEED = 20.0
 const GRAVITY = -9.8  # Gravity force (default Earth gravity)
 const INTERACTION_DISTANCE = 8.0  # Distance threshold for interaction
 
