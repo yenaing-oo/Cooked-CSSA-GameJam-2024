@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c04xpg6q5tfim"]
+[gd_scene load_steps=19 format=3 uid="uid://c04xpg6q5tfim"]
 
 [ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
 [ext_resource type="ArrayMesh" uid="uid://8piu0esrgi53" path="res://wall.obj" id="2_cb21w"]
 [ext_resource type="ArrayMesh" uid="uid://c3ind6wwx42xs" path="res://wall_half.obj" id="3_2rqgw"]
+[ext_resource type="AudioStream" uid="uid://crt86wtwyuw5x" path="res://cookedmusic.mp3" id="4_ibftd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cajwv"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -172,3 +173,7 @@ shape = SubResource("ConcavePolygonShape3D_oljui")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.735071, -4.92275e-08, 4.13068e-08, 0, 0.472495, 0.563097, -6.42619e-08, 0.563097, -0.472495, 0, 25.935, -21.325)
 fov = 40.0
+
+[node name="bgm" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_ibftd")
+autoplay = true

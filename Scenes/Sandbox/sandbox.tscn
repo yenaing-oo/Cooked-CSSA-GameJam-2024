@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://v7rso7h4eitr"]
+[gd_scene load_steps=7 format=3 uid="uid://v7rso7h4eitr"]
 
 [ext_resource type="PackedScene" uid="uid://foxdfq3qub11" path="res://Scenes/Sandbox/playerForTesting.tscn" id="1_yrw2v"]
 [ext_resource type="PackedScene" uid="uid://6ds8ggegs0ff" path="res://Scenes/Drink Station/drinkStation.tscn" id="2_fxirg"]
+[ext_resource type="PackedScene" uid="uid://1yc1amupu3fg" path="res://grilling_station.tscn" id="3_q7n5d"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tpihc"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -35,3 +36,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="drinkStation" parent="." instance=ExtResource("2_fxirg")]
 transform = Transform3D(-0.999867, 0, -0.0163006, 0, 1, 0, 0.0163006, 0, -0.999867, -8, 1.26057, 0)
+
+[node name="GrillingStation" parent="." instance=ExtResource("3_q7n5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1286, 0, -5.52608)
