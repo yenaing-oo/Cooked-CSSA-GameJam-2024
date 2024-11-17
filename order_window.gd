@@ -18,8 +18,8 @@ extends Node3D
 @export var veryHardMaxGraceTime = 13.0
 @export var easyOrderWaitingTime = 15.0
 @export var hardOrderWaitingTime = 10.0
-@export var timeBeforeHardDifficulty = 120.0
-@export var timeBeforeVeryHardDifficulty = 150 #This amount of seconds AFTER it becomes 'hard'
+@export var timeBeforeHardDifficulty = 60.0
+@export var timeBeforeVeryHardDifficulty = 120.0 #This amount of seconds AFTER it becomes 'hard'
 @export var max_orders = 3
 
 const GRACE_PEROID = 5 #The time before an order first shows up
