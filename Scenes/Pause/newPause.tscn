@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://db476piim5spd"]
 
-[ext_resource type="Script" path="res://new_pause.gd" id="1_y0qpj"]
+[ext_resource type="Script" path="res://Scenes/Pause/new_pause.gd" id="1_y0qpj"]
 
 [node name="newPause" type="Control"]
 layout_mode = 3
@@ -13,29 +13,40 @@ script = ExtResource("1_y0qpj")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 2
-offset_left = -1280.0
-offset_top = -720.0
-offset_right = 1280.0
-offset_bottom = 720.0
+offset_left = 421.0
+offset_top = 37.0
+offset_right = 1086.0
+offset_bottom = 430.0
 color = Color(0, 0, 0, 0.247059)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = -50.0
-offset_top = -50.0
-offset_right = 50.0
-offset_bottom = 51.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.63
+anchor_top = 0.734
+anchor_right = 0.63
+anchor_bottom = 0.734
+offset_left = -199.76
+offset_top = -202.132
+offset_right = -99.7601
+offset_bottom = -101.132
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="continueButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 text = "Continue"
 
 [node name="howToPlayButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 text = "How to Play"
 
 [node name="quitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/quitButton" to="." method="_on_quit_button_pressed"]

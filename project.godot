@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Cooked"
-run/main_scene="res://main.tscn"
+run/main_scene="res://Scenes/Main/main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://cookedlogo.png"
+config/icon="res://assets/cookedlogo.png"
 
 [display]
 

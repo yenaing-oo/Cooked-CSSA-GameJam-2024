@@ -3,22 +3,23 @@ extends Node3D
 var rating = 5
 var stars = []
 var flashing = false # Indicates if the stars are currently flashing
-@onready var quit_button = $GameOver/QuitButton
-@onready var restart_button = $GameOver/"RestartButton"
+@onready var quit_button = $Screens/GameOver/QuitButton
+@onready var restart_button = $Screens/GameOver/"RestartButton"
 
-@onready var pauseScene = $newPause
-@onready var continueButton = $newPause/VBoxContainer/continueButton
-@onready var howToButton = $newPause/VBoxContainer/howToPlayButton
-@onready var howToPlayScene = $howToPlay
-@onready var howToPlaySceneReturn = $howToPlay/Button
+@onready var pauseScene = $Screens/newPause
+@onready var continueButton = $Screens/newPause/VBoxContainer/continueButton
+@onready var howToButton = $Screens/newPause/VBoxContainer/howToPlayButton
+@onready var howToPlayScene = $Screens/howToPlay
 @onready var paused = false
+
+@onready var howToPlaySceneReturn = $Screens/howToPlay/Button
+
 @onready var masterAudio = AudioServer.get_bus_index("Master")
 
 @onready var timescaleValue = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#pass # Replace with function body.
 	for star in $Stars.get_children():
 		stars.append(star)
 	if quit_button:
@@ -45,7 +46,7 @@ func continueGame():
 	checkPauseState()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		if !howToPlayScene.is_visible_in_tree():
 			pauseScene.visible = true
@@ -55,6 +56,13 @@ func _process(delta: float) -> void:
 func checkPauseState():
 	if paused:
 		Engine.time_scale = 0
+		var screen_size_x = DisplayServer.window_get_size().x
+		var screen_size_y = DisplayServer.window_get_size().y
+
+		var menu_size_x = screen_size_x / 2.0 * -1
+		var menu_size_y = screen_size_y / 2.0 * -1
+
+		pauseScene.position = Vector2(menu_size_x,menu_size_y)
 	elif !paused:
 		pauseScene.visible = false
 		Engine.time_scale = timescaleValue

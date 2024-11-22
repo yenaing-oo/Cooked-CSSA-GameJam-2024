@@ -1,23 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbmm52jtdh1v5"]
-
-[ext_resource type="Script" path="res://Scenes/how_to_play.gd" id="1_djwv2"]
-[ext_resource type="Texture2D" uid="uid://chvjsprrvr3qb" path="res://assets/Screenshot 2024-11-17 114140.png" id="1_f8cke"]
+[gd_scene load_steps=2 format=3 uid="uid://cbmm52jtdh1v5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_05s5o"]
 font_size = 176
 
-[node name="How to play" type="Node2D"]
-script = ExtResource("1_djwv2")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.422371, 0.422371, 0.422371, 1)
-self_modulate = Color(0.359069, 0.359069, 0.359069, 1)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("1_f8cke")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-scale = Vector2(2, 2)
-zoom = Vector2(0.41, 0.41)
+[node name="How to play" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="Label" type="Label" parent="."]
 offset_left = -2628.0
@@ -45,6 +33,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
