@@ -6,7 +6,7 @@ extends Node3D
 const DIRECTIONS = ["up", "down", "left", "right"]
 const ARROW_SCALE = Vector3(0.07, 0.07, 0.07)
 const ARROW_ANCHOR = Vector3(0, 1.3, 0)
-@onready var player = get_parent().get_node("player")
+@onready var player = get_parent().get_parent().get_node("player")
 @onready var arrow_anchor = $ArrowAnchor
 
 var sequence_length = 6
@@ -22,16 +22,6 @@ var arrow_textures = {
 	"left": preload("res://assets/textures/left_arrow_outline.png"),
 	"right": preload("res://assets/textures/right_arrow_outline.png"),
 }
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
-	#start_minigame() #THIS FUNCTION SHOULD BE CALLED BY THE PLAYER NOT HERE, just for testing
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func start_minigame():
 	inMinigame = true

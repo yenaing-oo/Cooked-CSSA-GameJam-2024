@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bq05pqu66wwbu"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_ljlju"]
+[ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_ljlju"]
 [ext_resource type="PackedScene" uid="uid://d4iecpqh0rb8t" path="res://assets/Chef.fbx" id="2_afnys"]
 [ext_resource type="PackedScene" uid="uid://dle4n1cc32vvo" path="res://assets/models/Burger.glb" id="3_5tmmb"]
 [ext_resource type="PackedScene" uid="uid://b36oytyur37gs" path="res://Scenes/Drink Station/Soda Cup/sodaCup.tscn" id="4_eswte"]
