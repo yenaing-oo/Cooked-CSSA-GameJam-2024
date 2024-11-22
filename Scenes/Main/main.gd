@@ -12,7 +12,7 @@ var flashing = false # Indicates if the stars are currently flashing
 @onready var howToPlayScene = $Screens/howToPlay
 @onready var paused = false
 
-@onready var howToPlaySceneReturn = $Screens/howToPlay/Button
+@onready var howToPlaySceneReturn = $Screens/howToPlay/VBoxContainer/MarginContainer/Button
 
 @onready var masterAudio = AudioServer.get_bus_index("Master")
 
@@ -34,6 +34,14 @@ func _ready() -> void:
 		howToPlaySceneReturn.connect("pressed", showPause)
 
 func showHowToPlay():
+	var screen_size_x = DisplayServer.window_get_size().x
+	var screen_size_y = DisplayServer.window_get_size().y
+
+	var menu_size_x = screen_size_x / 2.0 * -1
+	var menu_size_y = screen_size_y / 2.0 * -1
+
+	howToPlayScene.position = Vector2(menu_size_x,menu_size_y)
+
 	pauseScene.visible = false
 	howToPlayScene.visible = true
 
@@ -48,9 +56,17 @@ func continueGame():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
-		if !howToPlayScene.is_visible_in_tree():
+		if !pauseScene.is_visible_in_tree():
 			pauseScene.visible = true
 			paused = true
+			checkPauseState()
+		elif pauseScene.is_visible_in_tree():
+			pauseScene.visible = false
+			paused = false
+			checkPauseState()
+		if howToPlayScene.is_visible_in_tree():
+			howToPlayScene.visible = false
+			paused = false
 			checkPauseState()
 
 func checkPauseState():
