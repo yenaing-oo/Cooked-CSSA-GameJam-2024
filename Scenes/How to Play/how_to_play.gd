@@ -10,6 +10,7 @@ var scale_factor_x
 var scale_factor_y
 
 func _ready():
+	get_tree().get_root().size_changed.connect(setScreen)
 	setScreen()
 
 func setScreen():
@@ -24,7 +25,6 @@ func setScreen():
 	setVBoxPosition()
 
 func getWindowSize():
-	# Might need to swap to DisplayServer.screen_get_size()
 	screen_X = DisplayServer.window_get_size().x
 	screen_Y = DisplayServer.window_get_size().y
 
@@ -33,7 +33,6 @@ func getScaleFactor():
 	var base_resolution_x = 1918
 	var base_resolution_y = 1078
 	
-	# May need to change around after testing on other monitors
 	scale_factor_x = base_factor * (float(screen_X) / base_resolution_x)
 	scale_factor_y =  base_factor * (float(screen_Y)/ base_resolution_y)
 
@@ -61,6 +60,3 @@ func setVBoxPosition():
 	position_Y = position_Y - size_y_offset
 
 	vBox.position = Vector2i(position_X, position_Y)
-
-func _on_quit_button_pressed() -> void:
-	get_tree().quit()
