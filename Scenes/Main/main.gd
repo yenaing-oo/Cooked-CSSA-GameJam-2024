@@ -34,14 +34,6 @@ func _ready() -> void:
 		howToPlaySceneReturn.connect("pressed", showPause)
 
 func showHowToPlay():
-	var screen_size_x = DisplayServer.window_get_size().x
-	var screen_size_y = DisplayServer.window_get_size().y
-
-	var menu_size_x = screen_size_x / 2.0 * -1
-	var menu_size_y = screen_size_y / 2.0 * -1
-
-	howToPlayScene.position = Vector2(menu_size_x,menu_size_y)
-
 	pauseScene.visible = false
 	howToPlayScene.visible = true
 
@@ -72,13 +64,6 @@ func _process(_delta: float) -> void:
 func checkPauseState():
 	if paused:
 		Engine.time_scale = 0
-		var screen_size_x = DisplayServer.window_get_size().x
-		var screen_size_y = DisplayServer.window_get_size().y
-
-		var menu_size_x = screen_size_x / 2.0 * -1
-		var menu_size_y = screen_size_y / 2.0 * -1
-
-		pauseScene.position = Vector2(menu_size_x,menu_size_y)
 	elif !paused:
 		pauseScene.visible = false
 		Engine.time_scale = timescaleValue
