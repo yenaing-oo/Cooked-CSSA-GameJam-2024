@@ -3,8 +3,8 @@ extends Node3D
 var rating = 5
 var stars = []
 var flashing = false # Indicates if the stars are currently flashing
-@onready var quit_button = $Screens/GameOver/QuitButton
-@onready var restart_button = $Screens/GameOver/"RestartButton"
+@onready var quit_button = $Screens/GameOver/HBoxContainer/QuitButton
+@onready var restart_button = $Screens/GameOver/HBoxContainer/RestartButton
 
 @onready var pauseScene = $Screens/newPause
 @onready var continueButton = $Screens/newPause/VBoxContainer/continueButton
@@ -107,5 +107,5 @@ func restart_game():
 	# Reload the current scene
 	var current_scene = get_tree().current_scene
 	if current_scene:
-		$GameOver.visible = false
+		$Screens/GameOver.visible = false
 		get_tree().reload_current_scene()
