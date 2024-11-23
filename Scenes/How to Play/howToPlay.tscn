@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbmm52jtdh1v5"]
+
+[ext_resource type="Script" path="res://Scenes/How to Play/how_to_play.gd" id="1_ibvm0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_05s5o"]
+
+[node name="howToPlay" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ibvm0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 421.0
+offset_top = 37.0
+offset_right = 1086.0
+offset_bottom = 430.0
+color = Color(0, 0, 0, 0.588235)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -234.0
+offset_right = 184.0
+offset_bottom = 234.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Controls
+W,A,S,D - Move Character
+Enter(⏎) - Interact with a station
+Shift(⇧) - Pickup prepared item
+Escape - Pause
+Arrow Keys (↑ ↓ ← →)- Assembly Table minigame
+
+Guide
+Accept an order by interacting with the
+Ordering Window when an order is available.
+
+Fulfill an order by interacting with Assembly
+Table while holding a burger and drink.
+
+If you don't pick up an order in time, your
+rating goes down"
+label_settings = SubResource("LabelSettings_05s5o")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 125
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 125
+theme_override_constants/margin_bottom = 10
+
+[node name="Button" type="Button" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "Return"
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]

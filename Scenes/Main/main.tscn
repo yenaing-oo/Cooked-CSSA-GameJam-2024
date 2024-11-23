@@ -1,36 +1,27 @@
 [gd_scene load_steps=56 format=3 uid="uid://c04xpg6q5tfim"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_i66vg"]
-[ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://laminate_floor_02_disp_4k.png" id="1_krwhf"]
-[ext_resource type="Script" path="res://game_manager.gd" id="2_7rypi"]
+[ext_resource type="Script" path="res://Scenes/Main/main.gd" id="1_i66vg"]
+[ext_resource type="Texture2D" uid="uid://dv6anu4bq5m8p" path="res://assets/laminate_floor_02_disp_4k.png" id="1_krwhf"]
+[ext_resource type="Script" path="res://Scenes/Main/game_manager.gd" id="2_7rypi"]
 [ext_resource type="ArrayMesh" uid="uid://8piu0esrgi53" path="res://wall.obj" id="2_cb21w"]
 [ext_resource type="PackedScene" uid="uid://dip4t3edicgy5" path="res://assets/models/Cabinet2.glb" id="2_itvpa"]
 [ext_resource type="PackedScene" uid="uid://gq3xry62a8f2" path="res://assets/models/Cabinet3.glb" id="3_vffqg"]
-[ext_resource type="PackedScene" uid="uid://bq05pqu66wwbu" path="res://player.tscn" id="4_pupp2"]
+[ext_resource type="PackedScene" uid="uid://bq05pqu66wwbu" path="res://Scenes/Player/player.tscn" id="4_pupp2"]
 [ext_resource type="PackedScene" uid="uid://jwufiv1utahh" path="res://assets/models/Fridge.glb" id="4_t7cqa"]
 [ext_resource type="PackedScene" uid="uid://6ds8ggegs0ff" path="res://Scenes/Drink Station/drinkStation.tscn" id="4_xr7el"]
 [ext_resource type="PackedScene" uid="uid://b6gvwlqeiywew" path="res://assets/models/Cabinet1.glb" id="5_aaxje"]
-[ext_resource type="PackedScene" uid="uid://88sdvjr4vjyk" path="res://assembly_station.tscn" id="5_ryx4q"]
+[ext_resource type="PackedScene" uid="uid://88sdvjr4vjyk" path="res://Scenes/Assembly Station/assembly_station.tscn" id="5_ryx4q"]
 [ext_resource type="PackedScene" uid="uid://du4xonpubccn7" path="res://assets/models/Cupboard.glb" id="5_tfiwq"]
 [ext_resource type="PackedScene" uid="uid://c15m3th3sl20i" path="res://assets/models/Sink.glb" id="6_wrqhi"]
 [ext_resource type="PackedScene" uid="uid://cftklxsi4md20" path="res://assets/models/HighCabinet1.glb" id="7_g5wvr"]
-[ext_resource type="PackedScene" uid="uid://1yc1amupu3fg" path="res://grilling_station.tscn" id="7_t6tr2"]
-[ext_resource type="PackedScene" uid="uid://c2bf7gptf2nbg" path="res://Order-Window.tscn" id="8_7h5am"]
+[ext_resource type="PackedScene" uid="uid://1yc1amupu3fg" path="res://Scenes/Grilling Station/grilling_station.tscn" id="7_t6tr2"]
+[ext_resource type="PackedScene" uid="uid://c2bf7gptf2nbg" path="res://Scenes/Order Window/Order-Window.tscn" id="8_7h5am"]
 [ext_resource type="PackedScene" uid="uid://bebt4gwnj7rdn" path="res://assets/models/HighCabinet2.glb" id="8_412p7"]
 [ext_resource type="Texture2D" uid="uid://b7h54iekwq11r" path="res://assets/textures/Star.png" id="17_lkctv"]
-[ext_resource type="AudioStream" uid="uid://crt86wtwyuw5x" path="res://cookedmusic.mp3" id="18_d84a0"]
-[ext_resource type="PackedScene" uid="uid://cbmm52jtdh1v5" path="res://Scenes/how_to_play.tscn" id="20_57yxg"]
-[ext_resource type="PackedScene" path="res://game_over.tscn" id="20_kawj3"]
-[ext_resource type="PackedScene" uid="uid://db476piim5spd" path="res://newPause.tscn" id="22_olink"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_3hyoq"]
-size = Vector3(5, 3, 0.1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xos7g"]
-albedo_color = Color(0, 0, 0, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_bdn83"]
-size = Vector3(5, 3, 0.001)
+[ext_resource type="AudioStream" uid="uid://crt86wtwyuw5x" path="res://Scenes/Main/cookedmusic.mp3" id="18_d84a0"]
+[ext_resource type="PackedScene" uid="uid://cbmm52jtdh1v5" path="res://Scenes/How to Play/howToPlay.tscn" id="20_57yxg"]
+[ext_resource type="PackedScene" uid="uid://cl6tgr2lq4oj8" path="res://Scenes/Game Over/game_over.tscn" id="20_kawj3"]
+[ext_resource type="PackedScene" uid="uid://db476piim5spd" path="res://Scenes/Pause/newPause.tscn" id="22_olink"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cajwv"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -44,6 +35,15 @@ background_mode = 2
 sky = SubResource("Sky_7a3nb")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_3hyoq"]
+size = Vector3(5, 3, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xos7g"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bdn83"]
+size = Vector3(5, 3, 0.001)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5q4m0"]
 transparency = 1
@@ -135,6 +135,18 @@ data = PackedVector3Array(-1.9, 4, -0.25, 1.9, 4, -0.25, -1.9, 4, 0.25, -1.9, 4,
 transform = Transform3D(2.13394, 0, 0, 0, 2.13394, 0, 0, 0, 2.13394, 0, 0, 0)
 script = ExtResource("1_i66vg")
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5wdju")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+light_energy = 0.5
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.468617, -5.42047e-08, 4.54831e-08, 0, 0.301221, 0.358981, -7.07592e-08, 0.358981, -0.301221, 0, 25.935, -21.325)
+fov = 40.0
+
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("2_7rypi")
@@ -177,9 +189,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_xos7g")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GameManager/blackboard"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0363874, 0.00395489, 0.00885582)
 shape = SubResource("BoxShape3D_bdn83")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_5wdju")
 
 [node name="kitchen" type="Node3D" parent="."]
 
@@ -560,33 +569,27 @@ physics_material_override = SubResource("PhysicsMaterial_ruswk")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="enviroment/Wall13/StaticBody3D"]
 shape = SubResource("BoxShape3D_0ogw3")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
-shadow_enabled = true
+[node name="Stations" type="Node3D" parent="."]
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.468617, -5.42046e-08, 4.54831e-08, 0, 0.301221, 0.358981, -7.07592e-08, 0.358981, -0.301221, 0, 25.935, -21.325)
-fov = 40.0
-
-[node name="DrinkStation" parent="." instance=ExtResource("4_xr7el")]
+[node name="DrinkStation" parent="Stations" instance=ExtResource("4_xr7el")]
 transform = Transform3D(-3, 0, -4.52987e-07, 0, 3, 0, 4.52987e-07, 0, -3, -11, 3.139, 7.35873)
 
-[node name="AssemblyStation" parent="." instance=ExtResource("5_ryx4q")]
+[node name="AssemblyStation" parent="Stations" instance=ExtResource("5_ryx4q")]
 unique_name_in_owner = true
 transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 5.96677, 1, 11.528)
+
+[node name="GrillingStation" parent="Stations" instance=ExtResource("7_t6tr2")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -11.6878, 0.71, -7.15625)
+
+[node name="OrderWindow" parent="Stations" instance=ExtResource("8_7h5am")]
+transform = Transform3D(0.00305158, 0.0054984, -2.99999, 0.000343578, 2.99999, 0.0054992, 2, -0.000523757, 0.00457642, 0, 0, 13)
+veryHardMaxGraceTime = 12.0
 
 [node name="player" parent="." instance=ExtResource("4_pupp2")]
 transform = Transform3D(-8.74228e-07, 0, 20, 0, 20, 0, -20, 0, -8.74228e-07, 6.945, 2.343, -6.19)
 
-[node name="GrillingStation" parent="." instance=ExtResource("7_t6tr2")]
-transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -11.6878, 0.71, -7.15625)
-
-[node name="OrderWindow" parent="." instance=ExtResource("8_7h5am")]
-transform = Transform3D(0.00305158, 0.0054984, -2.99999, 0.000343578, 2.99999, 0.0054992, 2, -0.000523757, 0.00457642, 0, 0, 13)
-veryHardMaxGraceTime = 12.0
-
 [node name="Stars" type="Node3D" parent="."]
-transform = Transform3D(0.135, 0, 0, 0, 0.105298, -0.0844831, 0, 0.0844831, 0.105298, 17.7707, 8.00612, 5.27328)
+transform = Transform3D(0.135, 0, 0, 0, 0.105298, -0.0844831, 0, 0.0844831, 0.105298, 17.1893, 8.00612, 5.27328)
 
 [node name="1" type="Sprite3D" parent="Stars"]
 texture = ExtResource("17_lkctv")
@@ -612,18 +615,24 @@ transform = Transform3D(-1, 0, -8.74228e-08, 3.55271e-15, 1, -2.98023e-08, 8.742
 pixel_size = 0.2
 text = "Rating"
 
+[node name="Screens" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="howToPlay" parent="Screens" instance=ExtResource("20_57yxg")]
+visible = false
+
+[node name="GameOver" parent="Screens" instance=ExtResource("20_kawj3")]
+unique_name_in_owner = true
+visible = false
+
+[node name="newPause" parent="Screens" instance=ExtResource("22_olink")]
+visible = false
+layout_mode = 1
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_d84a0")
 volume_db = -8.0
 autoplay = true
-
-[node name="howToPlay" parent="." instance=ExtResource("20_57yxg")]
-visible = false
-
-[node name="GameOver" parent="." instance=ExtResource("20_kawj3")]
-unique_name_in_owner = true
-visible = false
-
-[node name="newPause" parent="." instance=ExtResource("22_olink")]
-visible = false
-scale = Vector2(10, 10)

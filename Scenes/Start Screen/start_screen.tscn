@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cnmo4g5wmcyrt"]
 
-[ext_resource type="Script" path="res://start_screen.gd" id="1_yaa8b"]
-[ext_resource type="Texture2D" uid="uid://baiyskr6i2j4p" path="res://bg.png" id="2_7eyvp"]
+[ext_resource type="Script" path="res://Scenes/Start Screen/start_screen.gd" id="1_yaa8b"]
+[ext_resource type="Texture2D" uid="uid://baiyskr6i2j4p" path="res://assets/bg.png" id="2_7eyvp"]
 
 [node name="Start Screen" type="Control"]
 layout_mode = 3

@@ -43,7 +43,7 @@ func _ready() -> void:
 	loadingBarFillingOffset = loadingBarFilling.position.x
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if order:
 		#Do the loading bar thing if there's an order
 		var time_elapsed = orderWaitingTime - orderTimer.time_left

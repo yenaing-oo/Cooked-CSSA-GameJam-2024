@@ -7,10 +7,10 @@ const INTERACTION_DISTANCE = 8.0  # Distance threshold for interaction
 var carrying_burger = false
 var carrying_drink = false
 
-@onready var assembly_station = get_parent().get_node("AssemblyStation")  # Reference to AssemblyStation node in the main scene
-@onready var grilling_station = get_parent().get_node("GrillingStation")
-@onready var drink_station = get_parent().get_node("DrinkStation")
-@onready var order_window = get_parent().get_node("OrderWindow")
+@onready var assembly_station = get_parent().get_node("Stations/AssemblyStation")  # Reference to AssemblyStation node in the main scene
+@onready var grilling_station = get_parent().get_node("Stations/GrillingStation")
+@onready var drink_station = get_parent().get_node("Stations/DrinkStation")
+@onready var order_window = get_parent().get_node("Stations/OrderWindow")
 
 
 

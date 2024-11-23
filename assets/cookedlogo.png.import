@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhyumhhd4b5q7"
-path="res://.godot/imported/cookedlogo.png-59d8a17cf1c906ae368d56dbc1a002cb.ctex"
+path="res://.godot/imported/cookedlogo.png-ddb9b357109aa088e970452fa928b384.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cookedlogo.png"
-dest_files=["res://.godot/imported/cookedlogo.png-59d8a17cf1c906ae368d56dbc1a002cb.ctex"]
+source_file="res://assets/cookedlogo.png"
+dest_files=["res://.godot/imported/cookedlogo.png-ddb9b357109aa088e970452fa928b384.ctex"]
 
 [params]
 
