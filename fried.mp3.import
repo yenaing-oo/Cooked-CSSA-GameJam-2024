@@ -2,7 +2,7 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://cwj8wkn3mxeaa"
+uid="uid://76rdtoxo387l"
 path="res://.godot/imported/fried.mp3-80489013ed20569982e5bf80c43346eb.mp3str"
 
 [deps]
@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/fried.mp3-80489013ed20569982e5bf80c43346eb.mp
 
 [params]
 
-loop=true
-loop_offset=0.0
-bpm=0.0
+loop=false
+loop_offset=0
+bpm=0
 beat_count=0
 bar_beats=4

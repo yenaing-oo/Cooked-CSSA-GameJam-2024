@@ -2,7 +2,7 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://crt86wtwyuw5x"
+uid="uid://biwhgc131hcwj"
 path="res://.godot/imported/cookedmusic.mp3-8b4581d7898f087a1539252e8ab61a9d.mp3str"
 
 [deps]
@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/cookedmusic.mp3-8b4581d7898f087a1539252e8ab61
 
 [params]
 
-loop=true
-loop_offset=0.0
-bpm=0.0
+loop=false
+loop_offset=0
+bpm=0
 beat_count=0
 bar_beats=4
