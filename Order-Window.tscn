@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://c2bf7gptf2nbg"]
 
 [ext_resource type="ArrayMesh" uid="uid://da53wswqtm50o" path="res://assets/models/window.obj" id="1_7tafq"]
-[ext_resource type="Script" path="res://Scenes/Order Window/order_window.gd" id="1_xrn8n"]
+[ext_resource type="Script" path="res://order_window.gd" id="1_xrn8n"]
 [ext_resource type="PackedScene" uid="uid://odbjp2aqwxn5" path="res://assets/models/OrderWindow.glb" id="2_jef6m"]
-[ext_resource type="AudioStream" uid="uid://d0b0fumstfxuv" path="res://Scenes/Order Window/orderbell.mp3" id="4_42mml"]
+[ext_resource type="AudioStream" uid="uid://d0b0fumstfxuv" path="res://orderbell.mp3" id="4_42mml"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ktab2"]
 size = Vector3(0.439087, 1.98834, 2.00159)

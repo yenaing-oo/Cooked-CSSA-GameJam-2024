@@ -14,7 +14,7 @@ var loading_bar_burnt_offset
 var burger_raw
 var burger_cooked
 
-@onready var player = get_parent().get_parent().get_node("player")
+@onready var player = get_parent().get_node("player")
 @onready var audio_stream_player_3d: AudioStreamPlayer = $AudioStreamPlayer3D
 @onready var cook_timer: Timer = $CookTimer
 @onready var burn_timer: Timer = $BurnTimer
@@ -31,7 +31,7 @@ func _ready() -> void:
 	burger_cooked = $BurgerPattyCooked
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if cooking:
 		update_cooking_timer()
 	elif burning:

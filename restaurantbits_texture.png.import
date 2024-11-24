@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv6anu4bq5m8p"
-path.s3tc="res://.godot/imported/laminate_floor_02_disp_4k.png-da35aa16a3fe4a1f3656774e63a74239.s3tc.ctex"
-path.etc2="res://.godot/imported/laminate_floor_02_disp_4k.png-da35aa16a3fe4a1f3656774e63a74239.etc2.ctex"
+uid="uid://cl7l48y8k26af"
+path.s3tc="res://.godot/imported/restaurantbits_texture.png-5bbfd5f284ccbe1361f8b1758b8de6d1.s3tc.ctex"
+path.etc2="res://.godot/imported/restaurantbits_texture.png-5bbfd5f284ccbe1361f8b1758b8de6d1.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/laminate_floor_02_disp_4k.png"
-dest_files=["res://.godot/imported/laminate_floor_02_disp_4k.png-da35aa16a3fe4a1f3656774e63a74239.s3tc.ctex", "res://.godot/imported/laminate_floor_02_disp_4k.png-da35aa16a3fe4a1f3656774e63a74239.etc2.ctex"]
+source_file="res://restaurantbits_texture.png"
+dest_files=["res://.godot/imported/restaurantbits_texture.png-5bbfd5f284ccbe1361f8b1758b8de6d1.s3tc.ctex", "res://.godot/imported/restaurantbits_texture.png-5bbfd5f284ccbe1361f8b1758b8de6d1.etc2.ctex"]
 
 [params]
 
