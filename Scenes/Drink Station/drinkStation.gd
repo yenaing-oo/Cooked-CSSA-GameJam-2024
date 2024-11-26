@@ -6,7 +6,7 @@ extends Node3D
 @export var fill_time = 5.0
 @export var overflow_time = 5.0
 
-@onready var player = get_parent().get_parent().get_node("player")
+@onready var player = get_parent().get_node("player")
 
 class Soda:
 	var node

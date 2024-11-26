@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhyumhhd4b5q7"
-path="res://.godot/imported/cookedlogo.png-ddb9b357109aa088e970452fa928b384.ctex"
+uid="uid://e67fgvecubtd"
+path="res://.godot/imported/bg.png-24bff804693ee063127ad100e04c5185.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cookedlogo.png"
-dest_files=["res://.godot/imported/cookedlogo.png-ddb9b357109aa088e970452fa928b384.ctex"]
+source_file="res://bg.png"
+dest_files=["res://.godot/imported/bg.png-24bff804693ee063127ad100e04c5185.ctex"]
 
 [params]
 

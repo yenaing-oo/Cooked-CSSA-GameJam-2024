@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl7l48y8k26af"
-path.s3tc="res://.godot/imported/restaurantbits_texture.png-0c8e9537e36675c394568e91ad588e8f.s3tc.ctex"
-path.etc2="res://.godot/imported/restaurantbits_texture.png-0c8e9537e36675c394568e91ad588e8f.etc2.ctex"
+uid="uid://03saatsuv4u7"
+path.s3tc="res://.godot/imported/restaurantbits_texture.png-5bbfd5f284ccbe1361f8b1758b8de6d1.s3tc.ctex"
+path.etc2="res://.godot/imported/restaurantbits_texture.png-5bbfd5f284ccbe1361f8b1758b8de6d1.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/restaurantbits_texture.png"
-dest_files=["res://.godot/imported/restaurantbits_texture.png-0c8e9537e36675c394568e91ad588e8f.s3tc.ctex", "res://.godot/imported/restaurantbits_texture.png-0c8e9537e36675c394568e91ad588e8f.etc2.ctex"]
+source_file="res://restaurantbits_texture.png"
+dest_files=["res://.godot/imported/restaurantbits_texture.png-5bbfd5f284ccbe1361f8b1758b8de6d1.s3tc.ctex", "res://.godot/imported/restaurantbits_texture.png-5bbfd5f284ccbe1361f8b1758b8de6d1.etc2.ctex"]
 
 [params]
 

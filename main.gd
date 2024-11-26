@@ -3,23 +3,22 @@ extends Node3D
 var rating = 5
 var stars = []
 var flashing = false # Indicates if the stars are currently flashing
-@onready var quit_button = $Screens/GameOver/HBoxContainer/QuitButton
-@onready var restart_button = $Screens/GameOver/HBoxContainer/RestartButton
+@onready var quit_button = $GameOver/QuitButton
+@onready var restart_button = $GameOver/"RestartButton"
 
-@onready var pauseScene = $Screens/newPause
-@onready var continueButton = $Screens/newPause/VBoxContainer/continueButton
-@onready var howToButton = $Screens/newPause/VBoxContainer/howToPlayButton
-@onready var howToPlayScene = $Screens/howToPlay
+@onready var pauseScene = $newPause
+@onready var continueButton = $newPause/VBoxContainer/continueButton
+@onready var howToButton = $newPause/VBoxContainer/howToPlayButton
+@onready var howToPlayScene = $howToPlay
+@onready var howToPlaySceneReturn = $howToPlay/Button
 @onready var paused = false
-
-@onready var howToPlaySceneReturn = $Screens/howToPlay/VBoxContainer/MarginContainer/Button
-
 @onready var masterAudio = AudioServer.get_bus_index("Master")
 
 @onready var timescaleValue = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#pass # Replace with function body.
 	for star in $Stars.get_children():
 		stars.append(star)
 	if quit_button:
@@ -46,19 +45,11 @@ func continueGame():
 	checkPauseState()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
-		if !pauseScene.is_visible_in_tree():
+		if !howToPlayScene.is_visible_in_tree():
 			pauseScene.visible = true
 			paused = true
-			checkPauseState()
-		elif pauseScene.is_visible_in_tree():
-			pauseScene.visible = false
-			paused = false
-			checkPauseState()
-		if howToPlayScene.is_visible_in_tree():
-			howToPlayScene.visible = false
-			paused = false
 			checkPauseState()
 
 func checkPauseState():
@@ -107,5 +98,5 @@ func restart_game():
 	# Reload the current scene
 	var current_scene = get_tree().current_scene
 	if current_scene:
-		$Screens/GameOver.visible = false
+		$GameOver.visible = false
 		get_tree().reload_current_scene()
